@@ -1,4 +1,3 @@
-import 'package:fitness_client_project/features/others/veiws/nav_page.dart';
 import 'package:fitness_client_project/features/others/veiws/test_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';

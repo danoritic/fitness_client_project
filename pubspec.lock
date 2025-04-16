@@ -49,6 +49,13 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "1.18.0"
+  cr_calendar:
+    dependency: "direct main"
+    description:
+      path: "local_package/cr_calendar"
+      relative: true
+    source: path
+    version: "1.2.1"
   crypto:
     dependency: transitive
     description:
@@ -94,11 +101,6 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "4.0.0"
-  flutter_localizations:
-    dependency: transitive
-    description: flutter
-    source: sdk
-    version: "0.0.0"
   flutter_screenutil:
     dependency: "direct main"
     description:
@@ -148,10 +150,18 @@ packages:
     dependency: transitive
     description:
       name: intl
-      sha256: d6f56758b7d3014a48af9701c085700aac781a92a87a62b1333b46d8879661cf
+      sha256: "3bc132a9dbce73a7e4a21a17d06e1878839ffbf975568bc875c60537824b0c4d"
       url: "https://pub.dev"
     source: hosted
-    version: "0.19.0"
+    version: "0.18.1"
+  jiffy:
+    dependency: transitive
+    description:
+      name: jiffy
+      sha256: cc1d4b75016a9156c29b5d61f0c9176c3e0fb0580cc5a0e0422b5d2cab3fbfff
+      url: "https://pub.dev"
+    source: hosted
+    version: "6.2.1"
   leak_tracker:
     dependency: transitive
     description:
@@ -288,15 +298,14 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "2.1.8"
-  scrollable_clean_calendar:
+  range_slider_flutter:
     dependency: "direct main"
     description:
-      path: "."
-      ref: HEAD
-      resolved-ref: "861abe0ab29772a44985ba9be27ed8e7c99b3e4d"
-      url: "https://github.com/danoritic/scrollable_clean_calendar.git"
-    source: git
-    version: "1.5.0"
+      name: range_slider_flutter
+      sha256: ba7efe69101a100ac7d88db0d09610aea69c01d91cb853a5d423affb547607c3
+      url: "https://pub.dev"
+    source: hosted
+    version: "0.0.2"
   scrollable_positioned_list:
     dependency: transitive
     description:

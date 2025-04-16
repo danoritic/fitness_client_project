@@ -39,11 +39,13 @@ dependencies:
   flutter_screenutil:
   get:
   awesome_bottom_bar:
-  scrollable_clean_calendar:
-    git:
-      url: https://github.com/danoritic/scrollable_clean_calendar.git
+  # scrollable_clean_calendar:
+  #   git:
+  #     url: https://github.com/danoritic/scrollable_clean_calendar.git
   moment_dart:
-  # cr_calendar:
+  cr_calendar:
+    path: ./local_package/cr_calendar
+  range_slider_flutter:
 dev_dependencies:
   flutter_test:
     sdk: flutter
