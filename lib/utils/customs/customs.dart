@@ -2,15 +2,16 @@ import 'dart:math';
 
 import 'package:fitness_client_project/utils/customs/fancy_container.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
 
 Widget buildAppArrow({bool isLeft = true}) {
   return (isLeft)
-      ? Image.asset("assets/images/appArrow.png")
-      : Transform.rotate(
+      ? Transform.rotate(
           angle: pi,
-          child: Image.asset("assets/images/appArrow.png"),
-        );
+          child: Image.asset("assets/images/appArrowBetter.png"),
+        )
+      : Image.asset("assets/images/appArrowBetter.png");
 }
 
 Widget buildBackArrow(BuildContext context) {
@@ -20,11 +21,12 @@ Widget buildBackArrow(BuildContext context) {
       radius: 30,
       height: 30,
       width: 30,
+      backgroundColor: Colors.grey[300],
       action: () {
         Get.back();
       },
       child: Padding(
-        padding: const EdgeInsets.all(8.0),
+        padding: EdgeInsets.symmetric(vertical: 9.0.w),
         child: buildAppArrow(),
       ),
     ),

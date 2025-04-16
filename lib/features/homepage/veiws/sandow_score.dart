@@ -1,8 +1,11 @@
 import 'dart:math';
 
+import 'package:fitness_client_project/utils/customs/customs.dart';
 import 'package:fitness_client_project/utils/customs/fancy_container.dart';
+import 'package:fitness_client_project/utils/customs/fancy_text.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 class SandowScore extends StatelessWidget {
@@ -14,6 +17,7 @@ class SandowScore extends StatelessWidget {
       // appBar: AppBar(
       //   title: const Text('Home Page'),
       // ),
+      backgroundColor: Colors.white,
       body: Center(
         child: InkWell(
           onTap: () {
@@ -22,11 +26,71 @@ class SandowScore extends StatelessWidget {
               builder: (context) => SandowScoreDialog(),
             );
           },
-          child: Image.asset(
-            "assets/images/sandowScore.png",
-            fit: BoxFit.fitWidth,
-            alignment: Alignment.topCenter,
-            width: double.infinity,
+          child: Stack(
+            children: [
+              Image.asset(
+                "assets/images/sandowScore.png",
+                fit: BoxFit.fitWidth,
+                alignment: Alignment.topCenter,
+                width: double.infinity,
+              ),
+              Align(
+                alignment: Alignment.topCenter,
+                child: Padding(
+                  padding: const EdgeInsets.only(top: 38.0),
+                  child: FancyContainer(
+                    height: 50,
+                    backgroundColor: Colors.white,
+                    child: Padding(
+                      padding: const EdgeInsets.all(8.0),
+                      child: Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        children: [
+                          buildBackArrow(context),
+                          // FancyContainer(
+                          //   // height: 30,
+                          //   // width: 30,
+                          //   radius: 20,
+                          //   action: () {
+                          //     print("sassasasas");
+                          //   },
+                          //   // backgroundColor: Colors.grey[300],
+                          //   child: Padding(
+                          //     padding: const EdgeInsets.all(8.0),
+                          //     child: ,
+                          //   ),
+                          // ),
+                          Padding(
+                            padding: const EdgeInsets.all(8.0),
+                            child: FancyText(
+                              "Sandow Score",
+                              rawTextStyle: GoogleFonts.workSans(
+                                fontSize: 15,
+                                fontWeight: FontWeight.bold,
+                              ),
+                            ),
+                          ),
+                          FancyContainer(
+                            height: 30,
+                            width: 30,
+                            radius: 20,
+                            backgroundColor: Colors.grey[300],
+                            child: Padding(
+                              padding: const EdgeInsets.all(4.0),
+                              child: Icon(
+                                Icons.settings_outlined,
+                                weight: .2,
+                                size: 20,
+                              ),
+                            ),
+                          ),
+                        ],
+                      ),
+                    ),
+                  ),
+                ),
+              ),
+            ],
           ),
         ),
       ),
@@ -136,16 +200,21 @@ class SandowScoreDialog extends StatelessWidget {
             ),
           ),
           Center(
-            child: Container(
+            child: FancyContainer(
+              action: () {
+                // Get.back();
+                Navigator.of(context).pop();
+              },
               width: 48,
               height: 48,
-              decoration: ShapeDecoration(
-                shape: ContinuousRectangleBorder(
-                  borderRadius: BorderRadius.circular(40),
-                ),
-                color: Colors.grey[200],
-              ),
-              // backgroundColor: Colors.grey[200],
+              radius: 40,
+              // decoration: ShapeDecoration(
+              //   shape: ContinuousRectangleBorder(
+              //     borderRadius: BorderRadius.circular(40),
+              //   ),
+
+              // ),
+              backgroundColor: Colors.grey[200],
               // decoration: BoxDecoration(
               //   color: Colors.grey[200],
               //   shape: BoxShape.circle,

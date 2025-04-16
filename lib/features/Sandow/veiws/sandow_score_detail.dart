@@ -87,6 +87,7 @@ class _SandowScoreDetailState extends State<SandowScoreDetail> {
                 ),
                 SizedBox(height: 20),
                 _buildSecondSection(),
+                SizedBox(height: 20),
                 Column(
                   children: [
                     Align(
@@ -100,11 +101,11 @@ class _SandowScoreDetailState extends State<SandowScoreDetail> {
                       ),
                     ),
                     SizedBox(
-                      height: 300,
+                      height: 220,
                       child: GridView.builder(
                         gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
                           crossAxisCount: 2,
-                          childAspectRatio: 160 / 110,
+                          childAspectRatio: 160 / 120,
                         ),
                         itemCount: insightItemDetail.length,
                         itemBuilder: (context, index) {
@@ -122,8 +123,8 @@ class _SandowScoreDetailState extends State<SandowScoreDetail> {
                                     Row(
                                       children: [
                                         SizedBox(
-                                            height: 25,
-                                            width: 25,
+                                            height: 20.w,
+                                            width: 20.w,
                                             child: Image.asset(detail["icon"])),
                                         FancyText(
                                           detail["times"],
@@ -137,7 +138,7 @@ class _SandowScoreDetailState extends State<SandowScoreDetail> {
                                     FancyText(
                                       "${detail["name"]}",
                                       rawTextStyle: GoogleFonts.workSans(
-                                        fontSize: 14.w,
+                                        fontSize: 12.w,
                                         fontWeight: FontWeight.w400,
                                       ),
                                     ),
@@ -205,7 +206,7 @@ class _SandowScoreDetailState extends State<SandowScoreDetail> {
                     Align(
                       alignment: Alignment.centerLeft,
                       child: FancyText(
-                        "Insights",
+                        "Metrics",
                         rawTextStyle: GoogleFonts.workSans(
                           fontSize: 16.w,
                           fontWeight: FontWeight.bold,
