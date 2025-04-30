@@ -10,6 +10,7 @@ class FancyText extends StatefulWidget {
   final TextStyle? rawTextStyle;
   final Function()? action;
   final bool? isAsync;
+  final int? maxLine;
 
   // noAli
   FancyText(
@@ -22,6 +23,7 @@ class FancyText extends StatefulWidget {
     this.rawTextStyle,
     this.action,
     this.isAsync,
+    this.maxLine,
   });
 
   @override
@@ -60,6 +62,7 @@ class _FancyTextState extends State<FancyText> {
                 : null,
             child: Text(
               widget.text,
+              maxLines: widget.maxLine,
               style: widget.rawTextStyle ?? textStyle,
               textAlign: widget.textAlign,
             ),

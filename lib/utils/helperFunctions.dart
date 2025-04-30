@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:intl/intl.dart';
 
 Color getFigmaColor(String value, [int percentageOpacity = 100]) {
   return Color(int.parse("0xff$value"))
@@ -50,4 +51,27 @@ Widget faultyImgaeDefault({double? size, Color? color}) {
     size: size,
     color: color ?? Colors.black.withAlpha(100),
   );
+}
+
+Color getWhiterVersion(Color color, [double percent = 60]) {
+  //getWhiterVersion getFigmaColor("F97316")
+  print("sdsdjbsdksbsjjksbkab${color.red}");
+  final increment = 1 + percent / 100;
+  print("sdsdjbsdksbsjjksbkab-increment${increment}");
+  int redness = (color.red * increment).toInt();
+
+  if (redness > 255) redness = 255;
+  int greenness = (color.green * increment).toInt();
+  if (greenness > 255) greenness = 255;
+  int blueness = (color.blue * increment).toInt();
+  if (blueness > 255) blueness = 255;
+  print("sdsdjbsdksbsjjksbkab-rgb${[redness, greenness, blueness]}");
+  return Color.fromRGBO(redness, greenness, blueness, color.opacity);
+}
+
+String formatDateTimeToTimeWitAM(DateTime dateTime) {
+  // output like 02:21 AM
+  print(dateTime);
+  final formatter = DateFormat('hh:mm a');
+  return formatter.format(dateTime);
 }

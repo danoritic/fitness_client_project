@@ -5,31 +5,99 @@ import 'package:fitness_client_project/utils/helperFunctions.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:range_slider_flutter/range_slider_flutter.dart';
 
-Widget buildAppArrow({bool isLeft = true}) {
+Widget buildAppArrow({bool isLeft = true, Color? iconColor}) {
   return (isLeft)
       ? Transform.rotate(
           angle: pi,
-          child: Image.asset("assets/images/appArrowBetter.png"),
+          child: Image.asset(
+            "assets/images/appArrowBetter.png",
+            color: iconColor,
+          ),
         )
-      : Image.asset("assets/images/appArrowBetter.png");
+      : Image.asset(
+          "assets/images/appArrowBetter.png",
+          color: iconColor,
+        );
 }
 
-Widget buildBackArrow(BuildContext context) {
-  return Visibility(
-    visible: !(ModalRoute.of(context)?.isFirst ?? true),
-    child: FancyContainer(
-      radius: 30,
-      height: 30,
-      width: 30,
-      backgroundColor: Colors.grey[300],
-      action: () {
-        Get.back();
-      },
+Widget buildAppArrowVertical({bool isUp = true, Color? iconColor}) {
+  return (isUp)
+      ? Transform.rotate(
+          angle: pi / 2,
+          child: Image.asset(
+            "assets/images/appArrowBetter.png",
+            color: iconColor,
+          ),
+        )
+      : Transform.rotate(
+          angle: -pi / 2,
+          child: Image.asset(
+            "assets/images/appArrowBetter.png",
+            color: iconColor,
+          ),
+        );
+}
+
+Widget buildTailedAppArrow({bool isLeft = true, Color? iconColor}) {
+  return (isLeft)
+      ? Transform.rotate(
+          angle: pi,
+          child: Image.asset(
+            "assets/images/arrowTailed.png",
+            color: iconColor,
+          ),
+        )
+      : Image.asset(
+          "assets/images/arrowTailed.png",
+          color: iconColor,
+        );
+}
+
+List<int> practiceFunction(List<int> listOfIndex) {
+  /// while ************
+  // List<String> result = [];
+  // result;
+  // while (index > 5) {
+  //   result.add("${index}");
+  //   index = index - 1;
+  // }
+  // return result;
+
+  List<int> result = [];
+  for (int iter in listOfIndex) {
+    if (iter > 4) {
+      result.add(iter - 1);
+    } else if (iter == 4) {
+      result.add(0);
+    } else {
+      result.add(iter + 1);
+    }
+  }
+
+  return result;
+}
+
+Widget buildBackArrow(BuildContext context,
+    {Color? iconColor, Color? backgroundColor}) {
+  return FancyContainer(
+    radius: 30,
+    height: 30,
+    width: 30,
+    backgroundColor: !(ModalRoute.of(context)?.isFirst ?? true)
+        ? backgroundColor ?? Colors.grey[300]
+        : null,
+    child: Visibility(
+      visible: !(ModalRoute.of(context)?.isFirst ?? true),
       child: Padding(
         padding: EdgeInsets.symmetric(vertical: 9.0.w),
-        child: buildAppArrow(),
+        child: FancyContainer(
+            action: () {
+              Get.back();
+            },
+            child: buildAppArrow(iconColor: iconColor)),
       ),
     ),
   );
@@ -68,6 +136,15 @@ class _RangeSliderWidgetState extends State<RangeSliderWidget> {
           borderRadius: BorderRadius.circular(10),
           border: Border.all(color: Colors.white, width: 3),
           color: getFigmaColor("F97316"),
+          boxShadow: List.filled(
+            4,
+            BoxShadow(
+              color: Colors.grey.withAlpha(30),
+              offset: Offset(2, 2),
+              // spreadRadius: 10,
+              blurRadius: 10,
+            ),
+          ),
         ),
       ),
       rightHandler: RangeSliderFlutterHandler(
@@ -75,6 +152,15 @@ class _RangeSliderWidgetState extends State<RangeSliderWidget> {
           borderRadius: BorderRadius.circular(10),
           border: Border.all(color: Colors.white, width: 3),
           color: getFigmaColor("F97316"),
+          boxShadow: List.filled(
+            4,
+            BoxShadow(
+              color: Colors.grey.withAlpha(30),
+              offset: Offset(2, 2),
+              // spreadRadius: 10,
+              blurRadius: 10,
+            ),
+          ),
         ),
         foregroundDecoration: BoxDecoration(
           borderRadius: BorderRadius.circular(10),
@@ -110,4 +196,57 @@ class _RangeSliderWidgetState extends State<RangeSliderWidget> {
       },
     );
   }
+}
+
+Widget buildSideArrowContainer(
+    {bool isLeft = true, Color? iconColor, Widget? child}) {
+  return (isLeft)
+      ? Transform.rotate(
+          angle: pi,
+          child: Stack(
+            children: [
+              Image.asset(
+                "assets/images/sideArrowContainer.png",
+                color: iconColor,
+              ),
+              child ?? const SizedBox(),
+            ],
+          ),
+        )
+      : Stack(
+          children: [
+            Image.asset(
+              "assets/images/sideArrowContainer.png",
+              color: iconColor,
+            ),
+            child ?? const SizedBox(),
+          ],
+        );
+}
+
+// buildSideArrowContainer(){
+// assets/images/sideArrowContainer.png
+//   return
+// }
+
+wrapWithselectedsBorder({
+  required Widget child,
+  required double radius,
+  double spreadRadius = 2,
+}) {
+  return FancyContainer(
+    radius: radius,
+    backgroundColor: getFigmaColor("FFEDD5"),
+    isContinousBorder: false,
+    child: Padding(
+      padding: EdgeInsets.all(spreadRadius),
+      child: FancyContainer(
+        radius: radius,
+        isContinousBorder: false,
+        hasBorder: true,
+        borderColor: getFigmaColor("F97316"),
+        child: child,
+      ),
+    ),
+  );
 }

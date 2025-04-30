@@ -87,6 +87,7 @@ class _FancyContainerState extends State<FancyContainer> {
                             BorderRadius.circular(widget.radius ?? 8),
                         side: widget.hasBorder!
                             ? BorderSide(
+                                strokeAlign: 1,
                                 color: widget.borderColor ??
                                     const Color(0xFF000000),
                                 width: widget.borderThickness ?? 1,
@@ -108,6 +109,7 @@ class _FancyContainerState extends State<FancyContainer> {
                       color: widget.backgroundColor,
                       border: widget.hasBorder!
                           ? Border.all(
+                              strokeAlign: 1,
                               color:
                                   widget.borderColor ?? const Color(0xFF000000),
                               width: widget.borderThickness ?? 1,

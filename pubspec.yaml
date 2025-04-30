@@ -37,8 +37,13 @@ dependencies:
   cupertino_icons: ^1.0.8
   google_fonts:
   flutter_screenutil:
+  flutter_animate:
   get:
   awesome_bottom_bar:
+  easy_date_timeline:
+  
+  card_swiper:
+  dropdown_button2:
   # scrollable_clean_calendar:
   #   git:
   #     url: https://github.com/danoritic/scrollable_clean_calendar.git
@@ -46,6 +51,9 @@ dependencies:
   cr_calendar:
     path: ./local_package/cr_calendar
   range_slider_flutter:
+  fl_chart: 0.65.0
+  intl:
+  
 dev_dependencies:
   flutter_test:
     sdk: flutter
