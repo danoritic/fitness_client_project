@@ -44,6 +44,7 @@ dependencies:
   
   card_swiper:
   dropdown_button2:
+  dotted_line:
   # scrollable_clean_calendar:
   #   git:
   #     url: https://github.com/danoritic/scrollable_clean_calendar.git

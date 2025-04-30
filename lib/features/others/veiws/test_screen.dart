@@ -1,5 +1,6 @@
 import 'dart:math';
 
+import 'package:dotted_line/dotted_line.dart';
 import 'package:fitness_client_project/utils/customs/customs.dart';
 import 'package:fitness_client_project/utils/customs/dashed_lines.dart';
 import 'package:fitness_client_project/utils/customs/fancy_container.dart';
@@ -83,10 +84,145 @@ class _TestScreenState extends State<TestScreen> {
                       ],
                     ),
                     Container(
-                      color: Colors.red,
-                      width: 10,
-                      child: DirectionalDashedLine(
-                        angle: 90,
+                      height: MediaQuery.of(context).size.height * .65,
+                      child: Stack(
+                        children: [
+                          Align(
+                            alignment: Alignment.centerLeft,
+                            child: SizedBox(
+                              width: 50,
+                              child: Center(
+                                child: DottedLine(
+                                  direction: Axis.vertical,
+                                  alignment: WrapAlignment.center,
+                                  lineLength: double.infinity,
+                                  lineThickness: 1.0,
+                                  dashLength: 4.0,
+                                  dashColor: Colors.grey,
+                                  // dashGradient: [Colors.red, Colors.blue],
+                                  dashRadius: 0.0,
+                                  dashGapLength: 4.0,
+                                  dashGapColor: Colors.transparent,
+                                  // dashGapGradient: [Colors.red, Colors.blue],
+                                  dashGapRadius: 0.0,
+                                ),
+                              ),
+                            ),
+                          ),
+                          const SizedBox(height: 20),
+                          Row(
+                            children: [
+                              Padding(
+                                padding: const EdgeInsets.symmetric(
+                                    horizontal: 4.0, vertical: 10),
+                                child: FancyContainer(
+                                  radius: 20,
+                                  // height: 217,
+                                  isContinousBorder: false,
+
+                                  nulledAlign: true,
+                                  backgroundColor: getFigmaColor("f3f3f4"),
+                                  child: Padding(
+                                    padding: const EdgeInsets.symmetric(
+                                        horizontal: 4.0, vertical: 10),
+                                    child: Column(
+                                      mainAxisSize: MainAxisSize.min,
+                                      children: [
+                                        Icon(
+                                          Icons.timer,
+                                          size: 15,
+                                        ),
+                                        SizedBox(height: 5),
+                                        FancyText("13:00",
+                                            rawTextStyle: GoogleFonts.workSans(
+                                              fontSize: 14,
+                                              fontWeight: FontWeight.w700,
+                                            )
+                                            // textColor: getFigmaColor("676C75"),
+                                            ),
+                                      ],
+                                    ),
+                                  ),
+                                ),
+                              ),
+                              Expanded(
+                                child: FittedBox(
+                                  child: FancyContainer(
+                                    radius: 40,
+                                    // height: 217,
+                                    nulledAlign: true,
+                                    backgroundColor: getFigmaColor("f3f3f4"),
+                                    child: Padding(
+                                      padding: const EdgeInsets.all(8.0),
+                                      child: Column(
+                                        mainAxisAlignment:
+                                            MainAxisAlignment.center,
+                                        mainAxisSize: MainAxisSize.min,
+                                        children: [
+                                          Row(
+                                            children: [
+                                              FancyContainer(
+                                                height: 30,
+                                                width: 30,
+                                                radius: 30,
+                                                isContinousBorder: false,
+                                                child: Image.asset(
+                                                    "assets/images/maleCommentatorImage.png"),
+                                              ),
+                                              const SizedBox(width: 10),
+                                              Column(
+                                                crossAxisAlignment:
+                                                    CrossAxisAlignment.start,
+                                                children: [
+                                                  FancyText("Casca Smith",
+                                                      rawTextStyle:
+                                                          GoogleFonts.workSans(
+                                                        fontSize: 15,
+                                                        fontWeight:
+                                                            FontWeight.w700,
+                                                      )
+                                                      // textColor: getFigmaColor("676C75"),
+                                                      ),
+                                                  const SizedBox(height: 10),
+                                                  _buildIconImage(),
+                                                ],
+                                              ),
+                                            ],
+                                          ),
+                                          const SizedBox(height: 10),
+                                          FancyContainer(
+                                            backgroundColor: Colors.white,
+                                            radius: 6,
+                                            isContinousBorder: false,
+                                            // width: double.infinity,
+                                            child: Padding(
+                                              padding:
+                                                  const EdgeInsets.symmetric(
+                                                      horizontal: 8.0),
+                                              child: FancyText(
+                                                  "Upper Body Full Circuit Session 1",
+                                                  rawTextStyle:
+                                                      GoogleFonts.workSans(
+                                                          fontSize: 14,
+                                                          fontWeight:
+                                                              FontWeight.w700,
+                                                          color: getFigmaColor(
+                                                              "676C75"))
+                                                  // textColor: getFigmaColor("676C75"),
+                                                  ),
+                                            ),
+                                          ),
+                                          const SizedBox(height: 10),
+                                          _buildIconImageDotRepeat()
+                                        ],
+                                      ),
+                                    ),
+                                  ),
+                                ),
+                              ),
+                            ],
+                          ),
+                        ],
                       ),
                     )
                   ],
@@ -110,6 +246,66 @@ class _TestScreenState extends State<TestScreen> {
 // )
           ],
         ));
+  }
+
+  Row _buildIconImageDotRepeat() {
+    return Row(
+      mainAxisAlignment: MainAxisAlignment.center,
+      children: [
+        const SizedBox(width: 5),
+        SizedBox(
+            height: 10,
+            width: 10,
+            child: Image.asset("assets/images/appIcon-calendarFilled.png")),
+        const SizedBox(width: 5),
+        FancyText(
+          "10:25 - 11:35 AM",
+          weight: FontWeight.w500,
+          size: 10,
+          textColor: getFigmaColor("676C75"),
+        ),
+        const SizedBox(width: 5),
+        FancyContainer(
+          height: 5,
+          width: 5,
+
+          // isContinousBorder: false,
+          backgroundColor: getFigmaColor("D7D8D9"),
+        ),
+        const SizedBox(width: 5),
+        SizedBox(
+            height: 10,
+            width: 10,
+            child: Image.asset("assets/images/appIcon-dollar.png")),
+        const SizedBox(width: 5),
+        FancyText(
+          "550 USD",
+          weight: FontWeight.w500,
+          size: 10,
+          textColor: getFigmaColor("676C75"),
+        ),
+      ],
+    );
+  }
+
+  Row _buildIconImage() {
+    return Row(
+      mainAxisAlignment: MainAxisAlignment.center,
+      children: [
+        const SizedBox(width: 5),
+        SizedBox(
+            height: 15,
+            width: 15,
+            child: Image.asset("assets/images/insightIcon-dumbell.png")),
+        const SizedBox(width: 5),
+        FancyText(
+          "Strength/CORE Expert",
+          weight: FontWeight.w500,
+          size: 12,
+          textColor: getFigmaColor("676C75"),
+        ),
+      ],
+    );
   }
 
   SizedBox _buildDateSection() {
