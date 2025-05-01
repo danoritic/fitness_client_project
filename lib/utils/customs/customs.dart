@@ -2,6 +2,7 @@ import 'dart:math';
 
 import 'package:fitness_client_project/utils/customs/fancy_container.dart';
 import 'package:fitness_client_project/utils/helperFunctions.dart';
+import 'package:fitness_client_project/utils/utils.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
@@ -134,7 +135,7 @@ class _RangeSliderWidgetState extends State<RangeSliderWidget> {
       handler: RangeSliderFlutterHandler(
         decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(10),
-          border: Border.all(color: usedAppColor.Colors.white, width: 3),
+          border: Border.all(color: usedAppColor.white, width: 3),
           color: getFigmaColor("F97316"),
           boxShadow: List.filled(
             4,
@@ -150,7 +151,7 @@ class _RangeSliderWidgetState extends State<RangeSliderWidget> {
       rightHandler: RangeSliderFlutterHandler(
         decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(10),
-          border: Border.all(color: usedAppColor.Colors.white, width: 3),
+          border: Border.all(color: usedAppColor.white, width: 3),
           color: getFigmaColor("F97316"),
           boxShadow: List.filled(
             4,
@@ -164,7 +165,7 @@ class _RangeSliderWidgetState extends State<RangeSliderWidget> {
         ),
         foregroundDecoration: BoxDecoration(
           borderRadius: BorderRadius.circular(10),
-          border: Border.all(color: usedAppColor.Colors.white, width: 3),
+          border: Border.all(color: usedAppColor.white, width: 3),
           color: getFigmaColor("F97316"),
         ),
       ),

@@ -1,6 +1,7 @@
 import 'package:fitness_client_project/utils/customs/fancy_container.dart';
 import 'package:fitness_client_project/utils/customs/fancy_text.dart';
 import 'package:fitness_client_project/utils/helperFunctions.dart';
+import 'package:fitness_client_project/utils/utils.dart';
 import 'package:flutter/material.dart';
 // import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -18,7 +19,7 @@ class _CoachingSessionInstructionPageState
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        backgroundColor: usedAppColor.Colors.white,
+        backgroundColor: usedAppColor.white,
         body: Padding(
           padding: const EdgeInsets.all(10.0),
           child: Column(
@@ -80,15 +81,15 @@ class _CoachingSessionInstructionPageState
                             rawTextStyle: GoogleFonts.workSans(
                                 fontSize: 13,
                                 fontWeight: FontWeight.w600,
-                                color: usedAppColor.Colors.white
+                                color: usedAppColor.white
 
                                 //   size: 24,
                                 ),
                           ),
                           const SizedBox(width: 5),
-                          const Icon(
+                          Icon(
                             Icons.call_outlined,
-                            color: usedAppColor.Colors.white,
+                            color: usedAppColor.white,
                             size: 14,
                           ),
                         ]),

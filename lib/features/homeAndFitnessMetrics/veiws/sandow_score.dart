@@ -1,5 +1,6 @@
 import 'dart:math';
 
+import 'package:fitness_client_project/utils/app_variables.dart';
 import 'package:fitness_client_project/utils/customs/customs.dart';
 import 'package:fitness_client_project/utils/customs/fancy_container.dart';
 import 'package:fitness_client_project/utils/customs/fancy_text.dart';
@@ -17,7 +18,7 @@ class SandowScore extends StatelessWidget {
       // appBar: AppBar(
       //   title: const Text('Home Page'),
       // ),
-      backgroundColor: usedAppColors,
+      backgroundColor: usedAppColor.white,
       body: Center(
         child: InkWell(
           onTap: () {
@@ -40,7 +41,7 @@ class SandowScore extends StatelessWidget {
                   padding: const EdgeInsets.only(top: 38.0),
                   child: FancyContainer(
                     height: 50,
-                    backgroundColor: usedAppColor.Colors.white,
+                    backgroundColor: usedAppColor.white,
                     child: Padding(
                       padding: const EdgeInsets.all(8.0),
                       child: Row(
@@ -113,7 +114,7 @@ class SandowScoreDialog extends StatelessWidget {
         children: [
           SizedBox(),
           FancyContainer(
-            backgroundColor: usedAppColor.Colors.white,
+            backgroundColor: usedAppColor.white,
             radius: 60,
             isContinousBorder: true,
             child: AspectRatio(
@@ -180,14 +181,14 @@ class SandowScoreDialog extends StatelessWidget {
                               Text(
                                 'Great, thanks',
                                 style: TextStyle(
-                                  color: usedAppColor.Colors.white,
+                                  color: usedAppColor.white,
                                   fontSize: 16,
                                 ),
                               ),
                               SizedBox(width: 8),
                               Icon(
                                 Icons.check,
-                                color: usedAppColor.Colors.white,
+                                color: usedAppColor.white,
                               ),
                             ],
                           ),

@@ -2,6 +2,7 @@ import 'package:fitness_client_project/utils/customs/customs.dart';
 import 'package:fitness_client_project/utils/customs/fancy_container.dart';
 import 'package:fitness_client_project/utils/customs/fancy_text.dart';
 import 'package:fitness_client_project/utils/helperFunctions.dart';
+import 'package:fitness_client_project/utils/utils.dart';
 import 'package:flutter/material.dart';
 // import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -17,7 +18,7 @@ class _AiSuggesstionPageState extends State<AiSuggesstionPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: usedAppColor.Colors.white,
+      backgroundColor: usedAppColor.white,
       body: SafeArea(
         child: SingleChildScrollView(
           child: Column(
@@ -46,11 +47,11 @@ class _AiSuggesstionPageState extends State<AiSuggesstionPage> {
                           radius: 30,
                           nulledAlign: true,
                           backgroundColor: getFigmaColor("D7D8D9"),
-                          child: const Padding(
+                          child: Padding(
                             padding: EdgeInsets.all(4.0),
                             child: Icon(
                               Icons.question_mark_rounded,
-                              color: usedAppColor.Colors.white,
+                              color: usedAppColor.white,
                             ),
                           ),
                         ),
@@ -143,9 +144,9 @@ class _AiSuggesstionPageState extends State<AiSuggesstionPage> {
                                 borderThickness: 4,
                                 borderColor: getFigmaColor("F3F3F4"),
                                 backgroundColor: color,
-                                child: const Icon(
+                                child: Icon(
                                   Icons.ac_unit_sharp,
-                                  color: usedAppColor.Colors.white,
+                                  color: usedAppColor.white,
                                 )),
                           ),
                           Align(

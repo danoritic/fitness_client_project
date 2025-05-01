@@ -1,6 +1,7 @@
 import 'package:fitness_client_project/utils/customs/fancy_container.dart';
 import 'package:fitness_client_project/utils/customs/fancy_text.dart';
 import 'package:fitness_client_project/utils/helperFunctions.dart';
+import 'package:fitness_client_project/utils/utils.dart';
 import 'package:flutter/material.dart';
 // import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -17,7 +18,7 @@ class _FindingFitnessCoachPageState extends State<FindingFitnessCoachPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: usedAppColor.Colors.white,
+      backgroundColor: usedAppColor.white,
       body: Stack(
         children: [
           Image.asset(
@@ -57,14 +58,14 @@ class _FindingFitnessCoachPageState extends State<FindingFitnessCoachPage> {
                       rawTextStyle: GoogleFonts.workSans(
                         fontSize: 23,
                         fontWeight: FontWeight.bold,
-                        color: usedAppColor.Colors.white,
+                        color: usedAppColor.white,
                       ),
                     ),
                     SizedBox(height: 20),
                     LinearProgressIndicator(
                       value: .5,
                       borderRadius: BorderRadius.circular(20),
-                      color: usedAppColor.Colors.white,
+                      color: usedAppColor.white,
                       backgroundColor: getFigmaColor("f3f3f4", 32),
                     ),
                     SizedBox(height: 20),

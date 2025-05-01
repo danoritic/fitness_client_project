@@ -1,5 +1,6 @@
 import 'package:card_swiper/card_swiper.dart';
 import 'package:cr_calendar/cr_calendar.dart';
+import 'package:fitness_client_project/utils/app_variables.dart';
 import 'package:fitness_client_project/utils/customs/customs.dart';
 import 'package:fitness_client_project/utils/customs/fancy_container.dart';
 import 'package:fitness_client_project/utils/customs/fancy_text.dart';
@@ -157,7 +158,7 @@ class _HydrationDialogState extends State<HydrationDialog> {
                       child: FancyContainer(
                         height: 400,
                         radius: 50,
-                        backgroundColor: usedAppColor.Colors.white,
+                        backgroundColor: usedAppColor.white,
                         child: Padding(
                           padding: const EdgeInsets.all(8.0),
                           child: Column(
@@ -199,12 +200,12 @@ class _HydrationDialogState extends State<HydrationDialog> {
                                     children: [
                                       FancyText(
                                         "Yes, Hydrate",
-                                        textColor: usedAppColor.Colors.white,
+                                        textColor: usedAppColor.white,
                                       ),
                                       const SizedBox(width: 10),
-                                      const Icon(
+                                      Icon(
                                         Icons.check,
-                                        color: usedAppColor.Colors.white,
+                                        color: usedAppColor.white,
                                       )
                                     ],
                                   ),
@@ -258,7 +259,7 @@ class _DrinkWaterScreenState extends State<DrinkWaterScreen> {
     ];
 // swiperController.
     return Scaffold(
-      backgroundColor: usedAppColor.Colors.white,
+      backgroundColor: usedAppColor.white,
       body: SafeArea(
         child: Column(
           children: [
@@ -397,12 +398,12 @@ class _DrinkWaterScreenState extends State<DrinkWaterScreen> {
                   children: [
                     FancyText(
                       "Add Drink",
-                      textColor: usedAppColor.Colors.white,
+                      textColor: usedAppColor.white,
                     ),
                     const SizedBox(width: 10),
-                    const Icon(
+                    Icon(
                       Icons.add,
-                      color: usedAppColor.Colors.white,
+                      color: usedAppColor.white,
                     )
                   ],
                 ),
@@ -449,7 +450,7 @@ class _CascadedBottomSheetState extends State<CascadedBottomSheet> {
                   isContinousBorder: false,
                   borderRadius:
                       const BorderRadius.vertical(top: Radius.circular(20)),
-                  backgroundColor: usedAppColor.Colors.white.withAlpha(50),
+                  backgroundColor: usedAppColor.white.withAlpha(50),
                 ),
               ),
               Padding(
@@ -461,7 +462,7 @@ class _CascadedBottomSheetState extends State<CascadedBottomSheet> {
                   isContinousBorder: false,
                   borderRadius:
                       const BorderRadius.vertical(top: Radius.circular(20)),
-                  backgroundColor: usedAppColor.Colors.white.withAlpha(200),
+                  backgroundColor: usedAppColor.white.withAlpha(200),
                 ),
               ),
               Padding(
@@ -472,7 +473,7 @@ class _CascadedBottomSheetState extends State<CascadedBottomSheet> {
                   isContinousBorder: false,
                   borderRadius:
                       const BorderRadius.vertical(top: Radius.circular(20)),
-                  backgroundColor: usedAppColor.Colors.white,
+                  backgroundColor: usedAppColor.white,
                   child: Padding(
                     padding: const EdgeInsets.all(8.0),
                     child: SingleChildScrollView(
@@ -649,15 +650,14 @@ class _CascadedBottomSheetState extends State<CascadedBottomSheet> {
                                             padding: const EdgeInsets.all(8.0),
                                             child: Row(
                                               children: [
-                                                const Icon(
+                                                Icon(
                                                   Icons.water_drop_sharp,
-                                                  color:
-                                                      usedAppColor.Colors.white,
+                                                  color: usedAppColor.white,
                                                 ),
-                                                const SizedBox(width: 10),
+                                                SizedBox(width: 10),
                                                 FancyText("Calorie",
-                                                    textColor: usedAppColor
-                                                        .Colors.white),
+                                                    textColor:
+                                                        usedAppColor.white),
                                               ],
                                             ),
                                           ),
@@ -680,12 +680,12 @@ class _CascadedBottomSheetState extends State<CascadedBottomSheet> {
                                               children: [
                                                 const Icon(
                                                   Icons.water_drop_sharp,
-                                                  // color:usedAppColor.Colors.white,
+                                                  // color:usedAppColor.white,
                                                 ),
                                                 const SizedBox(width: 10),
                                                 FancyText(
                                                   "Calorie",
-                                                  // textColor:usedAppColor.Colors.white,
+                                                  // textColor:usedAppColor.white,
                                                 ),
                                               ],
                                             ),
@@ -712,12 +712,12 @@ class _CascadedBottomSheetState extends State<CascadedBottomSheet> {
                                   children: [
                                     FancyText(
                                       "Filter Sandow Score (25)",
-                                      textColor: usedAppColor.Colors.white,
+                                      textColor: usedAppColor.white,
                                     ),
                                     const SizedBox(width: 10),
-                                    const Icon(
+                                    Icon(
                                       Icons.tune_rounded,
-                                      color: usedAppColor.Colors.white,
+                                      color: usedAppColor.white,
                                     ),
                                   ],
                                 ),
@@ -759,7 +759,7 @@ class _DateTimeRangableSelectorState extends State<DateTimeRangableSelector> {
             Expanded(
               child: Center(
                 child: FancyContainer(
-                  backgroundColor: usedAppColor.Colors.white,
+                  backgroundColor: usedAppColor.white,
                   radius: 40,
                   // hasBorder: true,
                   height: 420,
@@ -787,8 +787,7 @@ class _DateTimeRangableSelectorState extends State<DateTimeRangableSelector> {
                                           padding: const EdgeInsets.all(6.0),
                                           child: FancyText(
                                             "select",
-                                            textColor:
-                                                usedAppColor.Colors.white,
+                                            textColor: usedAppColor.white,
                                           ),
                                         )),
                                   ),
@@ -917,12 +916,12 @@ class _DateTimeRangableSelectorState extends State<DateTimeRangableSelector> {
               children: [
                 FancyText(
                   properties.date.day.toString(),
-                  textColor: usedAppColor.Colors.white,
+                  textColor: usedAppColor.white,
                 ),
                 FancyContainer(
                   height: 3,
                   width: 3,
-                  backgroundColor: usedAppColor.Colors.white,
+                  backgroundColor: usedAppColor.white,
                 )
               ],
             ),
@@ -992,12 +991,12 @@ class _DateTimeRangableSelectorState extends State<DateTimeRangableSelector> {
                     children: [
                       FancyText(
                         properties.date.day.toString(),
-                        textColor: usedAppColor.Colors.white,
+                        textColor: usedAppColor.white,
                       ),
                       FancyContainer(
                         height: 3,
                         width: 3,
-                        backgroundColor: usedAppColor.Colors.white,
+                        backgroundColor: usedAppColor.white,
                       )
                     ],
                   ),
@@ -1017,12 +1016,12 @@ class _DateTimeRangableSelectorState extends State<DateTimeRangableSelector> {
                     children: [
                       FancyText(
                         properties.date.day.toString(),
-                        textColor: usedAppColor.Colors.white,
+                        textColor: usedAppColor.white,
                       ),
                       FancyContainer(
                         height: 3,
                         width: 3,
-                        backgroundColor: usedAppColor.Colors.white,
+                        backgroundColor: usedAppColor.white,
                       )
                     ],
                   ),
@@ -1056,12 +1055,12 @@ class _DateTimeRangableSelectorState extends State<DateTimeRangableSelector> {
                     children: [
                       FancyText(
                         properties.date.day.toString(),
-                        textColor: usedAppColor.Colors.white,
+                        textColor: usedAppColor.white,
                       ),
                       FancyContainer(
                         height: 3,
                         width: 3,
-                        backgroundColor: usedAppColor.Colors.white,
+                        backgroundColor: usedAppColor.white,
                       )
                     ],
                   ),
@@ -1081,12 +1080,12 @@ class _DateTimeRangableSelectorState extends State<DateTimeRangableSelector> {
                     children: [
                       FancyText(
                         properties.date.day.toString(),
-                        textColor: usedAppColor.Colors.white,
+                        textColor: usedAppColor.white,
                       ),
                       FancyContainer(
                         height: 3,
                         width: 3,
-                        backgroundColor: usedAppColor.Colors.white,
+                        backgroundColor: usedAppColor.white,
                       )
                     ],
                   ),
@@ -1113,7 +1112,7 @@ class _HydrationPageState extends State<HydrationPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        backgroundColor: usedAppColor.Colors.white,
+        backgroundColor: usedAppColor.white,
         body: SafeArea(
           child: Column(
             children: [
@@ -1190,8 +1189,7 @@ class _HydrationPageState extends State<HydrationPage> {
                                         nulledAlign: true,
                                         radius: 15,
                                         isContinousBorder: false,
-                                        backgroundColor:
-                                            usedAppColor.Colors.white,
+                                        backgroundColor: usedAppColor.white,
                                         child: const Padding(
                                           padding: EdgeInsets.all(8.0),
                                           child: Icon(Icons.question_mark),
@@ -1201,8 +1199,7 @@ class _HydrationPageState extends State<HydrationPage> {
                                         radius: 20,
                                         nulledAlign: true,
                                         isContinousBorder: false,
-                                        backgroundColor:
-                                            usedAppColor.Colors.white,
+                                        backgroundColor: usedAppColor.white,
                                         child: const Padding(
                                           padding: EdgeInsets.all(18.0),
                                           child: Icon(
@@ -1217,8 +1214,7 @@ class _HydrationPageState extends State<HydrationPage> {
                                         nulledAlign: true,
                                         radius: 15,
                                         isContinousBorder: false,
-                                        backgroundColor:
-                                            usedAppColor.Colors.white,
+                                        backgroundColor: usedAppColor.white,
                                         child: const Padding(
                                           padding: EdgeInsets.all(8.0),
                                           child: Icon(
@@ -1249,7 +1245,7 @@ Padding buildAppBar(BuildContext context, String title) {
     padding: const EdgeInsets.only(top: 38.0),
     child: FancyContainer(
       height: 50,
-      backgroundColor: usedAppColor.Colors.white,
+      backgroundColor: usedAppColor.white,
       child: Padding(
         padding: const EdgeInsets.all(8.0),
         child: Row(
@@ -1302,7 +1298,7 @@ class _HaydrationFullState extends State<HaydrationFull> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        backgroundColor: usedAppColor.Colors.white,
+        backgroundColor: usedAppColor.white,
         body: SafeArea(
           child: Stack(
             children: [
@@ -1319,13 +1315,13 @@ class _HaydrationFullState extends State<HaydrationFull> {
                       Image.asset(
                         "assets/images/waterDrop.png",
                         height: 30,
-                        color: usedAppColor.Colors.white,
+                        color: usedAppColor.white,
                       ),
                       const SizedBox(width: 10),
                       FancyText(
                         "2,500",
                         weight: FontWeight.w800,
-                        textColor: usedAppColor.Colors.white,
+                        textColor: usedAppColor.white,
                         size: 60,
                       ),
                       const SizedBox(width: 10),
@@ -1336,7 +1332,7 @@ class _HaydrationFullState extends State<HaydrationFull> {
                         rawTextStyle: GoogleFonts.workSans(
                           fontSize: 30,
                           fontWeight: FontWeight.w500,
-                          color: usedAppColor.Colors.white,
+                          color: usedAppColor.white,
                           // color: getFigmaColor("676C75"),
                         ),
                       )
@@ -1348,7 +1344,7 @@ class _HaydrationFullState extends State<HaydrationFull> {
                     rawTextStyle: GoogleFonts.workSans(
                       fontSize: 18,
                       fontWeight: FontWeight.w500,
-                      color: usedAppColor.Colors.white,
+                      color: usedAppColor.white,
                     ),
                   ),
                   const Spacer(),
@@ -1365,7 +1361,7 @@ class _HaydrationFullState extends State<HaydrationFull> {
                             nulledAlign: true,
                             radius: 15,
                             isContinousBorder: false,
-                            backgroundColor: usedAppColor.Colors.white,
+                            backgroundColor: usedAppColor.white,
                             child: const Padding(
                               padding: EdgeInsets.all(8.0),
                               child: Icon(Icons.question_mark),
@@ -1375,7 +1371,7 @@ class _HaydrationFullState extends State<HaydrationFull> {
                             radius: 20,
                             nulledAlign: true,
                             isContinousBorder: false,
-                            backgroundColor: usedAppColor.Colors.white,
+                            backgroundColor: usedAppColor.white,
                             child: const Padding(
                               padding: EdgeInsets.all(18.0),
                               child: Icon(
@@ -1390,7 +1386,7 @@ class _HaydrationFullState extends State<HaydrationFull> {
                             nulledAlign: true,
                             radius: 15,
                             isContinousBorder: false,
-                            backgroundColor: usedAppColor.Colors.white,
+                            backgroundColor: usedAppColor.white,
                             child: const Padding(
                               padding: EdgeInsets.all(8.0),
                               child: Icon(
@@ -1414,7 +1410,7 @@ class _HaydrationFullState extends State<HaydrationFull> {
       padding: const EdgeInsets.only(top: 38.0),
       child: FancyContainer(
         height: 50,
-        // backgroundColor:usedAppColor.Colors.white,
+        // backgroundColor:usedAppColor.white,
         child: Padding(
           padding: const EdgeInsets.all(8.0),
           child: Row(
@@ -1424,8 +1420,8 @@ class _HaydrationFullState extends State<HaydrationFull> {
                 // backgroundColor: Colors.red,
                 child: buildBackArrow(
                   context,
-                  backgroundColor: usedAppColor.Colors.white.withAlpha(50),
-                  iconColor: usedAppColor.Colors.white,
+                  backgroundColor: usedAppColor.white.withAlpha(50),
+                  iconColor: usedAppColor.white,
                 ),
               ),
               Padding(
@@ -1436,7 +1432,7 @@ class _HaydrationFullState extends State<HaydrationFull> {
                   rawTextStyle: GoogleFonts.workSans(
                     fontSize: 15,
                     fontWeight: FontWeight.bold,
-                    color: usedAppColor.Colors.white,
+                    color: usedAppColor.white,
                   ),
                 ),
               ),
@@ -1444,14 +1440,14 @@ class _HaydrationFullState extends State<HaydrationFull> {
                 height: 30,
                 width: 30,
                 radius: 20,
-                backgroundColor: usedAppColor.Colors.white.withAlpha(50),
-                child: const Padding(
+                backgroundColor: usedAppColor.white.withAlpha(50),
+                child: Padding(
                   padding: EdgeInsets.all(4.0),
                   child: Icon(
                     Icons.settings_outlined,
                     weight: .2,
                     size: 15,
-                    color: usedAppColor.Colors.white,
+                    color: usedAppColor.white,
                   ),
                 ),
               ),

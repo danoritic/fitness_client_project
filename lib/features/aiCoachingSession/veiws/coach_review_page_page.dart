@@ -3,6 +3,7 @@ import 'package:fitness_client_project/utils/customs/fancy_container.dart';
 import 'package:fitness_client_project/utils/customs/fancy_text.dart';
 import 'package:fitness_client_project/utils/customs/rater_widget.dart';
 import 'package:fitness_client_project/utils/helperFunctions.dart';
+import 'package:fitness_client_project/utils/utils.dart';
 import 'package:flutter/material.dart';
 // import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -18,7 +19,7 @@ class _CoachReviewPagePageState extends State<CoachReviewPagePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        backgroundColor: usedAppColor.Colors.white,
+        backgroundColor: usedAppColor.white,
         body: Stack(
           // Align
           children: [
@@ -162,12 +163,12 @@ class _CoachReviewPagePageState extends State<CoachReviewPagePage> {
                       children: [
                         FancyText(
                           "Submit Review",
-                          textColor: usedAppColor.Colors.white,
+                          textColor: usedAppColor.white,
                         ),
                         const SizedBox(width: 10),
-                        const Icon(
+                        Icon(
                           Icons.check_rounded,
-                          color: usedAppColor.Colors.white,
+                          color: usedAppColor.white,
                         )
                       ],
                     ),
@@ -184,7 +185,7 @@ class _CoachReviewPagePageState extends State<CoachReviewPagePage> {
       padding: const EdgeInsets.only(top: 0.0),
       child: FancyContainer(
         height: 50,
-        backgroundColor: usedAppColor.Colors.white,
+        backgroundColor: usedAppColor.white,
         child: Padding(
           padding: const EdgeInsets.all(8.0),
           child: Row(

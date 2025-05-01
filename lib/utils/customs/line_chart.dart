@@ -1,5 +1,6 @@
 import 'dart:math';
 
+import 'package:fitness_client_project/utils/utils.dart';
 import 'package:fl_chart/fl_chart.dart';
 // import 'package:fl_chart_app/presentation/resources/app_resources.dart';
 import 'package:flutter/material.dart';
@@ -55,8 +56,8 @@ class _LineChartRawState extends State<LineChartRaw> {
               style: TextStyle(
                 fontSize: 12,
                 color: showAvg
-                    ? usedAppColor.Colors.white.withOpacity(0.5)
-                    : usedAppColor.Colors.white,
+                    ? usedAppColor.white.withOpacity(0.5)
+                    : usedAppColor.white,
               ),
             ),
           ),
@@ -360,8 +361,8 @@ class _LineChartForHeartRateHistoryState
               style: TextStyle(
                 fontSize: 12,
                 color: showAvg
-                    ? usedAppColor.Colors.white.withOpacity(0.5)
-                    : usedAppColor.Colors.white,
+                    ? usedAppColor.white.withOpacity(0.5)
+                    : usedAppColor.white,
               ),
             ),
           ),

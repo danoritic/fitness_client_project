@@ -2,6 +2,7 @@ import 'package:fitness_client_project/utils/customs/customs.dart';
 import 'package:fitness_client_project/utils/customs/fancy_container.dart';
 import 'package:fitness_client_project/utils/customs/fancy_text.dart';
 import 'package:fitness_client_project/utils/helperFunctions.dart';
+import 'package:fitness_client_project/utils/utils.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 // import 'package:get/get.dart';
@@ -21,7 +22,7 @@ class _AiCoachChatPage14ImageSelectionMenuState
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        backgroundColor: usedAppColor.Colors.white,
+        backgroundColor: usedAppColor.white,
         body: SafeArea(
           child: Padding(
             padding: const EdgeInsets.all(8.0),
@@ -62,7 +63,7 @@ class _AiCoachChatPage14ImageSelectionMenuState
                                 setState(() {});
                               },
                               backgroundColor:
-                                  isSelected ? usedAppColor.Colors.white : null,
+                                  isSelected ? usedAppColor.white : null,
                               child: Padding(
                                 padding: const EdgeInsets.symmetric(
                                     horizontal: 10.0),
@@ -138,11 +139,11 @@ class _AiCoachChatPage14ImageSelectionMenuState
                   // width: 50,
                   nulledAlign: true,
                   radius: 40,
-                  child: const Padding(
+                  child: Padding(
                     padding: EdgeInsets.all(18.0),
                     child: Icon(
                       Icons.camera_alt_rounded,
-                      color: usedAppColor.Colors.white,
+                      color: usedAppColor.white,
                     ),
                   ),
                 )
@@ -157,7 +158,7 @@ class _AiCoachChatPage14ImageSelectionMenuState
       padding: const EdgeInsets.only(top: 0.0),
       child: FancyContainer(
         height: 50,
-        backgroundColor: usedAppColor.Colors.white,
+        backgroundColor: usedAppColor.white,
         child: Padding(
           padding: const EdgeInsets.all(8.0),
           child: Row(

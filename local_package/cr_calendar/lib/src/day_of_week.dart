@@ -16,7 +16,7 @@ class DayOfWeek extends StatelessWidget {
           border: Border.symmetric(
             horizontal: BorderSide(color: Colors.black12, width: 0.5),
           ),
-          color: usedAppColor.Colors.white,
+          color: Colors.white,
         ),
         height: 40,
         alignment: Alignment.center,

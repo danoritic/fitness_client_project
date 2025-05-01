@@ -6,7 +6,7 @@ class AppColors {
   Color babbbe = getFigmaColor("babbbe");
   Color f97316 = getFigmaColor("f97316");
   Color _676C75 = getFigmaColor("f97316");
-  Color white = usedAppColor.Colors.white;
+  Color white = Colors.white;
 }
 
 class AppColorsLightVersion extends AppColors {
@@ -19,7 +19,7 @@ class AppColorsLightVersion extends AppColors {
   @override
   Color _676C75 = getFigmaColor("f97316");
   Color D7D8D9 = getFigmaColor("D7D8D9");
-  Color white = usedAppColor.Colors.white;
+  Color white = Colors.white;
 }
 
 class AppColorsDarkVersion extends AppColors {

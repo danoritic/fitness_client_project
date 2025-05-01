@@ -168,7 +168,7 @@ class _GalleryOfScreensState extends State<GalleryOfScreens> {
                         //     padding: const EdgeInsets.all(9.0),
                         //     child: Icon(
                         //       Icons.arrow_back,
-                        //       color:usedAppColor.Colors.white,
+                        //       color:usedAppColor.white,
                         //     ),
                         //   ),
                         // ),
@@ -179,9 +179,8 @@ class _GalleryOfScreensState extends State<GalleryOfScreens> {
                         padding: const EdgeInsets.all(8.0),
                         child: FancyText(
                           isDark ? "lighten" : "darken",
-                          textColor: !isDark
-                              ? usedAppColor.Colors.white
-                              : Colors.black,
+                          textColor:
+                              !isDark ? usedAppColor.white : Colors.black,
                         ),
                       ),
                       action: () {
@@ -190,7 +189,7 @@ class _GalleryOfScreensState extends State<GalleryOfScreens> {
                         setState(() {});
                       },
                       backgroundColor:
-                          isDark ? usedAppColor.Colors.white : Colors.black,
+                          isDark ? usedAppColor.white : Colors.black,
                     ),
                     Expanded(
                       child: FancyContainer(
@@ -211,7 +210,7 @@ class _GalleryOfScreensState extends State<GalleryOfScreens> {
                         //     padding: const EdgeInsets.all(9.0),
                         //     child: Icon(
                         //       Icons.arrow_forward,
-                        //       color:usedAppColor.Colors.white,
+                        //       color:usedAppColor.white,
                         //     ),
                         //   ),
                         // ),

@@ -25,7 +25,7 @@ final class DatePickerProperties {
   const DatePickerProperties({
     required this.onDateRangeSelected,
     this.weekDaysBuilder,
-    this.backgroundColor = usedAppColor.Colors.white,
+    this.backgroundColor = Colors.white,
     this.initialPickerDate,
     this.padding = const EdgeInsets.all(8),
     this.dayItemBuilder,

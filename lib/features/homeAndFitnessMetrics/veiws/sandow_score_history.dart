@@ -33,7 +33,7 @@ class _SandowScoreHistoryState extends State<SandowScoreHistory> {
             ),
           ),
         ),
-        backgroundColor: usedAppColor.Colors.white,
+        backgroundColor: usedAppColor.white,
         //  Colors.grey[300],
 
         body: Padding(

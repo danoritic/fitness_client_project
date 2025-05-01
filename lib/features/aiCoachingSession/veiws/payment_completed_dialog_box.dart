@@ -29,7 +29,7 @@ class _PaymentCompletedDialogBoxState extends State<PaymentCompletedDialogBox> {
                       child: FancyContainer(
                         height: 350,
                         radius: 50,
-                        backgroundColor: usedAppColor.Colors.white,
+                        backgroundColor: usedAppColor.white,
                         child: Padding(
                           padding: const EdgeInsets.all(8.0),
                           child: Column(
@@ -73,12 +73,12 @@ class _PaymentCompletedDialogBoxState extends State<PaymentCompletedDialogBox> {
                                     children: [
                                       FancyText(
                                         "Complete",
-                                        textColor: usedAppColor.Colors.white,
+                                        textColor: usedAppColor.white,
                                       ),
                                       const SizedBox(width: 10),
                                       const Icon(
                                         Icons.check,
-                                        color: usedAppColor.Colors.white,
+                                        color: usedAppColor.white,
                                       )
                                     ],
                                   ),

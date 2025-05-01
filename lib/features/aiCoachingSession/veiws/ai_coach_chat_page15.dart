@@ -1,5 +1,6 @@
 import 'package:fitness_client_project/utils/customs/fancy_container.dart';
 import 'package:fitness_client_project/utils/customs/fancy_text.dart';
+import 'package:fitness_client_project/utils/utils.dart';
 import 'package:flutter/material.dart';
 // import 'package:get/get.dart';
 
@@ -78,7 +79,7 @@ class _AiCoachChatPage15ImageScanState
                         height: 110,
                         width: 85,
                         radius: 40,
-                        backgroundColor: usedAppColor.Colors.white,
+                        backgroundColor: usedAppColor.white,
                         shadows: List.filled(
                           4,
                           BoxShadow(
@@ -115,7 +116,7 @@ class _AiCoachChatPage15ImageScanState
                         height: 110,
                         width: 85,
                         radius: 40,
-                        backgroundColor: usedAppColor.Colors.white,
+                        backgroundColor: usedAppColor.white,
                         shadows: List.filled(
                           4,
                           BoxShadow(
@@ -168,7 +169,7 @@ class _AiCoachChatPage15ImageScanState
                             width: 50,
                             radius: 15,
                             isContinousBorder: false,
-                            backgroundColor: usedAppColor.Colors.white,
+                            backgroundColor: usedAppColor.white,
                             shadows: List.filled(
                               4,
                               BoxShadow(
@@ -191,7 +192,7 @@ class _AiCoachChatPage15ImageScanState
                             width: 70,
                             radius: 22,
                             isContinousBorder: false,
-                            backgroundColor: usedAppColor.Colors.white,
+                            backgroundColor: usedAppColor.white,
                             shadows: List.filled(
                               4,
                               BoxShadow(
@@ -214,7 +215,7 @@ class _AiCoachChatPage15ImageScanState
                             width: 50,
                             radius: 15,
                             isContinousBorder: false,
-                            backgroundColor: usedAppColor.Colors.white,
+                            backgroundColor: usedAppColor.white,
                             shadows: List.filled(
                               4,
                               BoxShadow(
@@ -239,7 +240,7 @@ class _AiCoachChatPage15ImageScanState
             // Center(child: Image.asset("assets/images/scanImage.png")
             //     //  Icon(
             //     //   Icons.document_scanner_rounded,
-            //     //   color:usedAppColor.Colors.white,
+            //     //   color:usedAppColor.white,
             //     //   size: 220,
             //     // ),
             //     )

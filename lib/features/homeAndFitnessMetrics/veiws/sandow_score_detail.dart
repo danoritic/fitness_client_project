@@ -2,6 +2,7 @@ import 'dart:math';
 
 import 'package:fitness_client_project/features/aiCoachingSession/widgets/score_card.dart';
 import 'package:fitness_client_project/features/homeAndFitnessMetrics/veiws/sandow_score.dart';
+import 'package:fitness_client_project/utils/app_variables.dart';
 import 'package:fitness_client_project/utils/customs/customs.dart';
 
 import 'package:fitness_client_project/utils/customs/fancy_container.dart';
@@ -61,7 +62,7 @@ class _SandowScoreDetailState extends State<SandowScoreDetail> {
         appBar: AppBar(
           leading: buildBackArrow(context),
           elevation: 0,
-          backgroundColor: usedAppColor.Colors.white,
+          backgroundColor: usedAppColor.white,
           title: Padding(
             padding: const EdgeInsets.all(8.0),
             child: FancyText(
@@ -73,7 +74,7 @@ class _SandowScoreDetailState extends State<SandowScoreDetail> {
             ),
           ),
         ),
-        backgroundColor: usedAppColor.Colors.white,
+        backgroundColor: usedAppColor.white,
         //  Colors.grey[300],
 
         body: Padding(
@@ -381,7 +382,7 @@ class _SandowScoreDetailState extends State<SandowScoreDetail> {
                     height: 100.w,
                     width: 100.w,
                     radius: 700,
-                    backgroundColor: usedAppColor.Colors.white,
+                    backgroundColor: usedAppColor.white,
                     child: Padding(
                       padding: const EdgeInsets.all(18.0),
                       child: Column(
@@ -432,7 +433,7 @@ class _SandowScoreDetailState extends State<SandowScoreDetail> {
               backgroundColor: Colors.black,
               child: FancyText(
                 "See AI Recommendations",
-                textColor: usedAppColor.Colors.white,
+                textColor: usedAppColor.white,
               ),
             )
           ],

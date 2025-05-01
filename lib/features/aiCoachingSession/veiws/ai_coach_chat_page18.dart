@@ -45,7 +45,7 @@ class _AiCoachChatPage18State extends State<AiCoachChatPage18> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: usedAppColor.Colors.white,
+      backgroundColor: usedAppColor.white,
       body: SafeArea(
         child: Padding(
           padding: const EdgeInsets.all(8.0),
@@ -104,7 +104,7 @@ class _AiCoachChatPage18State extends State<AiCoachChatPage18> {
                         selectedMenuItemBuilder: (context, child) {
                           return FancyContainer(
                             // height: 30,
-                            backgroundColor: usedAppColor.Colors.white,
+                            backgroundColor: usedAppColor.white,
                             child: child,
                           );
                         },
@@ -163,11 +163,11 @@ class _AiCoachChatPage18State extends State<AiCoachChatPage18> {
                             FancyText(
                               "Continue",
                               // size: 16,
-                              // textColor:usedAppColor.Colors.white,
+                              // textColor:usedAppColor.white,
                               rawTextStyle: GoogleFonts.workSans(
                                 fontSize: 16,
                                 fontWeight: FontWeight.w600,
-                                color: usedAppColor.Colors.white,
+                                color: usedAppColor.white,
                               ),
                             ),
                             const SizedBox(width: 7),

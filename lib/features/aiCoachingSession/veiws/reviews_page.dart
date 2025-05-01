@@ -3,6 +3,7 @@ import 'package:fitness_client_project/utils/customs/fancy_container.dart';
 import 'package:fitness_client_project/utils/customs/fancy_text.dart';
 import 'package:fitness_client_project/utils/customs/rating_widget.dart';
 import 'package:fitness_client_project/utils/helperFunctions.dart';
+import 'package:fitness_client_project/utils/utils.dart';
 import 'package:flutter/material.dart';
 // import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -19,7 +20,7 @@ class _ReviewsPageState extends State<ReviewsPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        backgroundColor: usedAppColor.Colors.white,
+        backgroundColor: usedAppColor.white,
         body: Padding(
           padding: const EdgeInsets.all(10.0),
           child: SingleChildScrollView(
@@ -170,8 +171,7 @@ class _ReviewsPageState extends State<ReviewsPage> {
                     tabName = e;
                     setState(() {});
                   },
-                  backgroundColor:
-                      isSelected ? usedAppColor.Colors.white : null,
+                  backgroundColor: isSelected ? usedAppColor.white : null,
                   child: Padding(
                     padding: const EdgeInsets.symmetric(horizontal: 10.0),
                     child: FancyText(
@@ -195,7 +195,7 @@ class _ReviewsPageState extends State<ReviewsPage> {
       padding: const EdgeInsets.only(top: 0.0),
       child: FancyContainer(
         height: 50,
-        backgroundColor: usedAppColor.Colors.white,
+        backgroundColor: usedAppColor.white,
         child: Padding(
           padding: const EdgeInsets.all(8.0),
           child: Row(

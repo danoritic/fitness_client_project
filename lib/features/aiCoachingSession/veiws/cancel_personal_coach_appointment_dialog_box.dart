@@ -30,7 +30,7 @@ class _CancelPersonalCoachAppointmentDialogBoxState
                       child: FancyContainer(
                         height: 420,
                         radius: 50,
-                        backgroundColor: usedAppColor.Colors.white,
+                        backgroundColor: usedAppColor.white,
                         child: Padding(
                           padding: const EdgeInsets.all(8.0),
                           child: Column(
@@ -109,12 +109,12 @@ class _CancelPersonalCoachAppointmentDialogBoxState
                                     children: [
                                       FancyText(
                                         "Yes, Cancel",
-                                        textColor: usedAppColor.Colors.white,
+                                        textColor: usedAppColor.white,
                                       ),
                                       const SizedBox(width: 10),
                                       const Icon(
                                         Icons.check,
-                                        color: usedAppColor.Colors.white,
+                                        color: usedAppColor.white,
                                       )
                                     ],
                                   ),

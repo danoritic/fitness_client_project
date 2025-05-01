@@ -20,7 +20,7 @@ class _CoachSelectionPageState extends State<CoachSelectionPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: usedAppColor.Colors.white,
+      backgroundColor: usedAppColor.white,
       body: Stack(
         children: [
           PageView(
@@ -36,9 +36,9 @@ class _CoachSelectionPageState extends State<CoachSelectionPage> {
               height: MediaQuery.of(context).size.height * .5,
               gradient: LinearGradient(
                 colors: [
-                  usedAppColor.Colors.white,
-                  usedAppColor.Colors.white,
-                  usedAppColor.Colors.white.withAlpha(0),
+                  usedAppColor.white,
+                  usedAppColor.white,
+                  usedAppColor.white.withAlpha(0),
                 ],
                 begin: Alignment.bottomCenter,
                 end: Alignment.topCenter,
@@ -137,9 +137,8 @@ class _CoachSelectionPageState extends State<CoachSelectionPage> {
                                   tabName = e;
                                   setState(() {});
                                 },
-                                backgroundColor: isSelected
-                                    ? usedAppColor.Colors.white
-                                    : null,
+                                backgroundColor:
+                                    isSelected ? usedAppColor.white : null,
                                 child: Padding(
                                   padding: const EdgeInsets.symmetric(
                                       horizontal: 10.0),
@@ -203,7 +202,7 @@ class _CoachSelectionPageState extends State<CoachSelectionPage> {
                     padding: const EdgeInsets.all(8.0),
                     child: Icon(
                       Icons.add,
-                      color: usedAppColor.Colors.white,
+                      color: usedAppColor.white,
                     ),
                   ),
                   backgroundColor: getFigmaColor("F97316"),

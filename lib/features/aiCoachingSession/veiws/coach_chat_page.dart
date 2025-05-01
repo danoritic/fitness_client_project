@@ -94,8 +94,7 @@ class _CoachChatPageState extends State<CoachChatPage> {
                         rawTextStyle: GoogleFonts.workSans(
                           fontSize: 10,
                           fontWeight: FontWeight.w400,
-                          color:
-                              isMine ? usedAppColor.Colors.white : Colors.black,
+                          color: isMine ? usedAppColor.white : Colors.black,
                           // weight: FontWeight.bold,
                           //   size: 24,
                         ),
@@ -138,7 +137,7 @@ class _CoachChatPageState extends State<CoachChatPage> {
           )),
           FancyContainer(
             // height: 30,
-            backgroundColor: usedAppColor.Colors.white,
+            backgroundColor: usedAppColor.white,
             borderRadius: const BorderRadius.vertical(top: Radius.circular(50)),
             child: Padding(
               padding: const EdgeInsets.all(8.0),
@@ -212,7 +211,7 @@ class _CoachChatPageState extends State<CoachChatPage> {
       padding: const EdgeInsets.only(top: 0.0),
       child: FancyContainer(
         // height: 50,
-        backgroundColor: usedAppColor.Colors.white,
+        backgroundColor: usedAppColor.white,
         child: Padding(
           padding: const EdgeInsets.all(8.0),
           child: Row(

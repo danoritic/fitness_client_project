@@ -18,7 +18,7 @@ class _UpcomingCoachFitnessTrainingPageState
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        backgroundColor: usedAppColor.Colors.white,
+        backgroundColor: usedAppColor.white,
         body: Padding(
           padding: const EdgeInsets.all(8.0),
           child: Column(
@@ -26,7 +26,7 @@ class _UpcomingCoachFitnessTrainingPageState
             children: [
               FancyContainer(
                 radius: 50,
-                backgroundColor: usedAppColor.Colors.white,
+                backgroundColor: usedAppColor.white,
                 child: Column(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
@@ -98,7 +98,7 @@ class _UpcomingCoachFitnessTrainingPageState
                       ),
                       const SizedBox(height: 10),
                       FancyContainer(
-                        backgroundColor: usedAppColor.Colors.white,
+                        backgroundColor: usedAppColor.white,
                         radius: 6,
                         isContinousBorder: false,
                         child: FancyText(
@@ -125,7 +125,7 @@ class _UpcomingCoachFitnessTrainingPageState
                   "Strength Expert",
                   weight: FontWeight.w800,
                   size: 16,
-                  textColor: usedAppColor.Colors.white,
+                  textColor: usedAppColor.white,
                 ),
               )
             ],

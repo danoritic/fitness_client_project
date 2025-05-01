@@ -1,6 +1,7 @@
 import 'package:fitness_client_project/utils/customs/fancy_container.dart';
 import 'package:fitness_client_project/utils/customs/fancy_text.dart';
 import 'package:fitness_client_project/utils/helperFunctions.dart';
+import 'package:fitness_client_project/utils/utils.dart';
 import 'package:flutter/material.dart';
 
 class RatingWidget extends StatefulWidget {
@@ -86,13 +87,13 @@ class _RatingWidgetState extends State<RatingWidget> {
                       FancyText(
                         "4.8",
                         size: 36,
-                        textColor: usedAppColor.Colors.white,
+                        textColor: usedAppColor.white,
                         weight: FontWeight.w900,
                       ),
                       FancyText(
                         "87 Reviews",
                         size: 12,
-                        textColor: usedAppColor.Colors.white,
+                        textColor: usedAppColor.white,
                         weight: FontWeight.w900,
                       ),
                     ],
@@ -110,7 +111,7 @@ class _RatingWidgetState extends State<RatingWidget> {
                           children: [
                             FancyText(
                               "$key",
-                              textColor: usedAppColor.Colors.white,
+                              textColor: usedAppColor.white,
                               weight: FontWeight.w900,
                             ),
                             Icon(
@@ -152,7 +153,7 @@ class _RatingWidgetState extends State<RatingWidget> {
             height: widget.height ?? 6,
             width: (percentage / 100) * (widget.maxwidth ?? 120),
             backgroundColor:
-                (widget.fillWidget == null) ? usedAppColor.Colors.white : null,
+                (widget.fillWidget == null) ? usedAppColor.white : null,
             child: (widget.fillWidget == null)
                 ? null
                 : Expanded(child: widget.fillWidget!),

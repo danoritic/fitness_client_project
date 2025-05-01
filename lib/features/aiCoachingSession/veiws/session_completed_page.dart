@@ -1,6 +1,7 @@
 import 'package:fitness_client_project/utils/customs/fancy_container.dart';
 import 'package:fitness_client_project/utils/customs/fancy_text.dart';
 import 'package:fitness_client_project/utils/helperFunctions.dart';
+import 'package:fitness_client_project/utils/utils.dart';
 import 'package:flutter/material.dart';
 // import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -16,7 +17,7 @@ class _SessionCompletedPageState extends State<SessionCompletedPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: usedAppColor.Colors.white,
+      backgroundColor: usedAppColor.white,
       body: Container(
         // color: Colors.red,
         child: Center(
@@ -74,18 +75,18 @@ class _SessionCompletedPageState extends State<SessionCompletedPage> {
                           FancyText(
                             "Great, Thanks!",
                             // size: 16,
-                            // textColor:usedAppColor.Colors.white,
+                            // textColor:usedAppColor.white,
                             rawTextStyle: GoogleFonts.workSans(
                               fontSize: 16,
                               fontWeight: FontWeight.w600,
-                              color: usedAppColor.Colors.white,
+                              color: usedAppColor.white,
                             ),
                           ),
                           const SizedBox(width: 7),
-                          const SizedBox(
+                          SizedBox(
                               width: 20,
                               child: Icon(Icons.check_rounded,
-                                  color: usedAppColor.Colors.white)),
+                                  color: usedAppColor.white)),
                         ],
                       ),
                     ),
@@ -110,11 +111,11 @@ class _SessionCompletedPageState extends State<SessionCompletedPage> {
                           FancyText(
                             "Repeat Session",
                             // size: 16,
-                            // textColor:usedAppColor.Colors.white,
+                            // textColor:usedAppColor.white,
                             rawTextStyle: GoogleFonts.workSans(
                               fontSize: 16,
                               fontWeight: FontWeight.w600,
-                              // color:usedAppColor.Colors.white,
+                              // color:usedAppColor.white,
                             ),
                           ),
                           const SizedBox(width: 7),
@@ -122,7 +123,7 @@ class _SessionCompletedPageState extends State<SessionCompletedPage> {
                             width: 20,
                             child: Icon(
                               Icons.repeat_rounded,
-                              // color:usedAppColor.Colors.white,
+                              // color:usedAppColor.white,
                             ),
                           ),
                         ],

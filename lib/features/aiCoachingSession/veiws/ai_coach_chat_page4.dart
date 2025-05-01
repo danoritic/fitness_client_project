@@ -3,6 +3,7 @@ import 'package:dropdown_button2/dropdown_button2.dart';
 import 'package:fitness_client_project/utils/customs/fancy_container.dart';
 import 'package:fitness_client_project/utils/customs/fancy_text.dart';
 import 'package:fitness_client_project/utils/helperFunctions.dart';
+import 'package:fitness_client_project/utils/utils.dart';
 import 'package:flutter/material.dart';
 // import 'package:get/get.dart';
 
@@ -19,7 +20,7 @@ class _AiCoachChatPage4State extends State<AiCoachChatPage4> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: usedAppColor.Colors.white,
+      backgroundColor: usedAppColor.white,
       body: SafeArea(
         child: Padding(
           padding: const EdgeInsets.all(8.0),
@@ -60,7 +61,7 @@ class _AiCoachChatPage4State extends State<AiCoachChatPage4> {
                         selectedMenuItemBuilder: (context, child) {
                           return FancyContainer(
                             // height: 30,
-                            backgroundColor: usedAppColor.Colors.white,
+                            backgroundColor: usedAppColor.white,
                             child: child,
                           );
                         },
@@ -129,7 +130,7 @@ class _AiCoachChatPage4State extends State<AiCoachChatPage4> {
                                 },
                                 backgroundColor: selectedBodyPart != e
                                     ? getFigmaColor("F3F3F4")
-                                    : usedAppColor.Colors.white,
+                                    : usedAppColor.white,
                                 // height: 40,
                                 // nulledAlign: true,
 

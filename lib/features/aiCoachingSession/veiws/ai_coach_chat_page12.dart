@@ -6,6 +6,7 @@ import 'package:fitness_client_project/utils/customs/customs.dart';
 import 'package:fitness_client_project/utils/customs/fancy_container.dart';
 import 'package:fitness_client_project/utils/customs/fancy_text.dart';
 import 'package:fitness_client_project/utils/helperFunctions.dart';
+import 'package:fitness_client_project/utils/utils.dart';
 import 'package:flutter/material.dart';
 // import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -45,7 +46,7 @@ class _AiCoachChatPage12State extends State<AiCoachChatPage12> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: usedAppColor.Colors.white,
+      backgroundColor: usedAppColor.white,
       body: SafeArea(
         child: Padding(
           padding: const EdgeInsets.all(8.0),
@@ -97,7 +98,7 @@ class _AiCoachChatPage12State extends State<AiCoachChatPage12> {
                             selectibles[index],
                             weight: FontWeight.bold,
                             textColor: isSelected
-                                ? usedAppColor.Colors.white
+                                ? usedAppColor.white
                                 : getFigmaColor("313A34"),
                           ),
                         ),
@@ -126,7 +127,7 @@ class _AiCoachChatPage12State extends State<AiCoachChatPage12> {
                         selectedMenuItemBuilder: (context, child) {
                           return FancyContainer(
                             // height: 30,
-                            backgroundColor: usedAppColor.Colors.white,
+                            backgroundColor: usedAppColor.white,
                             child: child,
                           );
                         },
@@ -185,11 +186,11 @@ class _AiCoachChatPage12State extends State<AiCoachChatPage12> {
                             FancyText(
                               "Continue",
                               // size: 16,
-                              // textColor:usedAppColor.Colors.white,
+                              // textColor:usedAppColor.white,
                               rawTextStyle: GoogleFonts.workSans(
                                 fontSize: 16,
                                 fontWeight: FontWeight.w600,
-                                color: usedAppColor.Colors.white,
+                                color: usedAppColor.white,
                               ),
                             ),
                             const SizedBox(width: 7),

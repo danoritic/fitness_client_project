@@ -99,9 +99,7 @@ class _YearPickerWidgetState extends State<YearPickerWidget> {
                 child: Text(
                   '$year',
                   style: TextStyle(
-                    color: _isPicked(year)
-                        ? usedAppColor.Colors.white
-                        : Colors.black87,
+                    color: _isPicked(year) ? Colors.white : Colors.black87,
                   ),
                 ),
               ),

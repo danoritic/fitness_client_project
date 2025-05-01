@@ -18,7 +18,7 @@ class _HeartRateHistoryPageState extends State<HeartRateHistoryPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: usedAppColor.Colors.white,
+      backgroundColor: usedAppColor.white,
       body: SafeArea(
         child: Padding(
           padding: const EdgeInsets.all(8.0),
@@ -150,7 +150,7 @@ class _HeartRateHistoryPageState extends State<HeartRateHistoryPage> {
       padding: const EdgeInsets.only(top: 38.0),
       child: FancyContainer(
         height: 50,
-        backgroundColor: usedAppColor.Colors.white,
+        backgroundColor: usedAppColor.white,
         child: Padding(
           padding: const EdgeInsets.all(8.0),
           child: Row(

@@ -65,7 +65,7 @@ class _ReactionPageState extends State<ReactionPage> {
                 rawTextStyle: GoogleFonts.workSans(
                   fontSize: 22,
                   fontWeight: FontWeight.bold,
-                  color: usedAppColor.Colors.white,
+                  color: usedAppColor.white,
                 ),
               ),
             ),
@@ -100,8 +100,8 @@ class _ReactionPageState extends State<ReactionPage> {
                               child: Image.asset(
                                 reactionsList[index]['image'],
                                 color: (index == focussedReaction)
-                                    ? usedAppColor.Colors.white
-                                    : usedAppColor.Colors.white.withAlpha(100),
+                                    ? usedAppColor.white
+                                    : usedAppColor.white.withAlpha(100),
                               ),
                             ),
                           ));
@@ -116,7 +116,7 @@ class _ReactionPageState extends State<ReactionPage> {
             const SizedBox(height: 30),
             FancyText(
               "${reactionsList[focussedReaction]['message']}",
-              textColor: usedAppColor.Colors.white,
+              textColor: usedAppColor.white,
             ),
             const SizedBox(height: 20),
             Padding(
@@ -126,7 +126,7 @@ class _ReactionPageState extends State<ReactionPage> {
                 isContinousBorder: false,
                 radius: 14,
                 width: double.infinity,
-                backgroundColor: usedAppColor.Colors.white,
+                backgroundColor: usedAppColor.white,
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [

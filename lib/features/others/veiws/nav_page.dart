@@ -4,6 +4,7 @@ import 'package:fitness_client_project/features/homeAndFitnessMetrics/veiws/sand
 import 'package:fitness_client_project/features/homeAndFitnessMetrics/veiws/sandow_score_history.dart';
 import 'package:fitness_client_project/features/homeAndFitnessMetrics/veiws/homepage.dart';
 import 'package:fitness_client_project/features/homeAndFitnessMetrics/veiws/sandow_score.dart';
+import 'package:fitness_client_project/utils/utils.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/scheduler.dart';
 
@@ -18,11 +19,11 @@ class _NavPageState extends State<NavPage> {
   int currentIndex = 0;
   List<Widget> pages = [
     // SandowScoreHistory(),
-    HomePage(),
-    SandowScore(),
-    SandowScoreHistory(),
-    SandowScoreDetail(),
-    Scaffold(
+    const HomePage(),
+    const SandowScore(),
+    const SandowScoreHistory(),
+    const SandowScoreDetail(),
+    const Scaffold(
       body: Center(
         child: Text("Profile"),
       ),
@@ -42,28 +43,28 @@ class _NavPageState extends State<NavPage> {
   @override
   Widget build(BuildContext context) {
     List<TabItem> items = [
-      TabItem(
+      const TabItem(
         icon: Icons.home_rounded,
       ),
-      TabItem(
+      const TabItem(
 
           // icon: ImageIcon(Image.asset("coffee.png").image),
           icon: Icons.fitness_center_rounded
           // title: 'Shop',
           ),
-      TabItem(
+      const TabItem(
 
           // icon: ImageIcon(Image.asset("coffee.png").image),
           icon: Icons.add
           // title: 'Shop',
           ),
-      TabItem(
+      const TabItem(
 
           // icon: ImageIcon(Image.asset("coffee.png").image),
           icon: Icons.restaurant_rounded
           // title: 'Shop',
           ),
-      TabItem(
+      const TabItem(
 
           // icon: ImageIcon(Image.asset("coffee.png").image),
           icon: Icons.person_rounded
@@ -100,7 +101,7 @@ class _NavPageState extends State<NavPage> {
               child: BottomBarInspiredOutside(
                 items: items,
                 // backgroundColor: Colors.transparent,
-                backgroundColor: usedAppColor.Colors.white,
+                backgroundColor: usedAppColor.white,
                 // .faintGreen,
 
                 color: Colors.grey,
@@ -135,7 +136,7 @@ class _NavPageState extends State<NavPage> {
       //     child: BottomBarInspiredOutside(
       //       items: items,
       //       // backgroundColor: Colors.transparent,
-      //       backgroundColor:usedAppColor.Colors.white,
+      //       backgroundColor:usedAppColor.white,
       //       // .faintGreen,
 
       //       color: Colors.grey,
@@ -153,7 +154,7 @@ class _NavPageState extends State<NavPage> {
       //           convexBridge: false,
       //           drawHexagon: true,
       //           isHexagon: false,
-      //           background:usedAppColor.Colors.white,
+      //           background:usedAppColor.white,
       //           color: Colors.red),
       //       itemStyle: ItemStyle.hexagon,
       //       animated: true,
