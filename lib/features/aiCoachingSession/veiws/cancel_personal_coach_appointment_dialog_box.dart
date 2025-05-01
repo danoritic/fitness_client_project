@@ -1,3 +1,4 @@
+import 'package:fitness_client_project/utils/utils.dart';
 import 'package:fitness_client_project/utils/customs/fancy_container.dart';
 import 'package:fitness_client_project/utils/customs/fancy_text.dart';
 import 'package:fitness_client_project/utils/helperFunctions.dart';
@@ -6,7 +7,7 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 class CancelPersonalCoachAppointmentDialogBox extends StatefulWidget {
-  const CancelPersonalCoachAppointmentDialogBox({super.key});
+  CancelPersonalCoachAppointmentDialogBox({super.key});
 
   @override
   State<CancelPersonalCoachAppointmentDialogBox> createState() =>
@@ -26,13 +27,13 @@ class _CancelPersonalCoachAppointmentDialogBoxState
                 Expanded(
                   child: Center(
                     child: Padding(
-                      padding: const EdgeInsets.all(12.0),
+                      padding: EdgeInsets.all(12.0),
                       child: FancyContainer(
                         height: 420,
                         radius: 50,
                         backgroundColor: usedAppColor.white,
                         child: Padding(
-                          padding: const EdgeInsets.all(8.0),
+                          padding: EdgeInsets.all(8.0),
                           child: Column(
                             mainAxisAlignment: MainAxisAlignment.spaceBetween,
                             children: [
@@ -57,7 +58,7 @@ class _CancelPersonalCoachAppointmentDialogBoxState
                                       //   textAlign: TextAlign.center,
                                     )),
                               ),
-                              const SizedBox(height: 5),
+                              SizedBox(height: 5),
                               FancyText(
                                 "There will be no refundable fee! Are you absolutely sure? 😡",
                                 textAlign: TextAlign.center,
@@ -68,10 +69,9 @@ class _CancelPersonalCoachAppointmentDialogBoxState
                                   //   size: 24,
                                 ),
                               ),
-                              const SizedBox(height: 5),
+                              SizedBox(height: 5),
                               Padding(
-                                padding:
-                                    const EdgeInsets.symmetric(horizontal: 8.0),
+                                padding: EdgeInsets.symmetric(horizontal: 8.0),
                                 child: FancyContainer(
                                   height: 45,
                                   isContinousBorder: false,
@@ -85,7 +85,7 @@ class _CancelPersonalCoachAppointmentDialogBoxState
                                         "No, Don’t Cancel",
                                         textColor: getFigmaColor("EF4444"),
                                       ),
-                                      const SizedBox(width: 10),
+                                      SizedBox(width: 10),
                                       Icon(
                                         Icons.close,
                                         color: getFigmaColor("EF4444"),
@@ -94,10 +94,9 @@ class _CancelPersonalCoachAppointmentDialogBoxState
                                   ),
                                 ),
                               ),
-                              const SizedBox(height: 5),
+                              SizedBox(height: 5),
                               Padding(
-                                padding:
-                                    const EdgeInsets.symmetric(horizontal: 8.0),
+                                padding: EdgeInsets.symmetric(horizontal: 8.0),
                                 child: FancyContainer(
                                   height: 45,
                                   isContinousBorder: false,
@@ -111,8 +110,8 @@ class _CancelPersonalCoachAppointmentDialogBoxState
                                         "Yes, Cancel",
                                         textColor: usedAppColor.white,
                                       ),
-                                      const SizedBox(width: 10),
-                                      const Icon(
+                                      SizedBox(width: 10),
+                                      Icon(
                                         Icons.check,
                                         color: usedAppColor.white,
                                       )
@@ -120,7 +119,7 @@ class _CancelPersonalCoachAppointmentDialogBoxState
                                   ),
                                 ),
                               ),
-                              const SizedBox(height: 5),
+                              SizedBox(height: 5),
                             ],
                           ),
                         ),
@@ -129,13 +128,13 @@ class _CancelPersonalCoachAppointmentDialogBoxState
                   ),
                 ),
                 Padding(
-                  padding: const EdgeInsets.all(18.0),
+                  padding: EdgeInsets.all(18.0),
                   child: FancyContainer(
                     backgroundColor: getFigmaColor("F3F3F4"),
                     width: 40,
                     height: 40,
                     radius: 20,
-                    child: const Icon(Icons.close),
+                    child: Icon(Icons.close),
                   ),
                 )
               ],

@@ -1,3 +1,4 @@
+import 'package:fitness_client_project/utils/utils.dart';
 import 'package:fitness_client_project/utils/customs/customs.dart';
 import 'package:fitness_client_project/utils/customs/fancy_container.dart';
 import 'package:fitness_client_project/utils/customs/fancy_text.dart';
@@ -7,7 +8,7 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 class CoachChatPage extends StatefulWidget {
-  const CoachChatPage({super.key});
+  CoachChatPage({super.key});
 
   @override
   State<CoachChatPage> createState() => _CoachChatPageState();
@@ -46,13 +47,12 @@ class _CoachChatPageState extends State<CoachChatPage> {
           FancyContainer(
             // height: 30,
 
-            borderRadius:
-                const BorderRadius.vertical(bottom: Radius.circular(50)),
+            borderRadius: BorderRadius.vertical(bottom: Radius.circular(50)),
             child: _buildTopBar(context),
           ),
           Expanded(
               child: Padding(
-            padding: const EdgeInsets.all(8.0),
+            padding: EdgeInsets.all(8.0),
             child: Column(
               children: listOfMessages.map(
                 (element) {
@@ -64,7 +64,7 @@ class _CoachChatPageState extends State<CoachChatPage> {
                       radius: 10,
                       isContinousBorder: false,
                       child: Padding(
-                        padding: const EdgeInsets.all(4.0),
+                        padding: EdgeInsets.all(4.0),
                         child: isMine
                             ? Icon(
                                 Icons.person,
@@ -82,7 +82,7 @@ class _CoachChatPageState extends State<CoachChatPage> {
                           ? getFigmaColor("393C43")
                           : getFigmaColor("BABBBE"),
                     ),
-                    const SizedBox(width: 5),
+                    SizedBox(width: 5),
                     FancyContainer(
                       nulledAlign: true,
                       constraints: BoxConstraints(
@@ -106,21 +106,21 @@ class _CoachChatPageState extends State<CoachChatPage> {
                     alignment:
                         isMine ? Alignment.centerRight : Alignment.centerLeft,
                     child: Padding(
-                      padding: const EdgeInsets.all(8.0),
+                      padding: EdgeInsets.all(8.0),
                       child: FancyContainer(
-                        constraints: const BoxConstraints(minHeight: 40),
+                        constraints: BoxConstraints(minHeight: 40),
                         nulledAlign: true,
                         backgroundColor:
                             isMine ? Colors.black : getFigmaColor("D7D8D9"),
                         isContinousBorder: false,
                         borderRadius: BorderRadius.only(
-                          topLeft: const Radius.circular(17),
+                          topLeft: Radius.circular(17),
                           bottomLeft: Radius.circular(isMine ? 17 : 0),
-                          topRight: const Radius.circular(17),
+                          topRight: Radius.circular(17),
                           bottomRight: Radius.circular(isMine ? 0 : 17),
                         ),
                         child: Padding(
-                          padding: const EdgeInsets.all(8.0),
+                          padding: EdgeInsets.all(8.0),
                           child: Row(
                               crossAxisAlignment: CrossAxisAlignment.start,
                               mainAxisSize: MainAxisSize.min,
@@ -138,9 +138,9 @@ class _CoachChatPageState extends State<CoachChatPage> {
           FancyContainer(
             // height: 30,
             backgroundColor: usedAppColor.white,
-            borderRadius: const BorderRadius.vertical(top: Radius.circular(50)),
+            borderRadius: BorderRadius.vertical(top: Radius.circular(50)),
             child: Padding(
-              padding: const EdgeInsets.all(8.0),
+              padding: EdgeInsets.all(8.0),
               child: Row(
                 children: [
                   Expanded(
@@ -153,7 +153,7 @@ class _CoachChatPageState extends State<CoachChatPage> {
                       child: Padding(
                         padding: EdgeInsets.all(0.0),
                         child: Padding(
-                          padding: const EdgeInsets.symmetric(horizontal: 7.0),
+                          padding: EdgeInsets.symmetric(horizontal: 7.0),
                           child: Row(
                             children: [
                               Icon(Icons.mic),
@@ -177,7 +177,7 @@ class _CoachChatPageState extends State<CoachChatPage> {
                       ),
                     ),
                   ),
-                  const SizedBox(width: 5),
+                  SizedBox(width: 5),
                   FancyContainer(
                     height: 40,
                     width: 40,
@@ -185,7 +185,7 @@ class _CoachChatPageState extends State<CoachChatPage> {
                     isContinousBorder: false,
                     backgroundColor: getFigmaColor("F97316"),
                     child: Padding(
-                      padding: const EdgeInsets.all(8.0),
+                      padding: EdgeInsets.all(8.0),
                       child: buildTailedAppArrow(isLeft: false),
                     ),
                   )
@@ -208,18 +208,18 @@ class _CoachChatPageState extends State<CoachChatPage> {
 
   Padding _buildTopBar(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.only(top: 0.0),
+      padding: EdgeInsets.only(top: 0.0),
       child: FancyContainer(
         // height: 50,
         backgroundColor: usedAppColor.white,
         child: Padding(
-          padding: const EdgeInsets.all(8.0),
+          padding: EdgeInsets.all(8.0),
           child: Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
               buildBackArrow(context),
               Padding(
-                padding: const EdgeInsets.all(8.0),
+                padding: EdgeInsets.all(8.0),
                 child: Expanded(
                   child: Column(
                     children: [
@@ -246,13 +246,13 @@ class _CoachChatPageState extends State<CoachChatPage> {
                                 //   size: 24,
                                 ),
                           ),
-                          const SizedBox(width: 5),
+                          SizedBox(width: 5),
                           FancyContainer(
                             height: 5,
                             width: 5,
                             backgroundColor: getFigmaColor("f3f3f4"),
                           ),
-                          const SizedBox(width: 5),
+                          SizedBox(width: 5),
                           FancyText(
                             "Certified",
                             textAlign: TextAlign.center,
@@ -275,7 +275,7 @@ class _CoachChatPageState extends State<CoachChatPage> {
                 width: 30,
                 radius: 20,
                 backgroundColor: Colors.grey[300],
-                child: const Padding(
+                child: Padding(
                   padding: EdgeInsets.all(4.0),
                   child: Icon(
                     Icons.settings_outlined,
