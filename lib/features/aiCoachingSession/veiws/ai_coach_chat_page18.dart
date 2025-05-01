@@ -6,12 +6,13 @@ import 'package:fitness_client_project/utils/customs/customs.dart';
 import 'package:fitness_client_project/utils/customs/fancy_container.dart';
 import 'package:fitness_client_project/utils/customs/fancy_text.dart';
 import 'package:fitness_client_project/utils/helperFunctions.dart';
+import 'package:fitness_client_project/utils/utils.dart';
 import 'package:flutter/material.dart';
 // import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 class AiCoachChatPage18 extends StatefulWidget {
-  const AiCoachChatPage18({super.key});
+  AiCoachChatPage18({super.key});
 
   @override
   State<AiCoachChatPage18> createState() => _AiCoachChatPage18State();
@@ -48,10 +49,10 @@ class _AiCoachChatPage18State extends State<AiCoachChatPage18> {
       backgroundColor: usedAppColor.white,
       body: SafeArea(
         child: Padding(
-          padding: const EdgeInsets.all(8.0),
+          padding: EdgeInsets.all(8.0),
           child: Column(
             children: [
-              const SizedBox(height: 20),
+              SizedBox(height: 20),
               Align(
                 alignment: Alignment.centerLeft,
                 child: SizedBox(
@@ -59,18 +60,18 @@ class _AiCoachChatPage18State extends State<AiCoachChatPage18> {
                   child: Image.asset("assets/images/Union_icon.png"),
                 ),
               ),
-              const SizedBox(height: 20),
+              SizedBox(height: 20),
               FancyText(
                 "Please wait while we’re generating a personalized workout & coach for you... ⏳",
               ),
-              const Spacer(),
+              Spacer(),
               Column(
                 children: [
                   Column(
                       children: List.filled(
                     2,
                     Padding(
-                      padding: const EdgeInsets.only(bottom: 8.0),
+                      padding: EdgeInsets.only(bottom: 8.0),
                       child: _buildItem(),
                     ),
                   )),
@@ -84,7 +85,7 @@ class _AiCoachChatPage18State extends State<AiCoachChatPage18> {
                   ),
                 ],
               ),
-              const Spacer(),
+              Spacer(),
               Row(
                 crossAxisAlignment: CrossAxisAlignment.end,
                 children: [
@@ -95,7 +96,7 @@ class _AiCoachChatPage18State extends State<AiCoachChatPage18> {
 
                           width: 150,
                           maxHeight: 200,
-                          offset: const Offset(-50, 0),
+                          offset: Offset(-50, 0),
                           decoration: BoxDecoration(
                               color: getFigmaColor("F3F3F4"),
                               borderRadius: BorderRadius.circular(20))),
@@ -115,7 +116,7 @@ class _AiCoachChatPage18State extends State<AiCoachChatPage18> {
                         height: 40,
                         width: 40,
                         child: Padding(
-                          padding: const EdgeInsets.all(8.0),
+                          padding: EdgeInsets.all(8.0),
                           child: Image.asset("assets/images/menuGrid.png"),
                         ),
                       ),
@@ -143,9 +144,9 @@ class _AiCoachChatPage18State extends State<AiCoachChatPage18> {
                       value: menuValue,
                     ),
                   ),
-                  const Spacer(),
+                  Spacer(),
                   Padding(
-                    padding: const EdgeInsets.all(8.0),
+                    padding: EdgeInsets.all(8.0),
                     child: FancyContainer(
                       backgroundColor: Colors.black,
                       // height: 40,
@@ -153,7 +154,7 @@ class _AiCoachChatPage18State extends State<AiCoachChatPage18> {
                       isContinousBorder: false,
                       radius: 15,
                       child: Padding(
-                        padding: const EdgeInsets.symmetric(
+                        padding: EdgeInsets.symmetric(
                           horizontal: 12.0,
                           vertical: 12.0,
                         ),
@@ -170,7 +171,7 @@ class _AiCoachChatPage18State extends State<AiCoachChatPage18> {
                                 color: usedAppColor.white,
                               ),
                             ),
-                            const SizedBox(width: 7),
+                            SizedBox(width: 7),
                             SizedBox(
                                 width: 20,
                                 child: buildTailedAppArrow(isLeft: false)),
@@ -194,7 +195,7 @@ class _AiCoachChatPage18State extends State<AiCoachChatPage18> {
       radius: 40,
       backgroundColor: getFigmaColor("F3F3F4"),
       child: Padding(
-        padding: const EdgeInsets.all(8.0),
+        padding: EdgeInsets.all(8.0),
         child: Row(
           children: [
             AspectRatio(
@@ -209,7 +210,7 @@ class _AiCoachChatPage18State extends State<AiCoachChatPage18> {
                 ),
               ),
             ),
-            const SizedBox(width: 10),
+            SizedBox(width: 10),
             Expanded(
               child: Column(
                 children: [
@@ -220,11 +221,11 @@ class _AiCoachChatPage18State extends State<AiCoachChatPage18> {
                         weight: FontWeight.bold,
                         size: 16,
                       ),
-                      const SizedBox(width: 10),
+                      SizedBox(width: 10),
                       FancyContainer(
                         isContinousBorder: false,
                         child: Padding(
-                          padding: const EdgeInsets.symmetric(
+                          padding: EdgeInsets.symmetric(
                               horizontal: 8.0, vertical: 4),
                           child: FancyText(
                             "Yoga",
@@ -236,13 +237,13 @@ class _AiCoachChatPage18State extends State<AiCoachChatPage18> {
                       )
                     ],
                   ),
-                  const SizedBox(height: 5),
+                  SizedBox(height: 5),
                   LinearProgressIndicator(
                     value: .5,
                     color: Colors.black,
                     backgroundColor: getFigmaColor("D7D8D9"),
                   ),
-                  const SizedBox(height: 5),
+                  SizedBox(height: 5),
                   Row(
                     mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                     children: [

@@ -6,12 +6,13 @@ import 'package:fitness_client_project/utils/customs/customs.dart';
 import 'package:fitness_client_project/utils/customs/fancy_container.dart';
 import 'package:fitness_client_project/utils/customs/fancy_text.dart';
 import 'package:fitness_client_project/utils/helperFunctions.dart';
+import 'package:fitness_client_project/utils/utils.dart';
 import 'package:flutter/material.dart';
 // import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 class FilterCoachSearchBottomSheet extends StatefulWidget {
-  const FilterCoachSearchBottomSheet({super.key});
+  FilterCoachSearchBottomSheet({super.key});
 
   @override
   State<FilterCoachSearchBottomSheet> createState() =>
@@ -57,44 +58,40 @@ class _FilterCoachSearchBottomSheetState
           child: Stack(
             children: [
               Padding(
-                padding: const EdgeInsets.only(right: 20.0, left: 20.0),
+                padding: EdgeInsets.only(right: 20.0, left: 20.0),
                 child: FancyContainer(
                   height: double.infinity,
                   width: double.infinity,
                   isContinousBorder: false,
-                  borderRadius:
-                      const BorderRadius.vertical(top: Radius.circular(20)),
+                  borderRadius: BorderRadius.vertical(top: Radius.circular(20)),
                   backgroundColor: usedAppColor.white.withAlpha(50),
                 ),
               ),
               Padding(
-                padding:
-                    const EdgeInsets.only(top: 10.0, right: 10.0, left: 10.0),
+                padding: EdgeInsets.only(top: 10.0, right: 10.0, left: 10.0),
                 child: FancyContainer(
                   height: double.infinity,
                   width: double.infinity,
                   isContinousBorder: false,
-                  borderRadius:
-                      const BorderRadius.vertical(top: Radius.circular(20)),
+                  borderRadius: BorderRadius.vertical(top: Radius.circular(20)),
                   backgroundColor: usedAppColor.white.withAlpha(200),
                 ),
               ),
               Padding(
-                padding: const EdgeInsets.only(
+                padding: EdgeInsets.only(
                   top: 20.0,
                 ),
                 child: FancyContainer(
                   isContinousBorder: false,
-                  borderRadius:
-                      const BorderRadius.vertical(top: Radius.circular(20)),
+                  borderRadius: BorderRadius.vertical(top: Radius.circular(20)),
                   backgroundColor: usedAppColor.white,
                   child: Padding(
-                    padding: const EdgeInsets.all(8.0),
+                    padding: EdgeInsets.all(8.0),
                     child: SingleChildScrollView(
                       child: Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
-                          const SizedBox(height: 10),
+                          SizedBox(height: 10),
                           Center(
                             child: FancyContainer(
                               width: 50,
@@ -102,7 +99,7 @@ class _FilterCoachSearchBottomSheetState
                               backgroundColor: getFigmaColor("D7D8D9"),
                             ),
                           ),
-                          const SizedBox(height: 10),
+                          SizedBox(height: 10),
                           Row(
                             mainAxisAlignment: MainAxisAlignment.spaceBetween,
                             children: [
@@ -116,7 +113,7 @@ class _FilterCoachSearchBottomSheetState
                               FancyContainer(
                                 backgroundColor: getFigmaColor("D7D8D9"),
                                 radius: 20,
-                                child: const Padding(
+                                child: Padding(
                                   padding: EdgeInsets.all(8.0),
                                   child: Icon(
                                     Icons.question_mark_outlined,
@@ -126,15 +123,15 @@ class _FilterCoachSearchBottomSheetState
                               )
                             ],
                           ),
-                          const SizedBox(height: 10),
+                          SizedBox(height: 10),
                           _buildAgeRangeSection(),
-                          const SizedBox(height: 10),
+                          SizedBox(height: 10),
                           _buildGenderSection(),
-                          const SizedBox(height: 10),
+                          SizedBox(height: 10),
                           _buildExpertiseAreaSection(),
-                          const SizedBox(height: 10),
+                          SizedBox(height: 10),
                           _buildSortBySection(),
-                          const SizedBox(height: 10),
+                          SizedBox(height: 10),
                           _buildBottomButton(),
                         ],
                       ),
@@ -151,7 +148,7 @@ class _FilterCoachSearchBottomSheetState
 
   Padding _buildBottomButton() {
     return Padding(
-      padding: const EdgeInsets.all(8.0),
+      padding: EdgeInsets.all(8.0),
       child: FancyContainer(
         radius: 15,
         width: 300,
@@ -161,7 +158,7 @@ class _FilterCoachSearchBottomSheetState
         backgroundColor: getFigmaColor("F97316"),
         //  getFigmaColor("F3F3F4"),
         child: Padding(
-          padding: const EdgeInsets.all(8.0),
+          padding: EdgeInsets.all(8.0),
           child: Row(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
@@ -169,10 +166,10 @@ class _FilterCoachSearchBottomSheetState
                 "Apply Filter (32)",
                 textColor: usedAppColor.white,
               ),
-              const SizedBox(width: 10),
+              SizedBox(width: 10),
               Transform.rotate(
                 angle: pi / 2,
-                child: const Icon(
+                child: Icon(
                   Icons.tune_rounded,
                   color: usedAppColor.white,
                 ),
@@ -210,7 +207,7 @@ class _FilterCoachSearchBottomSheetState
               isExpanded: true,
               iconStyleData: IconStyleData(
                 icon: Padding(
-                  padding: const EdgeInsets.all(8.0),
+                  padding: EdgeInsets.all(8.0),
                   child: SizedBox.square(
                     dimension: 15,
                     child: buildAppArrowVertical(),
@@ -277,7 +274,7 @@ class _FilterCoachSearchBottomSheetState
                   isExpanded: true,
                   iconStyleData: IconStyleData(
                     icon: Padding(
-                      padding: const EdgeInsets.all(8.0),
+                      padding: EdgeInsets.all(8.0),
                       child: SizedBox.square(
                         dimension: 15,
                         child: buildAppArrowVertical(),
@@ -376,7 +373,7 @@ class _FilterCoachSearchBottomSheetState
               int index = genderListAdvanced.indexOf(element);
               return (selectedIndex == index)
                   ? Padding(
-                      padding: const EdgeInsets.all(8.0),
+                      padding: EdgeInsets.all(8.0),
                       child: FancyContainer(
                         radius: 10,
                         action: () {
@@ -390,7 +387,7 @@ class _FilterCoachSearchBottomSheetState
                         // withAlpha(100),
                         borderThickness: 4,
                         child: Padding(
-                          padding: const EdgeInsets.all(8.0),
+                          padding: EdgeInsets.all(8.0),
                           child: Row(
                             children: [
                               SizedBox.square(
@@ -400,7 +397,7 @@ class _FilterCoachSearchBottomSheetState
                                   color: usedAppColor.white,
                                 ),
                               ),
-                              const SizedBox(width: 10),
+                              SizedBox(width: 10),
                               FancyText(element["name"],
                                   // "Male",
                                   size: 12,
@@ -411,7 +408,7 @@ class _FilterCoachSearchBottomSheetState
                       ),
                     )
                   : Padding(
-                      padding: const EdgeInsets.all(4.0),
+                      padding: EdgeInsets.all(4.0),
                       child: FancyContainer(
                         radius: 10,
                         action: () {
@@ -421,7 +418,7 @@ class _FilterCoachSearchBottomSheetState
                         isContinousBorder: false,
                         backgroundColor: getFigmaColor("F3F3F4"),
                         child: Padding(
-                          padding: const EdgeInsets.all(8.0),
+                          padding: EdgeInsets.all(8.0),
                           child: Row(
                             children: [
                               SizedBox.square(
@@ -431,7 +428,7 @@ class _FilterCoachSearchBottomSheetState
                                   color: Colors.grey,
                                 ),
                               ),
-                              const SizedBox(width: 10),
+                              SizedBox(width: 10),
                               FancyText(
                                 element["name"],
                                 size: 12,

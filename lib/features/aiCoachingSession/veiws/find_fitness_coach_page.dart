@@ -2,13 +2,14 @@ import 'package:fitness_client_project/utils/customs/customs.dart';
 import 'package:fitness_client_project/utils/customs/fancy_container.dart';
 import 'package:fitness_client_project/utils/customs/fancy_text.dart';
 import 'package:fitness_client_project/utils/helperFunctions.dart';
+import 'package:fitness_client_project/utils/utils.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_animate/flutter_animate.dart';
 // import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 class FindFitnessCoachPage extends StatefulWidget {
-  const FindFitnessCoachPage({super.key});
+  FindFitnessCoachPage({super.key});
 
   @override
   State<FindFitnessCoachPage> createState() => _FindFitnessCoachPageState();
@@ -60,13 +61,13 @@ class _FindFitnessCoachPageState extends State<FindFitnessCoachPage> {
                 _buildTopBar(context),
                 SizedBox(height: 10),
                 Padding(
-                  padding: const EdgeInsets.all(18.0),
+                  padding: EdgeInsets.all(18.0),
                   child: FancyContainer(
                     radius: 40,
                     // height: 217,
                     backgroundColor: usedAppColor.white,
                     child: Padding(
-                      padding: const EdgeInsets.all(8.0),
+                      padding: EdgeInsets.all(8.0),
                       child: Column(
                         children: [
                           Row(
@@ -137,7 +138,7 @@ class _FindFitnessCoachPageState extends State<FindFitnessCoachPage> {
               ],
             ),
             Padding(
-              padding: const EdgeInsets.only(
+              padding: EdgeInsets.only(
                 top: 58.0,
                 left: 10,
                 right: 10,
@@ -150,7 +151,7 @@ class _FindFitnessCoachPageState extends State<FindFitnessCoachPage> {
                 hasBorder: true,
                 borderColor: getFigmaColor("F97316"),
                 child: Padding(
-                  padding: const EdgeInsets.symmetric(horizontal: 16.0),
+                  padding: EdgeInsets.symmetric(horizontal: 16.0),
                   child: Row(
                     children: [
                       SizedBox(
@@ -180,32 +181,32 @@ class _FindFitnessCoachPageState extends State<FindFitnessCoachPage> {
     return Row(
       mainAxisAlignment: MainAxisAlignment.center,
       children: [
-        const SizedBox(width: 5),
+        SizedBox(width: 5),
         SizedBox(
             height: 15,
             width: 15,
             child: Image.asset("assets/images/insightIcon-dumbell.png")),
-        const SizedBox(width: 5),
+        SizedBox(width: 5),
         FancyText(
           "Strength Expert",
           weight: FontWeight.w500,
           size: 12,
           textColor: getFigmaColor("676C75"),
         ),
-        const SizedBox(width: 5),
+        SizedBox(width: 5),
         SizedBox(
             height: 15,
             width: 15,
             child:
                 Image.asset("assets/images/coachSelectionPageIcon-star.png")),
-        const SizedBox(width: 5),
+        SizedBox(width: 5),
         FancyText(
           "4.8",
           weight: FontWeight.w500,
           size: 12,
           textColor: getFigmaColor("676C75"),
         ),
-        const SizedBox(width: 5),
+        SizedBox(width: 5),
         FancyText(
           "(28)",
           weight: FontWeight.w800,
@@ -218,18 +219,18 @@ class _FindFitnessCoachPageState extends State<FindFitnessCoachPage> {
 
   Padding _buildTopBar(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.only(top: 0.0),
+      padding: EdgeInsets.only(top: 0.0),
       child: FancyContainer(
         height: 50,
         // backgroundColor:usedAppColor.white,
         child: Padding(
-          padding: const EdgeInsets.all(8.0),
+          padding: EdgeInsets.all(8.0),
           child: Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
               buildBackArrow(context),
               Padding(
-                padding: const EdgeInsets.all(8.0),
+                padding: EdgeInsets.all(8.0),
                 child: FancyText(
                   "Find Fitness Coach",
                   rawTextStyle: GoogleFonts.workSans(
@@ -243,7 +244,7 @@ class _FindFitnessCoachPageState extends State<FindFitnessCoachPage> {
                 width: 30,
                 radius: 20,
                 backgroundColor: Colors.grey[300],
-                child: const Padding(
+                child: Padding(
                   padding: EdgeInsets.all(4.0),
                   child: Icon(
                     Icons.settings_outlined,

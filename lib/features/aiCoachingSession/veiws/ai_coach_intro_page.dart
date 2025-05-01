@@ -1,3 +1,4 @@
+import 'package:fitness_client_project/utils/utils.dart';
 import 'package:fitness_client_project/utils/customs/fancy_container.dart';
 import 'package:fitness_client_project/utils/customs/fancy_text.dart';
 import 'package:fitness_client_project/utils/helperFunctions.dart';
@@ -26,7 +27,7 @@ class _AiCoachIntroPageState extends State<AiCoachIntroPage> {
               width: double.infinity,
             ),
             Padding(
-              padding: const EdgeInsets.all(8.0),
+              padding: EdgeInsets.all(8.0),
               child: Column(
                 children: [
                   Expanded(
@@ -39,7 +40,7 @@ class _AiCoachIntroPageState extends State<AiCoachIntroPage> {
                         isContinousBorder: false,
                         radius: 10,
                         child: Padding(
-                          padding: const EdgeInsets.all(8.0),
+                          padding: EdgeInsets.all(8.0),
                           child: Row(
                             mainAxisSize: MainAxisSize.min,
                             children: [
@@ -47,7 +48,7 @@ class _AiCoachIntroPageState extends State<AiCoachIntroPage> {
                                 Icons.warning_rounded,
                                 color: getFigmaColor("FED7AA"),
                               ),
-                              const SizedBox(width: 7),
+                              SizedBox(width: 7),
                               FancyText(
                                 "Get Up Now!",
                                 size: 16,
@@ -69,7 +70,7 @@ class _AiCoachIntroPageState extends State<AiCoachIntroPage> {
                         isContinousBorder: false,
                         radius: 10,
                         child: Padding(
-                          padding: const EdgeInsets.all(8.0),
+                          padding: EdgeInsets.all(8.0),
                           child: Row(
                             mainAxisSize: MainAxisSize.min,
                             children: [
@@ -77,7 +78,7 @@ class _AiCoachIntroPageState extends State<AiCoachIntroPage> {
                                 Icons.directions_run_rounded,
                                 color: getFigmaColor("E9D5FF"),
                               ),
-                              const SizedBox(width: 7),
+                              SizedBox(width: 7),
                               FancyText(
                                 "Get Up Now!",
                                 size: 16,
@@ -99,7 +100,7 @@ class _AiCoachIntroPageState extends State<AiCoachIntroPage> {
                         isContinousBorder: false,
                         radius: 10,
                         child: Padding(
-                          padding: const EdgeInsets.all(8.0),
+                          padding: EdgeInsets.all(8.0),
                           child: Row(
                             mainAxisSize: MainAxisSize.min,
                             children: [
@@ -113,7 +114,7 @@ class _AiCoachIntroPageState extends State<AiCoachIntroPage> {
                               //   Icons.alarm,
                               //   color: getFigmaColor("BFDBFE"),
                               // ),
-                              const SizedBox(width: 7),
+                              SizedBox(width: 7),
                               FancyText(
                                 "Do 588 Reps!",
                                 size: 16,
@@ -137,7 +138,7 @@ class _AiCoachIntroPageState extends State<AiCoachIntroPage> {
                             fontWeight: FontWeight.bold,
                           ),
                         ),
-                        const SizedBox(height: 10),
+                        SizedBox(height: 10),
                         FancyText(
                           "Elevate your training with AI fitness coach.",
                           textAlign: TextAlign.center,
@@ -146,7 +147,7 @@ class _AiCoachIntroPageState extends State<AiCoachIntroPage> {
                               fontWeight: FontWeight.bold,
                               color: getFigmaColor("676C75")),
                         ),
-                        const SizedBox(height: 20),
+                        SizedBox(height: 20),
                         FancyContainer(
                           backgroundColor: Colors.black,
                           // height: 40,
@@ -154,7 +155,7 @@ class _AiCoachIntroPageState extends State<AiCoachIntroPage> {
                           isContinousBorder: false,
                           radius: 10,
                           child: Padding(
-                            padding: const EdgeInsets.all(8.0),
+                            padding: EdgeInsets.all(8.0),
                             child: Row(
                               mainAxisSize: MainAxisSize.min,
                               children: [
@@ -163,8 +164,8 @@ class _AiCoachIntroPageState extends State<AiCoachIntroPage> {
                                   size: 16,
                                   textColor: usedAppColor.white,
                                 ),
-                                const SizedBox(width: 7),
-                                const Icon(
+                                SizedBox(width: 7),
+                                Icon(
                                   Icons.search,
                                   color: usedAppColor.white,
                                 ),

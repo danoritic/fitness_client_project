@@ -1,12 +1,13 @@
 import 'package:fitness_client_project/utils/customs/fancy_container.dart';
 import 'package:fitness_client_project/utils/customs/fancy_text.dart';
 import 'package:fitness_client_project/utils/helperFunctions.dart';
+import 'package:fitness_client_project/utils/utils.dart';
 import 'package:flutter/material.dart';
 // import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 class PaymentCompletedDialogBox extends StatefulWidget {
-  const PaymentCompletedDialogBox({super.key});
+  PaymentCompletedDialogBox({super.key});
 
   @override
   State<PaymentCompletedDialogBox> createState() =>
@@ -25,13 +26,13 @@ class _PaymentCompletedDialogBoxState extends State<PaymentCompletedDialogBox> {
                 Expanded(
                   child: Center(
                     child: Padding(
-                      padding: const EdgeInsets.all(8.0),
+                      padding: EdgeInsets.all(8.0),
                       child: FancyContainer(
                         height: 350,
                         radius: 50,
                         backgroundColor: usedAppColor.white,
                         child: Padding(
-                          padding: const EdgeInsets.all(8.0),
+                          padding: EdgeInsets.all(8.0),
                           child: Column(
                             mainAxisAlignment: MainAxisAlignment.spaceBetween,
                             children: [
@@ -61,7 +62,7 @@ class _PaymentCompletedDialogBoxState extends State<PaymentCompletedDialogBox> {
                                 ),
                               ),
                               Padding(
-                                padding: const EdgeInsets.all(8.0),
+                                padding: EdgeInsets.all(8.0),
                                 child: FancyContainer(
                                   height: 45,
                                   isContinousBorder: false,
@@ -75,8 +76,8 @@ class _PaymentCompletedDialogBoxState extends State<PaymentCompletedDialogBox> {
                                         "Complete",
                                         textColor: usedAppColor.white,
                                       ),
-                                      const SizedBox(width: 10),
-                                      const Icon(
+                                      SizedBox(width: 10),
+                                      Icon(
                                         Icons.check,
                                         color: usedAppColor.white,
                                       )
@@ -92,13 +93,13 @@ class _PaymentCompletedDialogBoxState extends State<PaymentCompletedDialogBox> {
                   ),
                 ),
                 Padding(
-                  padding: const EdgeInsets.all(18.0),
+                  padding: EdgeInsets.all(18.0),
                   child: FancyContainer(
                     backgroundColor: getFigmaColor("F3F3F4"),
                     width: 40,
                     height: 40,
                     radius: 20,
-                    child: const Icon(Icons.close),
+                    child: Icon(Icons.close),
                   ),
                 )
               ],

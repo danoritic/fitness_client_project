@@ -3,12 +3,13 @@ import 'package:fitness_client_project/utils/customs/fancy_container.dart';
 import 'package:fitness_client_project/utils/customs/fancy_text.dart';
 import 'package:fitness_client_project/utils/customs/line_chart.dart';
 import 'package:fitness_client_project/utils/helperFunctions.dart';
+import 'package:fitness_client_project/utils/utils.dart';
 import 'package:flutter/material.dart';
 // import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 class HeartRateHistoryPage extends StatefulWidget {
-  const HeartRateHistoryPage({super.key});
+ HeartRateHistoryPage({super.key});
 
   @override
   State<HeartRateHistoryPage> createState() => _HeartRateHistoryPageState();
@@ -21,7 +22,7 @@ class _HeartRateHistoryPageState extends State<HeartRateHistoryPage> {
       backgroundColor: usedAppColor.white,
       body: SafeArea(
         child: Padding(
-          padding: const EdgeInsets.all(8.0),
+          padding:EdgeInsets.all(8.0),
           child: SingleChildScrollView(
             child: Column(
               children: [
@@ -35,7 +36,7 @@ class _HeartRateHistoryPageState extends State<HeartRateHistoryPage> {
                         fontWeight: FontWeight.bold,
                       ),
                     ),
-                    const Spacer(),
+                   Spacer(),
                     FancyText(
                       "Newest First",
                       rawTextStyle: GoogleFonts.workSans(
@@ -43,13 +44,13 @@ class _HeartRateHistoryPageState extends State<HeartRateHistoryPage> {
                           fontWeight: FontWeight.bold,
                           color: getFigmaColor("676C75")),
                     ),
-                    const SizedBox(width: 5),
+                   SizedBox(width: 5),
                     SizedBox(
                         height: 15,
                         child: Image.asset("assets/images/wifiLike_logo.png")),
                   ],
                 ),
-                const SizedBox(height: 5),
+               SizedBox(height: 5),
                 ...List.filled(4, _buildHeartRateHistoryCard())
               ],
             ),
@@ -61,23 +62,23 @@ class _HeartRateHistoryPageState extends State<HeartRateHistoryPage> {
 
   Widget _buildHeartRateHistoryCard() {
     return Padding(
-      padding: const EdgeInsets.only(bottom: 8.0),
+      padding:EdgeInsets.only(bottom: 8.0),
       child: FancyContainer(
         radius: 30,
         backgroundColor: getFigmaColor("F3F3F4"),
         child: Padding(
-          padding: const EdgeInsets.all(0.0),
+          padding:EdgeInsets.all(0.0),
           child: Column(
             children: [
               LineChartForHeartRateHistory(),
               Padding(
-                padding: const EdgeInsets.all(8.0),
+                padding:EdgeInsets.all(8.0),
                 child: Row(
                   children: [
                     Row(
                       children: [
                         Padding(
-                          padding: const EdgeInsets.all(0.0),
+                          padding:EdgeInsets.all(0.0),
                           child: FancyText(
                             "82.5",
                             rawTextStyle: GoogleFonts.workSans(
@@ -87,7 +88,7 @@ class _HeartRateHistoryPageState extends State<HeartRateHistoryPage> {
                           ),
                         ),
                         Padding(
-                          padding: const EdgeInsets.all(8.0),
+                          padding:EdgeInsets.all(8.0),
                           child: FancyText(
                             "bpm",
                             rawTextStyle: GoogleFonts.workSans(
@@ -99,7 +100,7 @@ class _HeartRateHistoryPageState extends State<HeartRateHistoryPage> {
                         ),
                       ],
                     ),
-                    const Spacer(),
+                   Spacer(),
                     SizedBox(
                       height: 30,
                       child: buildAppArrow(isLeft: false),
@@ -108,7 +109,7 @@ class _HeartRateHistoryPageState extends State<HeartRateHistoryPage> {
                 ),
               ),
               Padding(
-                padding: const EdgeInsets.all(8.0),
+                padding:EdgeInsets.all(8.0),
                 child: Row(
                   children: [
                     FancyText(
@@ -120,7 +121,7 @@ class _HeartRateHistoryPageState extends State<HeartRateHistoryPage> {
                       ),
                     ),
                     Padding(
-                      padding: const EdgeInsets.all(4.0),
+                      padding:EdgeInsets.all(4.0),
                       child: FancyContainer(
                         backgroundColor: getFigmaColor("D7D8D9"),
                         width: 5,
@@ -147,12 +148,12 @@ class _HeartRateHistoryPageState extends State<HeartRateHistoryPage> {
 
   Padding _buildTopBar(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.only(top: 38.0),
+      padding:EdgeInsets.only(top: 38.0),
       child: FancyContainer(
         height: 50,
         backgroundColor: usedAppColor.white,
         child: Padding(
-          padding: const EdgeInsets.all(8.0),
+          padding:EdgeInsets.all(8.0),
           child: Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
@@ -166,12 +167,12 @@ class _HeartRateHistoryPageState extends State<HeartRateHistoryPage> {
               //   },
               //   // backgroundColor: Colors.grey[300],
               //   child: Padding(
-              //     padding: const EdgeInsets.all(8.0),
+              //     padding:EdgeInsets.all(8.0),
               //     child: ,
               //   ),
               // ),
               Padding(
-                padding: const EdgeInsets.all(8.0),
+                padding:EdgeInsets.all(8.0),
                 child: FancyText(
                   "Heart Rate History",
                   rawTextStyle: GoogleFonts.workSans(
@@ -185,7 +186,7 @@ class _HeartRateHistoryPageState extends State<HeartRateHistoryPage> {
                 width: 30,
                 radius: 20,
                 backgroundColor: Colors.grey[300],
-                child: const Padding(
+                child:Padding(
                   padding: EdgeInsets.all(4.0),
                   child: Icon(
                     Icons.settings_outlined,

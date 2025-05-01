@@ -2,12 +2,13 @@ import 'package:fitness_client_project/utils/customs/customs.dart';
 import 'package:fitness_client_project/utils/customs/fancy_container.dart';
 import 'package:fitness_client_project/utils/customs/fancy_text.dart';
 import 'package:fitness_client_project/utils/helperFunctions.dart';
+import 'package:fitness_client_project/utils/utils.dart';
 import 'package:flutter/material.dart';
 // import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 class SelectPaymentMethodsBottomSheet extends StatefulWidget {
-  const SelectPaymentMethodsBottomSheet({super.key});
+  SelectPaymentMethodsBottomSheet({super.key});
 
   @override
   State<SelectPaymentMethodsBottomSheet> createState() =>
@@ -54,44 +55,40 @@ class _SelectPaymentMethodsBottomSheetState
           child: Stack(
             children: [
               Padding(
-                padding: const EdgeInsets.only(right: 20.0, left: 20.0),
+                padding: EdgeInsets.only(right: 20.0, left: 20.0),
                 child: FancyContainer(
                   height: double.infinity,
                   width: double.infinity,
                   isContinousBorder: false,
-                  borderRadius:
-                      const BorderRadius.vertical(top: Radius.circular(20)),
+                  borderRadius: BorderRadius.vertical(top: Radius.circular(20)),
                   backgroundColor: usedAppColor.white.withAlpha(50),
                 ),
               ),
               Padding(
-                padding:
-                    const EdgeInsets.only(top: 10.0, right: 10.0, left: 10.0),
+                padding: EdgeInsets.only(top: 10.0, right: 10.0, left: 10.0),
                 child: FancyContainer(
                   height: double.infinity,
                   width: double.infinity,
                   isContinousBorder: false,
-                  borderRadius:
-                      const BorderRadius.vertical(top: Radius.circular(20)),
+                  borderRadius: BorderRadius.vertical(top: Radius.circular(20)),
                   backgroundColor: usedAppColor.white.withAlpha(200),
                 ),
               ),
               Padding(
-                padding: const EdgeInsets.only(
+                padding: EdgeInsets.only(
                   top: 20.0,
                 ),
                 child: FancyContainer(
                   isContinousBorder: false,
-                  borderRadius:
-                      const BorderRadius.vertical(top: Radius.circular(20)),
+                  borderRadius: BorderRadius.vertical(top: Radius.circular(20)),
                   backgroundColor: usedAppColor.white,
                   child: Padding(
-                    padding: const EdgeInsets.all(8.0),
+                    padding: EdgeInsets.all(8.0),
                     child: SingleChildScrollView(
                       child: Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
-                          const SizedBox(height: 10),
+                          SizedBox(height: 10),
                           Center(
                             child: FancyContainer(
                               width: 50,
@@ -99,7 +96,7 @@ class _SelectPaymentMethodsBottomSheetState
                               backgroundColor: getFigmaColor("D7D8D9"),
                             ),
                           ),
-                          const SizedBox(height: 10),
+                          SizedBox(height: 10),
                           Row(
                             mainAxisAlignment: MainAxisAlignment.spaceBetween,
                             children: [
@@ -113,7 +110,7 @@ class _SelectPaymentMethodsBottomSheetState
                               FancyContainer(
                                 backgroundColor: getFigmaColor("D7D8D9"),
                                 radius: 20,
-                                child: const Padding(
+                                child: Padding(
                                   padding: EdgeInsets.all(8.0),
                                   child: Icon(
                                     Icons.question_mark_outlined,
@@ -123,7 +120,7 @@ class _SelectPaymentMethodsBottomSheetState
                               )
                             ],
                           ),
-                          const SizedBox(height: 10),
+                          SizedBox(height: 10),
                           Column(
                             children: paymentProviderList.map(
                               (element) {
@@ -141,7 +138,7 @@ class _SelectPaymentMethodsBottomSheetState
                                   radius: radius,
                                   backgroundColor: getFigmaColor("f3f3f4"),
                                   child: Padding(
-                                    padding: const EdgeInsets.all(8.0),
+                                    padding: EdgeInsets.all(8.0),
                                     child: Row(
                                       children: [
                                         FancyText(
@@ -188,7 +185,7 @@ class _SelectPaymentMethodsBottomSheetState
                                 );
 
                                 return Padding(
-                                    padding: const EdgeInsets.only(top: 8.0),
+                                    padding: EdgeInsets.only(top: 8.0),
                                     child: isSelected
                                         ? wrapWithselectedsBorder(
                                             child: child, radius: radius)
@@ -212,7 +209,7 @@ class _SelectPaymentMethodsBottomSheetState
 
   Padding _buildBottomButton() {
     return Padding(
-      padding: const EdgeInsets.all(8.0),
+      padding: EdgeInsets.all(8.0),
       child: FancyContainer(
         radius: 15,
         width: 300,
@@ -222,7 +219,7 @@ class _SelectPaymentMethodsBottomSheetState
         backgroundColor: getFigmaColor("000000"),
         //  getFigmaColor("F3F3F4"),
         child: Padding(
-          padding: const EdgeInsets.all(8.0),
+          padding: EdgeInsets.all(8.0),
           child: Row(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
@@ -234,7 +231,7 @@ class _SelectPaymentMethodsBottomSheetState
                   color: usedAppColor.white,
                 ),
               ),
-              const SizedBox(width: 10),
+              SizedBox(width: 10),
               Icon(
                 Icons.check_rounded,
                 color: usedAppColor.white,

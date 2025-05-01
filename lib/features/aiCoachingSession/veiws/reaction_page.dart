@@ -3,6 +3,7 @@ import 'dart:math';
 import 'package:fitness_client_project/utils/customs/fancy_container.dart';
 import 'package:fitness_client_project/utils/customs/fancy_text.dart';
 import 'package:fitness_client_project/utils/helperFunctions.dart';
+import 'package:fitness_client_project/utils/utils.dart';
 import 'package:flutter/material.dart';
 // import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -10,7 +11,7 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:card_swiper/card_swiper.dart' as card_swiper;
 
 class ReactionPage extends StatefulWidget {
-  const ReactionPage({super.key});
+  ReactionPage({super.key});
 
   @override
   State<ReactionPage> createState() => _ReactionPageState();
@@ -88,10 +89,10 @@ class _ReactionPageState extends State<ReactionPage> {
                     },
                     itemWidth: 100,
                     index: focussedReaction,
-                    physics: const ClampingScrollPhysics(),
+                    physics: ClampingScrollPhysics(),
                     itemBuilder: (context, index) {
                       return Padding(
-                          padding: const EdgeInsets.all(8.0),
+                          padding: EdgeInsets.all(8.0),
                           child: FancyContainer(
                             // hasBorder: true,
                             // backgroundColor: Colors.green,
@@ -113,14 +114,14 @@ class _ReactionPageState extends State<ReactionPage> {
                   child:
                       Image.asset("assets/images/RateingPageImage-marker.png")),
             ),
-            const SizedBox(height: 30),
+            SizedBox(height: 30),
             FancyText(
               "${reactionsList[focussedReaction]['message']}",
               textColor: usedAppColor.white,
             ),
-            const SizedBox(height: 20),
+            SizedBox(height: 20),
             Padding(
-              padding: const EdgeInsets.all(8.0),
+              padding: EdgeInsets.all(8.0),
               child: FancyContainer(
                 height: 45,
                 isContinousBorder: false,
@@ -137,7 +138,7 @@ class _ReactionPageState extends State<ReactionPage> {
                 ),
               ),
             ),
-            const SizedBox(height: 5),
+            SizedBox(height: 5),
           ],
         ));
   }

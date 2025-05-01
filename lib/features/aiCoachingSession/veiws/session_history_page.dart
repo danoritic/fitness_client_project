@@ -4,12 +4,13 @@ import 'package:fitness_client_project/features/aiCoachingSession/widgets/widget
 import 'package:fitness_client_project/utils/customs/customs.dart';
 import 'package:fitness_client_project/utils/customs/fancy_text.dart';
 import 'package:fitness_client_project/utils/helperFunctions.dart';
+import 'package:fitness_client_project/utils/utils.dart';
 import 'package:flutter/material.dart';
 // import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 class SessionHistoryPage extends StatefulWidget {
-  const SessionHistoryPage({super.key});
+  SessionHistoryPage({super.key});
 
   @override
   State<SessionHistoryPage> createState() => _SessionHistoryPageState();
@@ -26,11 +27,11 @@ class _SessionHistoryPageState extends State<SessionHistoryPage> {
         elevation: 0,
       ),
       body: Padding(
-        padding: const EdgeInsets.all(8.0),
+        padding: EdgeInsets.all(8.0),
         child: SingleChildScrollView(
           child: Column(
             children: [
-              const SizedBox(height: 10),
+              SizedBox(height: 10),
               FancyText(
                 "Session Completed",
                 rawTextStyle: GoogleFonts.workSans(
@@ -38,7 +39,7 @@ class _SessionHistoryPageState extends State<SessionHistoryPage> {
                   fontWeight: FontWeight.w900,
                 ),
               ),
-              const SizedBox(height: 10),
+              SizedBox(height: 10),
               FancyText(
                 "Thank you for taking the time to do personalized fitness suggestion with our AI!",
                 rawTextStyle: GoogleFonts.workSans(
@@ -56,7 +57,7 @@ class _SessionHistoryPageState extends State<SessionHistoryPage> {
                       fontWeight: FontWeight.bold,
                     ),
                   ),
-                  const Spacer(),
+                  Spacer(),
                   FancyText(
                     "This Month",
                     rawTextStyle: GoogleFonts.workSans(
@@ -64,7 +65,7 @@ class _SessionHistoryPageState extends State<SessionHistoryPage> {
                         fontWeight: FontWeight.bold,
                         color: getFigmaColor("676C75")),
                   ),
-                  const SizedBox(width: 5),
+                  SizedBox(width: 5),
                   SizedBox(
                       height: 15,
                       child: Image.asset("assets/images/wifiLike_logo.png")),

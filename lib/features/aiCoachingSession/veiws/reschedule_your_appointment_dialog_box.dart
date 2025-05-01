@@ -1,12 +1,13 @@
 import 'package:fitness_client_project/utils/customs/fancy_container.dart';
 import 'package:fitness_client_project/utils/customs/fancy_text.dart';
 import 'package:fitness_client_project/utils/helperFunctions.dart';
+import 'package:fitness_client_project/utils/utils.dart';
 import 'package:flutter/material.dart';
 // import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 class RescheduleYourAppointmentDialogBox extends StatefulWidget {
-  const RescheduleYourAppointmentDialogBox({super.key});
+  RescheduleYourAppointmentDialogBox({super.key});
 
   @override
   State<RescheduleYourAppointmentDialogBox> createState() =>
@@ -26,13 +27,13 @@ class _RescheduleYourAppointmentDialogBoxState
                 Expanded(
                   child: Center(
                     child: Padding(
-                      padding: const EdgeInsets.all(12.0),
+                      padding: EdgeInsets.all(12.0),
                       child: FancyContainer(
                         height: 380,
                         radius: 50,
                         backgroundColor: usedAppColor.white,
                         child: Padding(
-                          padding: const EdgeInsets.all(8.0),
+                          padding: EdgeInsets.all(8.0),
                           child: Column(
                             mainAxisAlignment: MainAxisAlignment.spaceBetween,
                             children: [
@@ -56,7 +57,7 @@ class _RescheduleYourAppointmentDialogBoxState
                                       //   textAlign: TextAlign.center,
                                     )),
                               ),
-                              const SizedBox(height: 5),
+                              SizedBox(height: 5),
                               FancyText(
                                 "Are you sure to reschedule your fitness appointment with your coach?",
                                 textAlign: TextAlign.center,
@@ -67,9 +68,9 @@ class _RescheduleYourAppointmentDialogBoxState
                                   //   size: 24,
                                 ),
                               ),
-                              const SizedBox(height: 5),
+                              SizedBox(height: 5),
                               Padding(
-                                padding: const EdgeInsets.all(8.0),
+                                padding: EdgeInsets.all(8.0),
                                 child: FancyContainer(
                                   height: 45,
                                   isContinousBorder: false,
@@ -83,7 +84,7 @@ class _RescheduleYourAppointmentDialogBoxState
                                         "Yes, reschedule",
                                         textColor: usedAppColor.white,
                                       ),
-                                      const SizedBox(width: 10),
+                                      SizedBox(width: 10),
                                       SizedBox.square(
                                         dimension: 15,
                                         child: Image.asset(
@@ -95,7 +96,7 @@ class _RescheduleYourAppointmentDialogBoxState
                                   ),
                                 ),
                               ),
-                              const SizedBox(height: 5),
+                              SizedBox(height: 5),
                             ],
                           ),
                         ),
@@ -104,13 +105,13 @@ class _RescheduleYourAppointmentDialogBoxState
                   ),
                 ),
                 Padding(
-                  padding: const EdgeInsets.all(18.0),
+                  padding: EdgeInsets.all(18.0),
                   child: FancyContainer(
                     backgroundColor: getFigmaColor("F3F3F4"),
                     width: 40,
                     height: 40,
                     radius: 20,
-                    child: const Icon(Icons.close),
+                    child: Icon(Icons.close),
                   ),
                 )
               ],
