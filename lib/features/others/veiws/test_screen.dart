@@ -6,6 +6,7 @@ import 'package:fitness_client_project/utils/customs/dashed_lines.dart';
 import 'package:fitness_client_project/utils/customs/fancy_container.dart';
 import 'package:fitness_client_project/utils/customs/fancy_text.dart';
 import 'package:fitness_client_project/utils/customs/rater_widget.dart';
+import 'package:fitness_client_project/utils/customs/revealable_tile.dart';
 import 'package:fitness_client_project/utils/helperFunctions.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
@@ -110,118 +111,17 @@ class _TestScreenState extends State<TestScreen> {
                             ),
                           ),
                           const SizedBox(height: 20),
-                          Row(
-                            children: [
-                              Padding(
-                                padding: const EdgeInsets.symmetric(
-                                    horizontal: 4.0, vertical: 10),
-                                child: FancyContainer(
-                                  radius: 20,
-                                  // height: 217,
-                                  isContinousBorder: false,
-
-                                  nulledAlign: true,
-                                  backgroundColor: getFigmaColor("f3f3f4"),
-                                  child: Padding(
-                                    padding: const EdgeInsets.symmetric(
-                                        horizontal: 4.0, vertical: 10),
-                                    child: Column(
-                                      mainAxisSize: MainAxisSize.min,
-                                      children: [
-                                        Icon(
-                                          Icons.timer,
-                                          size: 15,
-                                        ),
-                                        SizedBox(height: 5),
-                                        FancyText("13:00",
-                                            rawTextStyle: GoogleFonts.workSans(
-                                              fontSize: 14,
-                                              fontWeight: FontWeight.w700,
-                                            )
-                                            // textColor: getFigmaColor("676C75"),
-                                            ),
-                                      ],
-                                    ),
-                                  ),
-                                ),
-                              ),
-                              Expanded(
-                                child: FittedBox(
-                                  child: FancyContainer(
-                                    radius: 40,
-                                    // height: 217,
-                                    nulledAlign: true,
-                                    backgroundColor: getFigmaColor("f3f3f4"),
-                                    child: Padding(
-                                      padding: const EdgeInsets.all(8.0),
-                                      child: Column(
-                                        mainAxisAlignment:
-                                            MainAxisAlignment.center,
-                                        mainAxisSize: MainAxisSize.min,
-                                        children: [
-                                          Row(
-                                            children: [
-                                              FancyContainer(
-                                                height: 30,
-                                                width: 30,
-                                                radius: 30,
-                                                isContinousBorder: false,
-                                                child: Image.asset(
-                                                    "assets/images/maleCommentatorImage.png"),
-                                              ),
-                                              const SizedBox(width: 10),
-                                              Column(
-                                                crossAxisAlignment:
-                                                    CrossAxisAlignment.start,
-                                                children: [
-                                                  FancyText("Casca Smith",
-                                                      rawTextStyle:
-                                                          GoogleFonts.workSans(
-                                                        fontSize: 15,
-                                                        fontWeight:
-                                                            FontWeight.w700,
-                                                      )
-                                                      // textColor: getFigmaColor("676C75"),
-                                                      ),
-                                                  const SizedBox(height: 10),
-                                                  _buildIconImage(),
-                                                ],
-                                              ),
-                                            ],
-                                          ),
-                                          const SizedBox(height: 10),
-                                          FancyContainer(
-                                            backgroundColor: Colors.white,
-                                            radius: 6,
-                                            isContinousBorder: false,
-                                            // width: double.infinity,
-                                            child: Padding(
-                                              padding:
-                                                  const EdgeInsets.symmetric(
-                                                      horizontal: 8.0),
-                                              child: FancyText(
-                                                  "Upper Body Full Circuit Session 1",
-                                                  rawTextStyle:
-                                                      GoogleFonts.workSans(
-                                                          fontSize: 14,
-                                                          fontWeight:
-                                                              FontWeight.w700,
-                                                          color: getFigmaColor(
-                                                              "676C75"))
-                                                  // textColor: getFigmaColor("676C75"),
-                                                  ),
-                                            ),
-                                          ),
-                                          const SizedBox(height: 10),
-                                          _buildIconImageDotRepeat()
-                                        ],
-                                      ),
-                                    ),
-                                  ),
-                                ),
-                              ),
-                            ],
-                          ),
+                          RevealableTextTile(
+                              child: _buildItemXTimeItem(),
+                              background: Row(
+                                mainAxisAlignment: MainAxisAlignment.end,
+                                children: [
+                                  FancyContainer(
+                                    backgroundColor: Colors.red,
+                                    child: Text("data"),
+                                  )
+                                ],
+                              )),
                         ],
                       ),
                     )
@@ -246,6 +146,110 @@ class _TestScreenState extends State<TestScreen> {
 // )
           ],
         ));
+  }
+
+  Row _buildItemXTimeItem() {
+    return Row(
+      children: [
+        Padding(
+          padding: const EdgeInsets.symmetric(horizontal: 4.0, vertical: 10),
+          child: FancyContainer(
+            radius: 20,
+            // height: 217,
+            isContinousBorder: false,
+
+            nulledAlign: true,
+            backgroundColor: getFigmaColor("f3f3f4"),
+            child: Padding(
+              padding:
+                  const EdgeInsets.symmetric(horizontal: 4.0, vertical: 10),
+              child: Column(
+                mainAxisSize: MainAxisSize.min,
+                children: [
+                  Icon(
+                    Icons.timer,
+                    size: 15,
+                  ),
+                  SizedBox(height: 5),
+                  FancyText("13:00",
+                      rawTextStyle: GoogleFonts.workSans(
+                        fontSize: 14,
+                        fontWeight: FontWeight.w700,
+                      )
+                      // textColor: getFigmaColor("676C75"),
+                      ),
+                ],
+              ),
+            ),
+          ),
+        ),
+        Expanded(
+          child: FittedBox(
+            child: FancyContainer(
+              radius: 40,
+              // height: 217,
+              nulledAlign: true,
+              backgroundColor: getFigmaColor("f3f3f4"),
+              child: Padding(
+                padding: const EdgeInsets.all(8.0),
+                child: Column(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  mainAxisSize: MainAxisSize.min,
+                  children: [
+                    Row(
+                      children: [
+                        FancyContainer(
+                          height: 30,
+                          width: 30,
+                          radius: 30,
+                          isContinousBorder: false,
+                          child: Image.asset(
+                              "assets/images/maleCommentatorImage.png"),
+                        ),
+                        const SizedBox(width: 10),
+                        Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            FancyText("Casca Smith",
+                                rawTextStyle: GoogleFonts.workSans(
+                                  fontSize: 15,
+                                  fontWeight: FontWeight.w700,
+                                )
+                                // textColor: getFigmaColor("676C75"),
+                                ),
+                            const SizedBox(height: 10),
+                            _buildIconImage(),
+                          ],
+                        ),
+                      ],
+                    ),
+                    const SizedBox(height: 10),
+                    FancyContainer(
+                      backgroundColor: Colors.white,
+                      radius: 6,
+                      isContinousBorder: false,
+                      // width: double.infinity,
+                      child: Padding(
+                        padding: const EdgeInsets.symmetric(horizontal: 8.0),
+                        child: FancyText("Upper Body Full Circuit Session 1",
+                            rawTextStyle: GoogleFonts.workSans(
+                                fontSize: 14,
+                                fontWeight: FontWeight.w700,
+                                color: getFigmaColor("676C75"))
+                            // textColor: getFigmaColor("676C75"),
+                            ),
+                      ),
+                    ),
+                    const SizedBox(height: 10),
+                    _buildIconImageDotRepeat()
+                  ],
+                ),
+              ),
+            ),
+          ),
+        ),
+      ],
+    );
   }
 
   Row _buildIconImageDotRepeat() {
