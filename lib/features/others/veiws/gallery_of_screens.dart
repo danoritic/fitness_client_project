@@ -45,7 +45,9 @@ class _GalleryOfScreensState extends State<GalleryOfScreens> {
     const AiCoachChatPage13And16(),
     const AiCoachChatPage14ImageSelectionMenu(),
   ];
+
   int currentIndex = 0;
+  // git revert c568fb6
   @override
   Widget build(BuildContext context) {
     return Scaffold(
