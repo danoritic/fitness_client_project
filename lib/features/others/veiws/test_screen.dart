@@ -118,8 +118,29 @@ class _TestScreenState extends State<TestScreen> {
                                 children: [
                                   FancyContainer(
                                     backgroundColor: Colors.red,
-                                    child: Text("data"),
-                                  )
+                                    isContinousBorder: false,
+                                    radius: 12,
+                                    nulledAlign: true,
+                                    child: Padding(
+                                      padding: const EdgeInsets.all(8.0),
+                                      child: Icon(Icons.delete,
+                                          color: Colors.white),
+                                    ),
+                                  ),
+                                  SizedBox(width: 10),
+                                  FancyContainer(
+                                    backgroundColor: getFigmaColor("F97316"),
+                                    nulledAlign: true,
+                                    isContinousBorder: false,
+                                    radius: 12,
+                                    child: Padding(
+                                        padding: const EdgeInsets.all(8.0),
+                                        child: Image.asset(
+                                            "assets/images/appIcon-calendarFilled.png")
+                                        // Icon(Icons.delete,
+                                        //     color: Colors.white),
+                                        ),
+                                  ),
                                 ],
                               )),
                         ],
