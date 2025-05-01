@@ -1,7 +1,7 @@
 import 'dart:math';
 
-import 'package:fitness_client_project/features/Sandow/widgets/score_card.dart';
-import 'package:fitness_client_project/features/homepage/veiws/sandow_score.dart';
+import 'package:fitness_client_project/features/aiCoachingSession/widgets/score_card.dart';
+import 'package:fitness_client_project/features/homeAndFitnessMetrics/veiws/sandow_score.dart';
 import 'package:fitness_client_project/utils/customs/customs.dart';
 
 import 'package:fitness_client_project/utils/customs/fancy_container.dart';

@@ -1,22 +1,23 @@
 import 'package:flutter/material.dart';
 
-class RevealableTextTile extends StatefulWidget {
+class RevealableTile extends StatefulWidget {
   final Widget child;
   final Widget background;
-  final double revealWidth;
+  // final double revealWidth;
+  RevealableTileController revealableTileController;
 
-  const RevealableTextTile({
+  RevealableTile({
     Key? key,
     required this.child,
     required this.background,
-    this.revealWidth = 100.0,
+    required this.revealableTileController,
   }) : super(key: key);
 
   @override
-  _RevealableTextTileState createState() => _RevealableTextTileState();
+  _RevealableTileState createState() => _RevealableTileState();
 }
 
-class _RevealableTextTileState extends State<RevealableTextTile>
+class _RevealableTileState extends State<RevealableTile>
     with SingleTickerProviderStateMixin {
   late AnimationController _controller;
   double _dragExtent = 0.0;
@@ -28,30 +29,36 @@ class _RevealableTextTileState extends State<RevealableTextTile>
       vsync: this,
       duration: const Duration(milliseconds: 250),
       value: 0.0,
-      lowerBound: -widget.revealWidth,
+      lowerBound: -widget.revealableTileController.revealWidth,
       upperBound: 0.0,
     );
+    widget.revealableTileController.animationController = _controller;
   }
 
   @override
   void dispose() {
-    _controller.dispose();
+    widget.revealableTileController.animationController?.dispose();
     super.dispose();
   }
 
   void _handleDragUpdate(DragUpdateDetails details) {
+    widget.revealableTileController.onDragStart?.call();
     setState(() {
       _dragExtent += details.delta.dx;
-      _dragExtent = _dragExtent.clamp(-widget.revealWidth, 0.0);
-      _controller.value = _dragExtent;
+      _dragExtent =
+          _dragExtent.clamp(-widget.revealableTileController.revealWidth, 0.0);
+      widget.revealableTileController.animationController?.value = _dragExtent;
     });
   }
 
   void _handleDragEnd(DragEndDetails details) {
-    if (_dragExtent < -widget.revealWidth / 2) {
-      _controller.animateTo(-widget.revealWidth);
+    if (_dragExtent < -widget.revealableTileController.revealWidth / 2) {
+      widget.revealableTileController.animationController
+          ?.animateTo(-widget.revealableTileController.revealWidth);
+      widget.revealableTileController.onOpen?.call();
     } else {
-      _controller.animateTo(0.0);
+      widget.revealableTileController.animationController?.animateTo(0.0);
+      widget.revealableTileController.onClose?.call();
     }
   }
 
@@ -72,10 +79,12 @@ class _RevealableTextTileState extends State<RevealableTextTile>
           onHorizontalDragUpdate: _handleDragUpdate,
           onHorizontalDragEnd: _handleDragEnd,
           child: AnimatedBuilder(
-            animation: _controller,
+            animation: widget.revealableTileController.animationController!,
             builder: (context, child) {
               return Transform.translate(
-                offset: Offset(_controller.value, 0),
+                offset: Offset(
+                    widget.revealableTileController.animationController!.value,
+                    0),
                 child: child,
               );
             },
@@ -88,40 +97,33 @@ class _RevealableTextTileState extends State<RevealableTextTile>
 }
 
 // Example usage:
-class ExampleScreen extends StatelessWidget {
-  const ExampleScreen({super.key});
 
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(title: const Text('Revealable TextTile')),
-      body: ListView(
-        children: [
-          RevealableTextTile(
-            revealWidth: 120.0,
-            background: Row(
-              mainAxisAlignment: MainAxisAlignment.end,
-              children: [
-                ElevatedButton(onPressed: () {}, child: Text('Edit')),
-                SizedBox(width: 8),
-              ],
-            ),
-            child: ListTile(
-              title: Text('Slide me to the left!'),
-              subtitle: Text('To reveal the edit button.'),
-            ),
-          ),
-          Divider(),
-          RevealableTextTile(
-            revealWidth: 80.0,
-            background: Icon(Icons.delete, color: Colors.red, size: 36),
-            child: ListTile(
-              title: Text('Slide me too!'),
-              subtitle: Text('To see a delete icon.'),
-            ),
-          ),
-        ],
-      ),
-    );
+class RevealableTileController {
+  String id;
+  bool isOpen = false;
+  double revealWidth = 100.0;
+  final Function()? onOpen;
+  final Function()? onClose;
+  final Function()? onDragStart;
+
+  RevealableTileController({
+    this.onOpen,
+    this.onClose,
+    this.onDragStart,
+    required this.id,
+    this.revealWidth = 100.0,
+  }) {
+    // animationController = AnimationController(vsync: null);
+  }
+  AnimationController? animationController;
+
+  Future slideAndSetIsOpenState(bool toOriginaPosition) async {
+    if (toOriginaPosition) {
+      await animationController?.animateTo(-revealWidth);
+      isOpen = true;
+    } else {
+      await animationController?.animateTo(0.0);
+      isOpen = false;
+    }
   }
 }

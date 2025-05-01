@@ -1,0 +1,47 @@
+import 'dart:math';
+
+import 'package:card_swiper/card_swiper.dart';
+import 'package:cr_calendar/cr_calendar.dart';
+import 'package:cr_calendar/cr_calendar.dart' as cr_calendar;
+import 'package:dropdown_button2/dropdown_button2.dart';
+import 'package:fitness_client_project/features/aiCoachingSession/models/models.dart';
+import 'package:fitness_client_project/features/aiCoachingSession/veiws/ai_coach_chat_last_page.dart';
+import 'package:fitness_client_project/features/aiCoachingSession/veiws/ai_coach_chat_page18.dart';
+import 'package:fitness_client_project/features/aiCoachingSession/veiws/cancel_personal_coach_appointment_dialog_box.dart';
+import 'package:fitness_client_project/features/aiCoachingSession/veiws/checkout_page.dart';
+import 'package:fitness_client_project/features/aiCoachingSession/veiws/coach_call_page.dart';
+import 'package:fitness_client_project/features/aiCoachingSession/veiws/coach_chat_page.dart';
+import 'package:fitness_client_project/features/aiCoachingSession/veiws/coach_review_dialog_box.dart';
+import 'package:fitness_client_project/features/aiCoachingSession/veiws/coach_review_page_page.dart';
+import 'package:fitness_client_project/features/aiCoachingSession/veiws/coach_selection_page.dart';
+import 'package:fitness_client_project/features/aiCoachingSession/veiws/coach_talk_session_ended_page.dart';
+import 'package:fitness_client_project/features/aiCoachingSession/veiws/coaching_session_instruction_page.dart';
+import 'package:fitness_client_project/features/aiCoachingSession/veiws/filter_coach_search_bottom_sheet.dart';
+import 'package:fitness_client_project/features/aiCoachingSession/veiws/find_fitness_coach_by_text_page.dart';
+import 'package:fitness_client_project/features/aiCoachingSession/veiws/find_fitness_coach_page.dart';
+import 'package:fitness_client_project/features/aiCoachingSession/veiws/finding_fitness_coach_page.dart';
+import 'package:fitness_client_project/features/aiCoachingSession/veiws/payment_completed_dialog_box.dart';
+import 'package:fitness_client_project/features/aiCoachingSession/veiws/reaction_page.dart';
+import 'package:fitness_client_project/features/aiCoachingSession/veiws/reschedule_your_appointment_dialog_box.dart';
+import 'package:fitness_client_project/features/aiCoachingSession/veiws/reviews_page.dart';
+import 'package:fitness_client_project/features/aiCoachingSession/veiws/select_payment_methods_bottom_sheet.dart';
+import 'package:fitness_client_project/features/aiCoachingSession/veiws/session_completed_page.dart';
+import 'package:fitness_client_project/features/aiCoachingSession/veiws/upcoming_coach_fitness_training_page.dart';
+import 'package:fitness_client_project/features/aiCoachingSession/widgets/widgets.dart';
+
+import 'package:fitness_client_project/utils/customs/customs.dart';
+import 'package:fitness_client_project/utils/customs/fancy_container.dart';
+import 'package:fitness_client_project/utils/customs/fancy_text.dart';
+import 'package:fitness_client_project/utils/customs/line_chart.dart';
+import 'package:fitness_client_project/utils/customs/rater_widget.dart';
+import 'package:fitness_client_project/utils/customs/rating_widget.dart';
+import 'package:fitness_client_project/utils/helperFunctions.dart';
+import 'package:flutter/material.dart';
+import 'package:flutter_animate/flutter_animate.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:get/route_manager.dart';
+// import 'package:get/get.dart';
+import 'package:google_fonts/google_fonts.dart';
+import 'package:moment_dart/moment_dart.dart';
+
+import 'package:card_swiper/card_swiper.dart' as card_swiper;

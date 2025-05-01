@@ -38,9 +38,11 @@ dependencies:
   google_fonts:
   flutter_screenutil:
   flutter_animate:
+  uuid:
   get:
   awesome_bottom_bar:
   easy_date_timeline:
+  interactive_slider: 0.3.0
   
   card_swiper:
   dropdown_button2:

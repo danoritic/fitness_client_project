@@ -1,4 +1,4 @@
-import 'package:fitness_client_project/features/aiChatSession/models/models.dart';
+import 'package:fitness_client_project/features/aiCoachingSession/models/models.dart';
 import 'package:fitness_client_project/utils/customs/fancy_container.dart';
 import 'package:fitness_client_project/utils/customs/fancy_text.dart';
 import 'package:fitness_client_project/utils/helperFunctions.dart';

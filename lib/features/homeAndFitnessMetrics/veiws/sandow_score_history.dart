@@ -1,4 +1,4 @@
-import 'package:fitness_client_project/features/Sandow/widgets/score_card.dart';
+import 'package:fitness_client_project/features/aiCoachingSession/widgets/score_card.dart';
 import 'package:fitness_client_project/utils/customs/customs.dart';
 import 'package:fitness_client_project/utils/customs/fancy_text.dart';
 import 'package:fitness_client_project/utils/helperFunctions.dart';

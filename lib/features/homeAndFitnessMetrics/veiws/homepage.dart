@@ -1,4 +1,4 @@
-import 'package:fitness_client_project/features/homepage/veiws/sandow_score.dart';
+import 'package:fitness_client_project/features/homeAndFitnessMetrics/veiws/sandow_score.dart';
 import 'package:fitness_client_project/utils/customs/fancy_text.dart';
 import 'package:fitness_client_project/utils/helperFunctions.dart';
 import 'package:flutter/material.dart';

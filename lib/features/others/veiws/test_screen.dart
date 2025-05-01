@@ -15,9 +15,12 @@ import 'package:google_fonts/google_fonts.dart';
 export "overFlow_ofTestScreen.dart";
 import 'package:easy_date_timeline/easy_date_timeline.dart'
     as easy_date_timeline;
+import 'package:interactive_slider/interactive_slider.dart';
+import 'package:range_slider_flutter/range_slider_flutter.dart';
+import 'package:uuid/uuid.dart';
 
 // TestScreen
-// CoachingSchedulePage
+// CancelThisAppointmentPage
 // CoachingSchedulePage
 
 // assets/images/creditCardBG.png
@@ -46,126 +49,1005 @@ class TestScreen extends StatefulWidget {
 }
 
 class _TestScreenState extends State<TestScreen> {
-  DateTime? _selectedDate;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
         backgroundColor: Colors.white,
-        body: Column(
-          children: [
-            _buildTopBar(context),
-            Padding(
-              padding: const EdgeInsets.all(8.0),
-              child: SingleChildScrollView(
-                child: Column(
+        body: Padding(
+          padding: const EdgeInsets.all(8.0),
+          child: SingleChildScrollView(
+            child: Column(
+              children: [
+                _buildTopBar(context),
+                _buildItem(),
+                SizedBox(height: 10),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
-                    _buildDateSection(),
-                    Row(
-                      children: [
-                        FancyText(
-                          "All Appointments",
-                          rawTextStyle: GoogleFonts.workSans(
-                            fontSize: 13,
-                            fontWeight: FontWeight.bold,
-                          ),
-                        ),
-                        const Spacer(),
-                        FancyText(
-                          "Newest First",
-                          rawTextStyle: GoogleFonts.workSans(
-                              fontSize: 11,
-                              fontWeight: FontWeight.bold,
-                              color: getFigmaColor("676C75")),
-                        ),
-                        const SizedBox(width: 5),
-                        SizedBox(
-                            height: 11,
-                            child:
-                                Image.asset("assets/images/wifiLike_logo.png")),
-                      ],
+                    FancyText(
+                      "Personal Information",
+                      rawTextStyle: GoogleFonts.workSans(
+                        fontSize: 15,
+                        fontWeight: FontWeight.bold,
+                      ),
                     ),
-                    Container(
-                      height: MediaQuery.of(context).size.height * .65,
-                      child: Stack(
-                        children: [
-                          Align(
-                            alignment: Alignment.centerLeft,
-                            child: SizedBox(
-                              width: 50,
-                              child: Center(
-                                child: DottedLine(
-                                  direction: Axis.vertical,
-                                  alignment: WrapAlignment.center,
-                                  lineLength: double.infinity,
-                                  lineThickness: 1.0,
-                                  dashLength: 4.0,
-                                  dashColor: Colors.grey,
-                                  // dashGradient: [Colors.red, Colors.blue],
-                                  dashRadius: 0.0,
-                                  dashGapLength: 4.0,
-                                  dashGapColor: Colors.transparent,
-                                  // dashGapGradient: [Colors.red, Colors.blue],
-                                  dashGapRadius: 0.0,
-                                ),
-                              ),
-                            ),
-                          ),
-                          const SizedBox(height: 20),
-                          RevealableTextTile(
-                              child: _buildItemXTimeItem(),
-                              background: Row(
-                                mainAxisAlignment: MainAxisAlignment.end,
-                                children: [
-                                  FancyContainer(
-                                    backgroundColor: Colors.red,
-                                    isContinousBorder: false,
-                                    radius: 12,
-                                    nulledAlign: true,
-                                    child: Padding(
-                                      padding: const EdgeInsets.all(8.0),
-                                      child: Icon(Icons.delete,
-                                          color: Colors.white),
-                                    ),
-                                  ),
-                                  SizedBox(width: 10),
-                                  FancyContainer(
-                                    backgroundColor: getFigmaColor("F97316"),
-                                    nulledAlign: true,
-                                    isContinousBorder: false,
-                                    radius: 12,
-                                    child: Padding(
-                                        padding: const EdgeInsets.all(8.0),
-                                        child: Image.asset(
-                                            "assets/images/appIcon-calendarFilled.png")
-                                        // Icon(Icons.delete,
-                                        //     color: Colors.white),
-                                        ),
-                                  ),
-                                ],
-                              )),
-                        ],
+                    FancyContainer(
+                      backgroundColor: getFigmaColor("BABBBE"),
+                      radius: 20,
+                      child: const Padding(
+                        padding: EdgeInsets.all(4.0),
+                        child: Icon(
+                          Icons.question_mark_outlined,
+                          size: 12,
+                          color: Colors.white,
+                        ),
                       ),
                     )
                   ],
                 ),
-              ),
-            )
-            // (
-            //   initialDate: DateTime(2024, 3, 18),
-            // )
-//             (
-//   focusedDate: _selectedDate,
-//   firstDate: DateTime(2024, 3, 18),
-//   lastDate: DateTime(2030, 3, 18),
-//   onDateChange: (date) {
-//     // Handle the selected date.
-//     _selectedDate=date;
-//     setState(() {
+                SizedBox(height: 10),
+                _buildTextFieldSection(
+                  leftIcon: Icon(Icons.person_outline_rounded),
+                  hint: "Makise Kurisu",
+                  label: "Full Name",
+                  textEditingController: TextEditingController(),
+                ),
+                SizedBox(height: 10),
+                _buildTextFieldSection(
+                  leftIcon: Icon(Icons.mail_outline_rounded),
+                  hint: "elementary221b@gmail.com",
+                  label: "Email",
+                  textEditingController: TextEditingController(),
+                ),
+                SizedBox(height: 10),
+                _buildTextFieldSection(
+                  leftIcon: Icon(Icons.phone_iphone_rounded),
+                  hint: "+123 456 789",
+                  label: "Phone Number",
+                  textEditingController: TextEditingController(),
+                ),
+                SizedBox(height: 10),
+                Divider(),
+                SizedBox(height: 10),
+                _buildGenderSection(),
+                SizedBox(height: 10),
+                InteractiveSlider(
+                  startIcon: const Icon(Icons.volume_down),
+                  centerIcon: const Text('Center'),
+                  endIcon: const Icon(Icons.volume_up),
+                  min: 1.0,
+                  max: 15.0,
+                  onChanged: (value) => setState(() => _value = value),
+                )
+              ],
+            ),
+          ),
+        ));
+  }
 
-//     });
-//   },
-// )
+  double _value = 15;
+
+  double _upperValue = 50;
+  List<Map> genderListAdvanced = [
+    {"name": "Female", "image": "assets/images/genderIcon-female.png"},
+    {"name": "Male", "image": "assets/images/genderIcon-male.png"},
+    {"name": "Other", "image": "assets/images/genderIcon-ai.png"},
+  ];
+  int? selectedGenderIndex;
+  Column _buildGenderSection() {
+    return Column(
+      children: [
+        Row(
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          children: [
+            FancyText(
+              "Gender",
+              rawTextStyle: GoogleFonts.workSans(
+                fontSize: 14,
+                fontWeight: FontWeight.bold,
+              ),
+            ),
+            FancyText(
+              "Choose 1",
+              rawTextStyle: GoogleFonts.workSans(
+                fontSize: 14,
+                fontWeight: FontWeight.bold,
+                color: getFigmaColor("676C75"),
+              ),
+            ),
           ],
+        ),
+        SingleChildScrollView(
+          scrollDirection: Axis.horizontal,
+          child: Row(
+            children: genderListAdvanced.map((element) {
+              int index = genderListAdvanced.indexOf(element);
+              return (selectedGenderIndex == index)
+                  ? Padding(
+                      padding: const EdgeInsets.all(8.0),
+                      child: FancyContainer(
+                        radius: 10,
+                        action: () {
+                          selectedGenderIndex = null;
+                          setState(() {});
+                        },
+                        isContinousBorder: false,
+                        backgroundColor: getFigmaColor("2563EB"),
+                        hasBorder: true,
+                        borderColor: getFigmaColor("CAD9F9"),
+                        // withAlpha(100),
+                        borderThickness: 4,
+                        child: Padding(
+                          padding: const EdgeInsets.all(8.0),
+                          child: Row(
+                            children: [
+                              SizedBox.square(
+                                dimension: 12,
+                                child: Image.asset(
+                                  element["image"],
+                                  color: Colors.white,
+                                ),
+                              ),
+                              const SizedBox(width: 10),
+                              FancyText(element["name"],
+                                  // "Male",
+                                  size: 12,
+                                  textColor: Colors.white),
+                            ],
+                          ),
+                        ),
+                      ),
+                    )
+                  : Padding(
+                      padding: const EdgeInsets.all(4.0),
+                      child: FancyContainer(
+                        radius: 10,
+                        action: () {
+                          selectedGenderIndex = index;
+                          setState(() {});
+                        },
+                        isContinousBorder: false,
+                        backgroundColor: getFigmaColor("F3F3F4"),
+                        child: Padding(
+                          padding: const EdgeInsets.all(8.0),
+                          child: Row(
+                            children: [
+                              SizedBox.square(
+                                dimension: 12,
+                                child: Image.asset(
+                                  element["image"],
+                                  color: Colors.grey,
+                                ),
+                              ),
+                              const SizedBox(width: 10),
+                              FancyText(
+                                element["name"],
+                                size: 12,
+                                // "Calorie",
+                                // textColor: Colors.white,
+                              ),
+                            ],
+                          ),
+                        ),
+                      ),
+                    );
+            }).toList(),
+          ),
+        ),
+      ],
+    );
+  }
+
+  String? focusedTextField;
+  Column _buildTextFieldSection(
+      {required Widget leftIcon,
+      required String hint,
+      required String label,
+      required TextEditingController textEditingController}) {
+    return Column(
+      crossAxisAlignment: CrossAxisAlignment.start,
+      children: [
+        FancyText(
+          label,
+          // "Card Number",
+          rawTextStyle: GoogleFonts.workSans(
+            fontSize: 15,
+            fontWeight: FontWeight.bold,
+          ),
+        ),
+        SizedBox(height: 10),
+        Builder(builder: (context) {
+          // focusedTextField = "Card Number textField"
+          bool isSelected = focusedTextField == label;
+          double radius = 15;
+
+          Widget child = FancyContainer(
+            height: 45,
+            radius: radius,
+            isContinousBorder: false,
+            backgroundColor: getFigmaColor("F3F3F4"),
+            child: Padding(
+              padding: const EdgeInsets.symmetric(horizontal: 8.0),
+              child: Row(
+                children: [
+                  SizedBox(
+                    height: 15,
+                    width: 15,
+                    child: leftIcon,
+                  ),
+                  SizedBox(
+                    height: 15,
+                    width: 15,
+                  ),
+                  Expanded(
+                    child: TextField(
+                      controller: textEditingController,
+                      cursorColor: getFigmaColor("F97316"),
+                      onTap: () {
+                        // Card Holder textField
+                        focusedTextField = label;
+                        setState(() {});
+                      },
+                      decoration: InputDecoration(
+                        border: InputBorder.none,
+                        hintText: hint,
+                        hintStyle: GoogleFonts.workSans(
+                          color: getFigmaColor("393C43"),
+                          fontSize: 12,
+                          fontWeight: FontWeight.w600,
+                        ),
+                      ),
+                    ),
+                  ),
+
+                  SizedBox(
+                    height: 15,
+                    width: 15,
+                    child: Image.asset("assets/images/appIcon-fatPencil.png"),
+                  ),
+                  // Transform.rotate(
+                  //   angle: 0,
+                  //   child:
+                  // )
+                ],
+              ),
+            ),
+          );
+
+          return isSelected
+              ? wrapWithselectedsBorder(child: child, radius: radius)
+              : child;
+        }),
+      ],
+    );
+  }
+
+  FancyContainer _buildItem() {
+    return FancyContainer(
+      height: 85,
+      radius: 40,
+      nulledAlign: true,
+      backgroundColor: getFigmaColor("F3F3F4"),
+      child: Padding(
+        padding: const EdgeInsets.all(8.0),
+        child: Row(
+          children: [
+            AspectRatio(
+              aspectRatio: 1,
+              child: FancyContainer(
+                radius: 40,
+                backgroundColor: Colors.red,
+                child: Image.asset(
+                  "assets/images/sttretchingWoman.png",
+                  // width: double.infinity,
+                  fit: BoxFit.fitWidth,
+                ),
+              ),
+            ),
+            const SizedBox(width: 10),
+            Expanded(
+              child: Column(
+                children: [
+                  Row(
+                    children: [
+                      FancyContainer(
+                        isContinousBorder: false,
+                        child: Padding(
+                          padding: const EdgeInsets.symmetric(
+                              horizontal: 8.0, vertical: 4),
+                          child: FancyText(
+                            "Human",
+                            weight: FontWeight.w900,
+                            size: 8,
+                          ),
+                        ),
+                        backgroundColor: getFigmaColor("D7D8D9"),
+                      )
+                    ],
+                  ),
+                  const SizedBox(height: 5),
+                  Align(
+                    alignment: Alignment.centerLeft,
+                    child: FancyText(
+                      "Zen Flow Yoga",
+                      weight: FontWeight.bold,
+                      size: 12,
+                    ),
+                  ),
+                  const SizedBox(height: 5),
+                  Row(
+                    // mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                    children: [
+                      Icon(
+                        Icons.star_rounded,
+                        color: getFigmaColor("F97316"),
+                        size: 12,
+                      ),
+                      const SizedBox(width: 5),
+                      FancyText(
+                        "1.8",
+                        weight: FontWeight.w500,
+                        size: 14,
+                        textColor: getFigmaColor("676C75"),
+                      ),
+                      const SizedBox(width: 5),
+                      FancyContainer(
+                        height: 5,
+                        width: 5,
+
+                        // isContinousBorder: false,
+                        backgroundColor: getFigmaColor("D7D8D9"),
+                      ),
+                      const SizedBox(width: 5),
+                      SizedBox(
+                        height: 12,
+                        child: Image.asset(
+                            "assets/images/insightIcon-dumbell.png"),
+                      ),
+                      // Icon(
+                      //   Icons.timer,
+                      //   color: getFigmaColor("9EA0A5"),
+                      //   size: 12,
+                      // ),
+                      const SizedBox(width: 5),
+                      FancyText(
+                        "Strength",
+                        weight: FontWeight.w500,
+                        size: 14,
+                        textColor: getFigmaColor("676C75"),
+                      ),
+                    ],
+                  )
+                ],
+              ),
+            ),
+            SizedBox(height: 15, width: 15, child: buildAppArrow(isLeft: false))
+          ],
+        ),
+      ),
+    );
+  }
+
+  Padding _buildTopBar(BuildContext context) {
+    return Padding(
+      padding: const EdgeInsets.only(top: 0.0),
+      child: FancyContainer(
+        height: 50,
+        // backgroundColor: Colors.white,
+        child: Padding(
+          padding: const EdgeInsets.all(8.0),
+          child: Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            children: [
+              buildBackArrow(context),
+              Padding(
+                padding: const EdgeInsets.all(8.0),
+                child: FancyText(
+                  "Book Coach",
+                  rawTextStyle: GoogleFonts.workSans(
+                    fontSize: 15,
+                    fontWeight: FontWeight.bold,
+                  ),
+                ),
+              ),
+              FancyContainer(
+                height: 30,
+                width: 30,
+                radius: 20,
+                backgroundColor: Colors.grey[300],
+                child: const Padding(
+                  padding: EdgeInsets.all(4.0),
+                  child: Icon(
+                    Icons.settings_outlined,
+                    weight: .2,
+                    size: 20,
+                  ),
+                ),
+              ),
+            ],
+          ),
+        ),
+      ),
+    );
+  }
+}
+
+class CancelThisAppointmentPage extends StatefulWidget {
+  const CancelThisAppointmentPage({super.key});
+
+  @override
+  State<CancelThisAppointmentPage> createState() =>
+      _CancelThisAppointmentPageState();
+}
+
+class _CancelThisAppointmentPageState extends State<CancelThisAppointmentPage> {
+  List<String> listOfReasonsToQuit = [
+    "I found a better provider",
+    "I’m concerned about the insurance",
+    "The provider doesn’t accept insurance",
+    "Provider asked to cancel",
+    "There was an issue on my end",
+    "Other",
+  ];
+  List<int> selectedreasons = [];
+  @override
+  Widget build(BuildContext context) {
+    // Main scaffold for the screen
+    return Scaffold(
+      backgroundColor: Colors.white,
+      body: Center(
+        child: Padding(
+          padding: const EdgeInsets.all(10.0),
+          child: SingleChildScrollView(
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+              // Main content column
+              children: [
+                Container(
+                  height: 56,
+                  width: 56,
+                  decoration: BoxDecoration(
+                      color: getFigmaColor("FFEDD5"),
+                      borderRadius: BorderRadius.circular(20)),
+                  child: Icon(
+                    Icons.check_rounded,
+                    color: getFigmaColor("F97316"),
+                  ),
+                ),
+                SizedBox(height: 10),
+                Text(
+                  "Cancel This Appointment",
+                  style: GoogleFonts.workSans(
+                    fontSize: 22,
+                    fontWeight: FontWeight.bold,
+                  ),
+                ),
+                SizedBox(height: 10),
+                Text(
+                  "Cancelling fitness appointment too many times will result being banned!",
+                  style: GoogleFonts.workSans(
+                    fontSize: 14,
+                  ),
+                ),
+                SizedBox(height: 20),
+                // Container displaying appointment details
+                FancyContainer(
+                  radius: 40,
+                  // height: 217,
+                  nulledAlign: true,
+                  backgroundColor: getFigmaColor("f3f3f4"),
+                  child: Padding(
+                    padding: const EdgeInsets.all(8.0),
+                    // Inner column for appointment details
+                    child: Column(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      mainAxisSize: MainAxisSize.min,
+                      children: [
+                        Row(
+                          children: [
+                            FancyContainer(
+                              height: 30,
+                              width: 30,
+                              radius: 30,
+                              isContinousBorder: false,
+                              child: Image.asset(
+                                  "assets/images/maleCommentatorImage.png"),
+                            ),
+                            const SizedBox(width: 10),
+                            Column(
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: [
+                                FancyText("Casca Smith",
+                                    rawTextStyle: GoogleFonts.workSans(
+                                      fontSize: 15,
+                                      fontWeight: FontWeight.w700,
+                                    )),
+                                const SizedBox(height: 10),
+                                _buildIconImage(),
+                              ],
+                            ),
+                          ],
+                        ),
+                        const SizedBox(height: 10),
+                        FancyContainer(
+                          backgroundColor: Colors.white,
+                          radius: 6,
+                          isContinousBorder: false,
+                          child: Padding(
+                            padding:
+                                const EdgeInsets.symmetric(horizontal: 8.0),
+                            child: FancyText(
+                                "Upper Body Full Circuit Session 1",
+                                rawTextStyle: GoogleFonts.workSans(
+                                    fontSize: 12,
+                                    fontWeight: FontWeight.w600,
+                                    color: getFigmaColor("676C75"))),
+                          ),
+                        ),
+                        const SizedBox(height: 10),
+                        _buildIconImageDotRepeat()
+                      ],
+                    ),
+                  ),
+                ),
+                SizedBox(height: 20),
+                // Text asking for cancellation reason
+                Text(
+                  "Please select the cancellation reason?",
+                  style: GoogleFonts.workSans(
+                    fontSize: 12,
+                    fontWeight: FontWeight.bold,
+                  ),
+                ),
+                SizedBox(height: 20),
+                // Row of selectable reasons for cancellation
+                Column(
+                  children: List.generate(
+                    listOfReasonsToQuit.length,
+                    (index) {
+                      bool isSelected = selectedreasons.contains(index);
+                      return Padding(
+                        padding: const EdgeInsets.symmetric(
+                          // Horizontal padding for each reason
+                          horizontal: 4.0,
+                          vertical: 2.0,
+                        ),
+                        child: FancyContainer(
+                          radius: 10,
+                          action: () {
+                            if (isSelected) {
+                              selectedreasons.remove(index);
+                            } else {
+                              // Add or remove the reason from the selected list
+                              selectedreasons.add(index);
+                            }
+                            setState(() {});
+                          },
+                          isContinousBorder: false,
+                          // backgroundColor: getFigmaColor("F3F3F4"),
+                          // hasBorder: isSelected,
+                          // Highlight selected reasons with a border
+                          borderColor: getFigmaColor("2563EB"),
+                          child: Padding(
+                            padding: const EdgeInsets.all(2.0),
+                            child: Row(
+                              // mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                              children: [
+                                FancyContainer(
+                                  height: 15,
+                                  width: 15,
+                                  radius: 4,
+                                  isContinousBorder: false,
+                                  backgroundColor: isSelected
+                                      ? getFigmaColor("F97316", 12)
+                                      : null,
+                                  borderColor: isSelected
+                                      ? getFigmaColor("F97316")
+                                      : getFigmaColor("babbbe"),
+                                  hasBorder: true,
+                                  child: (isSelected)
+                                      ? FancyContainer(
+                                          height: 8,
+                                          width: 8,
+                                          radius: 3,
+
+                                          isContinousBorder: false,
+                                          backgroundColor:
+                                              getFigmaColor("F97316"),
+                                          // child: SizedBox(),
+                                        )
+                                      : null,
+                                ),
+                                SizedBox(width: 10),
+                                // Spacer(),
+                                FancyText(
+                                  listOfReasonsToQuit[index],
+                                  size: 10,
+                                ),
+                              ],
+                            ),
+                          ),
+                        ),
+                      );
+                    },
+                  ),
+                ),
+                SizedBox(height: 10),
+                FancyContainer(
+                  height: 140,
+                  radius: 60,
+                  backgroundColor: getFigmaColor("f3f3f4"),
+                  child: Padding(
+                    padding: const EdgeInsets.all(18.0),
+                    child: Column(
+                      children: [
+                        Expanded(
+                          child: TextField(
+                            maxLines: 3 - 1,
+                            decoration:
+                                InputDecoration(border: InputBorder.none),
+                          ),
+                        ),
+                        Row(
+                          children: [
+                            Spacer(),
+                            Icon(
+                              Icons.description,
+                              color: getFigmaColor("babbbe"),
+                            ),
+                            SizedBox(width: 5),
+                            FancyText(
+                              "78/120",
+                              textColor: getFigmaColor("6A6D72"),
+                            )
+                          ],
+                        )
+                      ],
+                    ),
+                  ),
+                ),
+                const SizedBox(height: 15),
+                const SizedBox(height: 5),
+
+                Padding(
+                  padding: const EdgeInsets.symmetric(horizontal: 8.0),
+                  child: FancyContainer(
+                    height: 45,
+                    isContinousBorder: false,
+                    radius: 14,
+                    width: double.infinity,
+                    backgroundColor: getFigmaColor("EF4444"),
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        FancyText(
+                          "Continue Cancellation",
+                          textColor: Colors.white,
+                        ),
+                        const SizedBox(width: 10),
+                        SizedBox(
+                          width: 20,
+                          child: buildTailedAppArrow(isLeft: false),
+                        ),
+
+                        // const Icon(
+                        //   Icons.check,
+                        //   color: Colors.white,
+                        // )
+                      ],
+                    ),
+                  ),
+                ),
+                const SizedBox(height: 5),
+
+                Padding(
+                  padding: const EdgeInsets.symmetric(horizontal: 8.0),
+                  child: FancyContainer(
+                    height: 45,
+                    isContinousBorder: false,
+                    radius: 14,
+                    width: double.infinity,
+                    backgroundColor: getFigmaColor("EF4444", 20),
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        FancyText(
+                          "Keep Appointment",
+                          textColor: getFigmaColor("EF4444"),
+                        ),
+                      ],
+                    ),
+                  ),
+                ),
+                const SizedBox(height: 5),
+              ],
+            ),
+          ),
+        ),
+      ),
+    );
+  }
+
+  // Widget for displaying an icon, text, and a separator dot
+  Row _buildIconImageDotRepeat() {
+    return Row(
+      mainAxisAlignment: MainAxisAlignment.center,
+      children: [
+        const SizedBox(width: 5),
+        SizedBox(
+            height: 10,
+            width: 10,
+            child: Image.asset("assets/images/appIcon-calendarFilled.png")),
+        const SizedBox(width: 5),
+        FancyText(
+          "10:25 - 11:35 AM",
+          weight: FontWeight.w500,
+          size: 10,
+          textColor: getFigmaColor("676C75"),
+        ),
+        const SizedBox(width: 5),
+        FancyContainer(
+          height: 5,
+          width: 5,
+
+          // isContinousBorder: false,
+          backgroundColor: getFigmaColor("D7D8D9"),
+        ),
+        const SizedBox(width: 5),
+        SizedBox(
+            height: 10,
+            width: 10,
+            child: Image.asset("assets/images/appIcon-dollar.png")),
+        const SizedBox(width: 5),
+        FancyText(
+          "550 USD",
+          weight: FontWeight.w500,
+          size: 10,
+          textColor: getFigmaColor("676C75"),
+        ),
+      ],
+    );
+  }
+
+  // Widget for displaying an icon and text
+  Row _buildIconImage() {
+    return Row(
+      mainAxisAlignment: MainAxisAlignment.center,
+      children: [
+        const SizedBox(width: 5),
+        SizedBox(
+            height: 15,
+            width: 15,
+            child: Image.asset("assets/images/insightIcon-dumbell.png")),
+        const SizedBox(width: 5),
+        FancyText(
+          "Strength/CORE Expert",
+          weight: FontWeight.w500,
+          size: 12,
+          textColor: getFigmaColor("676C75"),
+        ),
+      ],
+    );
+  }
+}
+
+class CoachingSchedulePage extends StatefulWidget {
+  const CoachingSchedulePage({super.key});
+
+  @override
+  State<CoachingSchedulePage> createState() => _CoachingSchedulePageState();
+}
+
+class _CoachingSchedulePageState extends State<CoachingSchedulePage> {
+  DateTime? _selectedDate;
+  late List<RevealableTileController> revealableControllerList;
+
+  int? currentlyOpenTileIndex = 0;
+  @override
+  void initState() {
+    revealableControllerList = List.generate(
+      4,
+      (index) {
+        return RevealableTileController(
+          id: index.toString(),
+          onOpen: () {
+            currentlyOpenTileIndex = index;
+            revealableControllerList.forEach(
+              (element) {
+                if (element.id != index.toString()) {
+                  try {
+                    element.slideAndSetIsOpenState(false);
+                  } catch (e) {}
+                }
+              },
+            );
+            // setState(() {});
+          },
+          onClose: () {
+            currentlyOpenTileIndex = null;
+            // setState(() {});
+          },
+          onDragStart: () {
+            revealableControllerList.forEach(
+              (element) {
+                if (element.id != index.toString()) {
+                  try {
+                    element.slideAndSetIsOpenState(false);
+                  } catch (e) {}
+                }
+              },
+            );
+          },
+        );
+      },
+    );
+    super.initState();
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+        backgroundColor: Colors.white,
+        body: SingleChildScrollView(
+          child: Column(
+            children: [
+              _buildTopBar(context),
+              Padding(
+                padding: const EdgeInsets.all(8.0),
+                child: SingleChildScrollView(
+                  child: Column(
+                    children: [
+                      _buildDateSection(),
+                      Row(
+                        children: [
+                          FancyText(
+                            "All Appointments",
+                            rawTextStyle: GoogleFonts.workSans(
+                              fontSize: 13,
+                              fontWeight: FontWeight.bold,
+                            ),
+                          ),
+                          const Spacer(),
+                          FancyText(
+                            "Newest First",
+                            rawTextStyle: GoogleFonts.workSans(
+                                fontSize: 11,
+                                fontWeight: FontWeight.bold,
+                                color: getFigmaColor("676C75")),
+                          ),
+                          const SizedBox(width: 5),
+                          SizedBox(
+                              height: 11,
+                              child: Image.asset(
+                                  "assets/images/wifiLike_logo.png")),
+                        ],
+                      ),
+                      Container(
+                        height: MediaQuery.of(context).size.height * .73,
+                        child: Stack(
+                          children: [
+                            Align(
+                              alignment: Alignment.centerLeft,
+                              child: SizedBox(
+                                width: 50,
+                                child: Center(
+                                  child: DottedLine(
+                                    direction: Axis.vertical,
+                                    alignment: WrapAlignment.center,
+                                    lineLength: double.infinity,
+                                    lineThickness: 1.0,
+                                    dashLength: 4.0,
+                                    dashColor: Colors.grey,
+                                    // dashGradient: [Colors.red, Colors.blue],
+                                    dashRadius: 0.0,
+                                    dashGapLength: 4.0,
+                                    dashGapColor: Colors.transparent,
+                                    // dashGapGradient: [Colors.red, Colors.blue],
+                                    dashGapRadius: 0.0,
+                                  ),
+                                ),
+                              ),
+                            ),
+                            const SizedBox(height: 20),
+                            Column(
+                              children:
+                                  revealableControllerList.map((elelment) {
+                                return Padding(
+                                  padding:
+                                      const EdgeInsets.symmetric(vertical: 8.0),
+                                  child: RevealableTile(
+                                      child: _buildItemXTimeItem(),
+                                      background: Row(
+                                        mainAxisAlignment:
+                                            MainAxisAlignment.end,
+                                        children: [
+                                          FancyContainer(
+                                            backgroundColor: Colors.red,
+                                            isContinousBorder: false,
+                                            radius: 12,
+                                            nulledAlign: true,
+                                            action: () {
+                                              elelment
+                                                  .slideAndSetIsOpenState(false)
+                                                  .then(
+                                                (value) {
+                                                  revealableControllerList
+                                                      .remove(elelment);
+                                                  if (mounted) setState(() {});
+                                                },
+                                              );
+
+                                              // setState(() {});
+                                            },
+                                            child: Padding(
+                                              padding:
+                                                  const EdgeInsets.all(8.0),
+                                              child: Icon(Icons.delete,
+                                                  color: Colors.white),
+                                            ),
+                                          ),
+                                          SizedBox(width: 10),
+                                          FancyContainer(
+                                            backgroundColor:
+                                                getFigmaColor("F97316"),
+                                            nulledAlign: true,
+                                            isContinousBorder: false,
+                                            radius: 12,
+                                            height: 40,
+                                            action: () {
+                                              elelment
+                                                  .slideAndSetIsOpenState(false)
+                                                  .then(
+                                                    (value) {},
+                                                  );
+
+                                              // setState(() {});
+                                            },
+                                            child: Padding(
+                                                padding:
+                                                    const EdgeInsets.all(8.0),
+                                                child: Image.asset(
+                                                  "assets/images/appIcon-calendarFilled.png",
+                                                  color: Colors.white,
+                                                )
+                                                // Icon(Icons.delete,
+                                                //     color: Colors.white),
+                                                ),
+                                          ),
+                                        ],
+                                      ),
+                                      revealableTileController: elelment
+                                      //     RevealableTileController(
+                                      //   id: Uuid().v4(),
+                                      // ),
+                                      ),
+                                );
+                              }).toList(),
+                            )
+                          ],
+                        ),
+                      )
+                    ],
+                  ),
+                ),
+              )
+              // (
+              //   initialDate: DateTime(2024, 3, 18),
+              // )
+              //             (
+              //   focusedDate: _selectedDate,
+              //   firstDate: DateTime(2024, 3, 18),
+              //   lastDate: DateTime(2030, 3, 18),
+              //   onDateChange: (date) {
+              //     // Handle the selected date.
+              //     _selectedDate=date;
+              //     setState(() {
+
+              //     });
+              //   },
+              // )
+            ],
+          ),
         ));
   }
 
