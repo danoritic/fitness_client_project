@@ -16,7 +16,7 @@ class _AiCoachIntroPageState extends State<AiCoachIntroPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.white,
+      backgroundColor: usedAppColor.Colors.white,
       body: SafeArea(
         child: Stack(
           children: [
@@ -51,7 +51,7 @@ class _AiCoachIntroPageState extends State<AiCoachIntroPage> {
                               FancyText(
                                 "Get Up Now!",
                                 size: 16,
-                                textColor: Colors.white,
+                                textColor: usedAppColor.Colors.white,
                               )
                             ],
                           ),
@@ -81,7 +81,7 @@ class _AiCoachIntroPageState extends State<AiCoachIntroPage> {
                               FancyText(
                                 "Get Up Now!",
                                 size: 16,
-                                textColor: Colors.white,
+                                textColor: usedAppColor.Colors.white,
                               )
                             ],
                           ),
@@ -117,7 +117,7 @@ class _AiCoachIntroPageState extends State<AiCoachIntroPage> {
                               FancyText(
                                 "Do 588 Reps!",
                                 size: 16,
-                                textColor: Colors.white,
+                                textColor: usedAppColor.Colors.white,
                               )
                             ],
                           ),
@@ -161,12 +161,12 @@ class _AiCoachIntroPageState extends State<AiCoachIntroPage> {
                                 FancyText(
                                   "Get Up Now!",
                                   size: 16,
-                                  textColor: Colors.white,
+                                  textColor: usedAppColor.Colors.white,
                                 ),
                                 const SizedBox(width: 7),
                                 const Icon(
                                   Icons.search,
-                                  color: Colors.white,
+                                  color: usedAppColor.Colors.white,
                                 ),
                               ],
                             ),

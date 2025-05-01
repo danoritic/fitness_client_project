@@ -28,7 +28,7 @@ class _CoachReviewDialogBoxState extends State<CoachReviewDialogBox> {
                       child: FancyContainer(
                         height: 350,
                         radius: 50,
-                        backgroundColor: Colors.white,
+                        backgroundColor: usedAppColor.Colors.white,
                         child: Padding(
                           padding: const EdgeInsets.all(8.0),
                           child: Column(
@@ -72,12 +72,12 @@ class _CoachReviewDialogBoxState extends State<CoachReviewDialogBox> {
                                     children: [
                                       FancyText(
                                         "Great, thanks",
-                                        textColor: Colors.white,
+                                        textColor: usedAppColor.Colors.white,
                                       ),
                                       const SizedBox(width: 10),
                                       const Icon(
                                         Icons.check,
-                                        color: Colors.white,
+                                        color: usedAppColor.Colors.white,
                                       )
                                     ],
                                   ),

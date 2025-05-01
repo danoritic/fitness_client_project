@@ -17,7 +17,7 @@ class _FindingFitnessCoachPageState extends State<FindingFitnessCoachPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.white,
+      backgroundColor: usedAppColor.Colors.white,
       body: Stack(
         children: [
           Image.asset(
@@ -57,14 +57,14 @@ class _FindingFitnessCoachPageState extends State<FindingFitnessCoachPage> {
                       rawTextStyle: GoogleFonts.workSans(
                         fontSize: 23,
                         fontWeight: FontWeight.bold,
-                        color: Colors.white,
+                        color: usedAppColor.Colors.white,
                       ),
                     ),
                     SizedBox(height: 20),
                     LinearProgressIndicator(
                       value: .5,
                       borderRadius: BorderRadius.circular(20),
-                      color: Colors.white,
+                      color: usedAppColor.Colors.white,
                       backgroundColor: getFigmaColor("f3f3f4", 32),
                     ),
                     SizedBox(height: 20),

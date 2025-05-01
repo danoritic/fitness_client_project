@@ -61,7 +61,7 @@ class _SandowScoreDetailState extends State<SandowScoreDetail> {
         appBar: AppBar(
           leading: buildBackArrow(context),
           elevation: 0,
-          backgroundColor: Colors.white,
+          backgroundColor: usedAppColor.Colors.white,
           title: Padding(
             padding: const EdgeInsets.all(8.0),
             child: FancyText(
@@ -73,7 +73,7 @@ class _SandowScoreDetailState extends State<SandowScoreDetail> {
             ),
           ),
         ),
-        backgroundColor: Colors.white,
+        backgroundColor: usedAppColor.Colors.white,
         //  Colors.grey[300],
 
         body: Padding(
@@ -381,7 +381,7 @@ class _SandowScoreDetailState extends State<SandowScoreDetail> {
                     height: 100.w,
                     width: 100.w,
                     radius: 700,
-                    backgroundColor: Colors.white,
+                    backgroundColor: usedAppColor.Colors.white,
                     child: Padding(
                       padding: const EdgeInsets.all(18.0),
                       child: Column(
@@ -432,7 +432,7 @@ class _SandowScoreDetailState extends State<SandowScoreDetail> {
               backgroundColor: Colors.black,
               child: FancyText(
                 "See AI Recommendations",
-                textColor: Colors.white,
+                textColor: usedAppColor.Colors.white,
               ),
             )
           ],

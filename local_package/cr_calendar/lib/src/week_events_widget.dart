@@ -65,7 +65,8 @@ class WeekEventsWidget extends StatelessWidget {
                         child: Text(
                           item.name,
                           overflow: TextOverflow.ellipsis,
-                          style: const TextStyle(color: Colors.white),
+                          style:
+                              const TextStyle(color: usedAppColor.Colors.white),
                         ),
                       ),
                     ),

@@ -64,7 +64,7 @@ class _FilterCoachSearchBottomSheetState
                   isContinousBorder: false,
                   borderRadius:
                       const BorderRadius.vertical(top: Radius.circular(20)),
-                  backgroundColor: Colors.white.withAlpha(50),
+                  backgroundColor: usedAppColor.Colors.white.withAlpha(50),
                 ),
               ),
               Padding(
@@ -76,7 +76,7 @@ class _FilterCoachSearchBottomSheetState
                   isContinousBorder: false,
                   borderRadius:
                       const BorderRadius.vertical(top: Radius.circular(20)),
-                  backgroundColor: Colors.white.withAlpha(200),
+                  backgroundColor: usedAppColor.Colors.white.withAlpha(200),
                 ),
               ),
               Padding(
@@ -87,7 +87,7 @@ class _FilterCoachSearchBottomSheetState
                   isContinousBorder: false,
                   borderRadius:
                       const BorderRadius.vertical(top: Radius.circular(20)),
-                  backgroundColor: Colors.white,
+                  backgroundColor: usedAppColor.Colors.white,
                   child: Padding(
                     padding: const EdgeInsets.all(8.0),
                     child: SingleChildScrollView(
@@ -167,14 +167,14 @@ class _FilterCoachSearchBottomSheetState
             children: [
               FancyText(
                 "Apply Filter (32)",
-                textColor: Colors.white,
+                textColor: usedAppColor.Colors.white,
               ),
               const SizedBox(width: 10),
               Transform.rotate(
                 angle: pi / 2,
                 child: const Icon(
                   Icons.tune_rounded,
-                  color: Colors.white,
+                  color: usedAppColor.Colors.white,
                 ),
               ),
             ],
@@ -232,13 +232,13 @@ class _FilterCoachSearchBottomSheetState
                               )
                               //  Image.asset(
                               //   ,
-                              //   color: Colors.white,
+                              //   color:usedAppColor.Colors.white,
                               // ),
                               ),
                           FancyText(
                             element["name"],
                             size: 12,
-                            // textColor: Colors.white,
+                            // textColor:usedAppColor.Colors.white,
                           ),
                         ],
                       ));
@@ -299,13 +299,13 @@ class _FilterCoachSearchBottomSheetState
                                   )
                                   //  Image.asset(
                                   //   ,
-                                  //   color: Colors.white,
+                                  //   color:usedAppColor.Colors.white,
                                   // ),
                                   ),
                               FancyText(
                                 element["name"],
                                 size: 12,
-                                // textColor: Colors.white,
+                                // textColor:usedAppColor.Colors.white,
                               ),
                             ],
                           ));
@@ -397,14 +397,14 @@ class _FilterCoachSearchBottomSheetState
                                 dimension: 12,
                                 child: Image.asset(
                                   element["image"],
-                                  color: Colors.white,
+                                  color: usedAppColor.Colors.white,
                                 ),
                               ),
                               const SizedBox(width: 10),
                               FancyText(element["name"],
                                   // "Male",
                                   size: 12,
-                                  textColor: Colors.white),
+                                  textColor: usedAppColor.Colors.white),
                             ],
                           ),
                         ),
@@ -436,7 +436,7 @@ class _FilterCoachSearchBottomSheetState
                                 element["name"],
                                 size: 12,
                                 // "Calorie",
-                                // textColor: Colors.white,
+                                // textColor:usedAppColor.Colors.white,
                               ),
                             ],
                           ),

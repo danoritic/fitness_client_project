@@ -54,7 +54,9 @@ class _LineChartRawState extends State<LineChartRaw> {
               'avg',
               style: TextStyle(
                 fontSize: 12,
-                color: showAvg ? Colors.white.withOpacity(0.5) : Colors.white,
+                color: showAvg
+                    ? usedAppColor.Colors.white.withOpacity(0.5)
+                    : usedAppColor.Colors.white,
               ),
             ),
           ),
@@ -357,7 +359,9 @@ class _LineChartForHeartRateHistoryState
               'avg',
               style: TextStyle(
                 fontSize: 12,
-                color: showAvg ? Colors.white.withOpacity(0.5) : Colors.white,
+                color: showAvg
+                    ? usedAppColor.Colors.white.withOpacity(0.5)
+                    : usedAppColor.Colors.white,
               ),
             ),
           ),

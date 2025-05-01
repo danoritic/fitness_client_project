@@ -70,7 +70,7 @@ class DayItem extends StatelessWidget {
           maxLines: 1,
           textAlign: TextAlign.end,
           style: TextStyle(
-            color: isCurrentDay ? Colors.white : Colors.green,
+            color: isCurrentDay ? usedAppColor.Colors.white : Colors.green,
             fontSize: 12,
           ),
         ),
@@ -82,7 +82,7 @@ class DayItem extends StatelessWidget {
 
   Color? _getTextColor(BuildContext context) {
     if (isCurrentDay) {
-      return Colors.white;
+      returnusedAppColor.Colors.white;
     } else {
       return isWithinMonth
           ? Theme.of(context).textTheme.bodySmall?.color

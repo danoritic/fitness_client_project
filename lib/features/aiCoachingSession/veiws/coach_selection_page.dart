@@ -20,7 +20,7 @@ class _CoachSelectionPageState extends State<CoachSelectionPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.white,
+      backgroundColor: usedAppColor.Colors.white,
       body: Stack(
         children: [
           PageView(
@@ -36,9 +36,9 @@ class _CoachSelectionPageState extends State<CoachSelectionPage> {
               height: MediaQuery.of(context).size.height * .5,
               gradient: LinearGradient(
                 colors: [
-                  Colors.white,
-                  Colors.white,
-                  Colors.white.withAlpha(0),
+                  usedAppColor.Colors.white,
+                  usedAppColor.Colors.white,
+                  usedAppColor.Colors.white.withAlpha(0),
                 ],
                 begin: Alignment.bottomCenter,
                 end: Alignment.topCenter,
@@ -137,8 +137,9 @@ class _CoachSelectionPageState extends State<CoachSelectionPage> {
                                   tabName = e;
                                   setState(() {});
                                 },
-                                backgroundColor:
-                                    isSelected ? Colors.white : null,
+                                backgroundColor: isSelected
+                                    ? usedAppColor.Colors.white
+                                    : null,
                                 child: Padding(
                                   padding: const EdgeInsets.symmetric(
                                       horizontal: 10.0),
@@ -202,7 +203,7 @@ class _CoachSelectionPageState extends State<CoachSelectionPage> {
                     padding: const EdgeInsets.all(8.0),
                     child: Icon(
                       Icons.add,
-                      color: Colors.white,
+                      color: usedAppColor.Colors.white,
                     ),
                   ),
                   backgroundColor: getFigmaColor("F97316"),

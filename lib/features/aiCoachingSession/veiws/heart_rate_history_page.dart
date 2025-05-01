@@ -1,5 +1,3 @@
-
-
 import 'package:fitness_client_project/utils/customs/customs.dart';
 import 'package:fitness_client_project/utils/customs/fancy_container.dart';
 import 'package:fitness_client_project/utils/customs/fancy_text.dart';
@@ -8,9 +6,6 @@ import 'package:fitness_client_project/utils/helperFunctions.dart';
 import 'package:flutter/material.dart';
 // import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
-
-
-
 
 class HeartRateHistoryPage extends StatefulWidget {
   const HeartRateHistoryPage({super.key});
@@ -23,7 +18,7 @@ class _HeartRateHistoryPageState extends State<HeartRateHistoryPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.white,
+      backgroundColor: usedAppColor.Colors.white,
       body: SafeArea(
         child: Padding(
           padding: const EdgeInsets.all(8.0),
@@ -155,7 +150,7 @@ class _HeartRateHistoryPageState extends State<HeartRateHistoryPage> {
       padding: const EdgeInsets.only(top: 38.0),
       child: FancyContainer(
         height: 50,
-        backgroundColor: Colors.white,
+        backgroundColor: usedAppColor.Colors.white,
         child: Padding(
           padding: const EdgeInsets.all(8.0),
           child: Row(

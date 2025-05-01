@@ -22,7 +22,7 @@ class _FindFitnessCoachByTextPageState
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        backgroundColor: Colors.white,
+        backgroundColor: usedAppColor.Colors.white,
         body: Column(
           children: [
             _buildTopBar(context),
@@ -262,7 +262,8 @@ class _FindFitnessCoachByTextPageState
                     tabName = e;
                     setState(() {});
                   },
-                  backgroundColor: isSelected ? Colors.white : null,
+                  backgroundColor:
+                      isSelected ? usedAppColor.Colors.white : null,
                   child: Padding(
                     padding: const EdgeInsets.symmetric(horizontal: 10.0),
                     child: FancyText(
@@ -286,7 +287,7 @@ class _FindFitnessCoachByTextPageState
       padding: const EdgeInsets.only(top: 0.0),
       child: FancyContainer(
         height: 50,
-        // backgroundColor: Colors.white,
+        // backgroundColor:usedAppColor.Colors.white,
         child: Padding(
           padding: const EdgeInsets.all(8.0),
           child: Row(

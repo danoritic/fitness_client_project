@@ -18,7 +18,7 @@ class _CoachTalkSessionEndedPageState extends State<CoachTalkSessionEndedPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        backgroundColor: Colors.white,
+        backgroundColor: usedAppColor.Colors.white,
         body: Center(
           child: Padding(
             padding: const EdgeInsets.all(10.0),
@@ -72,7 +72,7 @@ class _CoachTalkSessionEndedPageState extends State<CoachTalkSessionEndedPage> {
                         rawTextStyle: GoogleFonts.workSans(
                           fontSize: 18,
                           fontWeight: FontWeight.w400,
-                          color: Colors.white,
+                          color: usedAppColor.Colors.white,
                           // weight: FontWeight.bold,
                           //   size: 24,
                         ),

@@ -45,7 +45,10 @@ import 'package:fitness_client_project/features/homeAndFitnessMetrics/veiws/sand
 import 'package:fitness_client_project/features/homeAndFitnessMetrics/veiws/sandow_score_history.dart';
 import 'package:fitness_client_project/features/homeAndFitnessMetrics/veiws/veiws.dart';
 import 'package:fitness_client_project/features/others/veiws/test_screen.dart';
+import 'package:fitness_client_project/utils/app_variables.dart';
 import 'package:fitness_client_project/utils/customs/fancy_container.dart';
+import 'package:fitness_client_project/utils/customs/fancy_text.dart';
+import 'package:fitness_client_project/utils/helperFunctions.dart';
 
 import 'package:flutter/material.dart';
 
@@ -165,11 +168,29 @@ class _GalleryOfScreensState extends State<GalleryOfScreens> {
                         //     padding: const EdgeInsets.all(9.0),
                         //     child: Icon(
                         //       Icons.arrow_back,
-                        //       color: Colors.white,
+                        //       color:usedAppColor.Colors.white,
                         //     ),
                         //   ),
                         // ),
                       ),
+                    ),
+                    FancyContainer(
+                      child: Padding(
+                        padding: const EdgeInsets.all(8.0),
+                        child: FancyText(
+                          isDark ? "lighten" : "darken",
+                          textColor: !isDark
+                              ? usedAppColor.Colors.white
+                              : Colors.black,
+                        ),
+                      ),
+                      action: () {
+                        isDark = !isDark;
+                        changeAppThemeMode(isDark);
+                        setState(() {});
+                      },
+                      backgroundColor:
+                          isDark ? usedAppColor.Colors.white : Colors.black,
                     ),
                     Expanded(
                       child: FancyContainer(
@@ -190,7 +211,7 @@ class _GalleryOfScreensState extends State<GalleryOfScreens> {
                         //     padding: const EdgeInsets.all(9.0),
                         //     child: Icon(
                         //       Icons.arrow_forward,
-                        //       color: Colors.white,
+                        //       color:usedAppColor.Colors.white,
                         //     ),
                         //   ),
                         // ),

@@ -17,7 +17,7 @@ class SandowScore extends StatelessWidget {
       // appBar: AppBar(
       //   title: const Text('Home Page'),
       // ),
-      backgroundColor: Colors.white,
+      backgroundColor: usedAppColors,
       body: Center(
         child: InkWell(
           onTap: () {
@@ -40,7 +40,7 @@ class SandowScore extends StatelessWidget {
                   padding: const EdgeInsets.only(top: 38.0),
                   child: FancyContainer(
                     height: 50,
-                    backgroundColor: Colors.white,
+                    backgroundColor: usedAppColor.Colors.white,
                     child: Padding(
                       padding: const EdgeInsets.all(8.0),
                       child: Row(
@@ -113,7 +113,7 @@ class SandowScoreDialog extends StatelessWidget {
         children: [
           SizedBox(),
           FancyContainer(
-            backgroundColor: Colors.white,
+            backgroundColor: usedAppColor.Colors.white,
             radius: 60,
             isContinousBorder: true,
             child: AspectRatio(
@@ -180,14 +180,14 @@ class SandowScoreDialog extends StatelessWidget {
                               Text(
                                 'Great, thanks',
                                 style: TextStyle(
-                                  color: Colors.white,
+                                  color: usedAppColor.Colors.white,
                                   fontSize: 16,
                                 ),
                               ),
                               SizedBox(width: 8),
                               Icon(
                                 Icons.check,
-                                color: Colors.white,
+                                color: usedAppColor.Colors.white,
                               ),
                             ],
                           ),

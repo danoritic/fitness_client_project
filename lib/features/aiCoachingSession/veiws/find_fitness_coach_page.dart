@@ -18,7 +18,7 @@ class _FindFitnessCoachPageState extends State<FindFitnessCoachPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        backgroundColor: Colors.white,
+        backgroundColor: usedAppColor.Colors.white,
         body: Stack(
           children: [
             Image.asset(
@@ -32,8 +32,8 @@ class _FindFitnessCoachPageState extends State<FindFitnessCoachPage> {
                 height: MediaQuery.of(context).size.height * .5,
                 gradient: LinearGradient(
                   colors: [
-                    Colors.white.withAlpha(0),
-                    Colors.white.withAlpha(100),
+                    usedAppColor.Colors.white.withAlpha(0),
+                    usedAppColor.Colors.white.withAlpha(100),
                   ],
                   begin: Alignment.bottomCenter,
                   end: Alignment.topCenter,
@@ -64,7 +64,7 @@ class _FindFitnessCoachPageState extends State<FindFitnessCoachPage> {
                   child: FancyContainer(
                     radius: 40,
                     // height: 217,
-                    backgroundColor: Colors.white,
+                    backgroundColor: usedAppColor.Colors.white,
                     child: Padding(
                       padding: const EdgeInsets.all(8.0),
                       child: Column(
@@ -126,7 +126,7 @@ class _FindFitnessCoachPageState extends State<FindFitnessCoachPage> {
                               "Strength Expert",
                               weight: FontWeight.w800,
                               size: 16,
-                              textColor: Colors.white,
+                              textColor: usedAppColor.Colors.white,
                             ),
                           )
                         ],
@@ -221,7 +221,7 @@ class _FindFitnessCoachPageState extends State<FindFitnessCoachPage> {
       padding: const EdgeInsets.only(top: 0.0),
       child: FancyContainer(
         height: 50,
-        // backgroundColor: Colors.white,
+        // backgroundColor:usedAppColor.Colors.white,
         child: Padding(
           padding: const EdgeInsets.all(8.0),
           child: Row(

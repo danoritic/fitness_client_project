@@ -16,7 +16,7 @@ class _SessionCompletedPageState extends State<SessionCompletedPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.white,
+      backgroundColor: usedAppColor.Colors.white,
       body: Container(
         // color: Colors.red,
         child: Center(
@@ -74,18 +74,18 @@ class _SessionCompletedPageState extends State<SessionCompletedPage> {
                           FancyText(
                             "Great, Thanks!",
                             // size: 16,
-                            // textColor: Colors.white,
+                            // textColor:usedAppColor.Colors.white,
                             rawTextStyle: GoogleFonts.workSans(
                               fontSize: 16,
                               fontWeight: FontWeight.w600,
-                              color: Colors.white,
+                              color: usedAppColor.Colors.white,
                             ),
                           ),
                           const SizedBox(width: 7),
                           const SizedBox(
                               width: 20,
                               child: Icon(Icons.check_rounded,
-                                  color: Colors.white)),
+                                  color: usedAppColor.Colors.white)),
                         ],
                       ),
                     ),
@@ -110,11 +110,11 @@ class _SessionCompletedPageState extends State<SessionCompletedPage> {
                           FancyText(
                             "Repeat Session",
                             // size: 16,
-                            // textColor: Colors.white,
+                            // textColor:usedAppColor.Colors.white,
                             rawTextStyle: GoogleFonts.workSans(
                               fontSize: 16,
                               fontWeight: FontWeight.w600,
-                              // color: Colors.white,
+                              // color:usedAppColor.Colors.white,
                             ),
                           ),
                           const SizedBox(width: 7),
@@ -122,7 +122,7 @@ class _SessionCompletedPageState extends State<SessionCompletedPage> {
                             width: 20,
                             child: Icon(
                               Icons.repeat_rounded,
-                              // color: Colors.white,
+                              // color:usedAppColor.Colors.white,
                             ),
                           ),
                         ],

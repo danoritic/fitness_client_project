@@ -18,7 +18,7 @@ class _CoachingSessionInstructionPageState
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        backgroundColor: Colors.white,
+        backgroundColor: usedAppColor.Colors.white,
         body: Padding(
           padding: const EdgeInsets.all(10.0),
           child: Column(
@@ -80,7 +80,7 @@ class _CoachingSessionInstructionPageState
                             rawTextStyle: GoogleFonts.workSans(
                                 fontSize: 13,
                                 fontWeight: FontWeight.w600,
-                                color: Colors.white
+                                color: usedAppColor.Colors.white
 
                                 //   size: 24,
                                 ),
@@ -88,7 +88,7 @@ class _CoachingSessionInstructionPageState
                           const SizedBox(width: 5),
                           const Icon(
                             Icons.call_outlined,
-                            color: Colors.white,
+                            color: usedAppColor.Colors.white,
                             size: 14,
                           ),
                         ]),

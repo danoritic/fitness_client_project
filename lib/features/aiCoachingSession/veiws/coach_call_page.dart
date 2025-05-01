@@ -17,7 +17,7 @@ class _CoachCallPageState extends State<CoachCallPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: Colors.white,
+        backgroundColor: usedAppColor.Colors.white,
         elevation: 0,
         title: Column(
           children: [
@@ -59,9 +59,9 @@ class _CoachCallPageState extends State<CoachCallPage> {
                 height: MediaQuery.of(context).size.height * .4,
                 gradient: LinearGradient(
                   colors: [
-                    Colors.white,
-                    Colors.white.withAlpha(200),
-                    Colors.white.withAlpha(0),
+                    usedAppColor.Colors.white,
+                    usedAppColor.Colors.white.withAlpha(200),
+                    usedAppColor.Colors.white.withAlpha(0),
                   ],
                   begin: Alignment.bottomCenter,
                   end: Alignment.topCenter,
@@ -79,7 +79,7 @@ class _CoachCallPageState extends State<CoachCallPage> {
                         height: 110,
                         width: 85,
                         radius: 40,
-                        backgroundColor: Colors.white,
+                        backgroundColor: usedAppColor.Colors.white,
                         shadows: List.filled(
                           4,
                           BoxShadow(
@@ -109,7 +109,7 @@ class _CoachCallPageState extends State<CoachCallPage> {
                             width: 50,
                             radius: 15,
                             isContinousBorder: false,
-                            backgroundColor: Colors.white,
+                            backgroundColor: usedAppColor.Colors.white,
                             shadows: List.filled(
                               4,
                               BoxShadow(
@@ -151,7 +151,7 @@ class _CoachCallPageState extends State<CoachCallPage> {
                               child: Icon(
                                 Icons.call_rounded,
                                 weight: 1,
-                                color: Colors.white,
+                                color: usedAppColor.Colors.white,
                               ),
                             ),
                           ),
@@ -163,7 +163,7 @@ class _CoachCallPageState extends State<CoachCallPage> {
                             width: 50,
                             radius: 15,
                             isContinousBorder: false,
-                            backgroundColor: Colors.white,
+                            backgroundColor: usedAppColor.Colors.white,
                             shadows: List.filled(
                               4,
                               BoxShadow(
@@ -188,7 +188,7 @@ class _CoachCallPageState extends State<CoachCallPage> {
             // Center(child: Image.asset("assets/images/scanImage.png")
             //     //  Icon(
             //     //   Icons.document_scanner_rounded,
-            //     //   color: Colors.white,
+            //     //   color:usedAppColor.Colors.white,
             //     //   size: 220,
             //     // ),
             //     )

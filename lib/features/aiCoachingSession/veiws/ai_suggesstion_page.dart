@@ -17,7 +17,7 @@ class _AiSuggesstionPageState extends State<AiSuggesstionPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.white,
+      backgroundColor: usedAppColor.Colors.white,
       body: SafeArea(
         child: SingleChildScrollView(
           child: Column(
@@ -50,7 +50,7 @@ class _AiSuggesstionPageState extends State<AiSuggesstionPage> {
                             padding: EdgeInsets.all(4.0),
                             child: Icon(
                               Icons.question_mark_rounded,
-                              color: Colors.white,
+                              color: usedAppColor.Colors.white,
                             ),
                           ),
                         ),
@@ -145,7 +145,7 @@ class _AiSuggesstionPageState extends State<AiSuggesstionPage> {
                                 backgroundColor: color,
                                 child: const Icon(
                                   Icons.ac_unit_sharp,
-                                  color: Colors.white,
+                                  color: usedAppColor.Colors.white,
                                 )),
                           ),
                           Align(

@@ -19,10 +19,10 @@ class _SessionHistoryPageState extends State<SessionHistoryPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.white,
+      backgroundColor: usedAppColor.Colors.white,
       appBar: AppBar(
         leading: buildBackArrow(context),
-        backgroundColor: Colors.white,
+        backgroundColor: usedAppColor.Colors.white,
         elevation: 0,
       ),
       body: Padding(

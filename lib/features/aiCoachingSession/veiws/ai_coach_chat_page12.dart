@@ -45,7 +45,7 @@ class _AiCoachChatPage12State extends State<AiCoachChatPage12> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.white,
+      backgroundColor: usedAppColor.Colors.white,
       body: SafeArea(
         child: Padding(
           padding: const EdgeInsets.all(8.0),
@@ -97,7 +97,7 @@ class _AiCoachChatPage12State extends State<AiCoachChatPage12> {
                             selectibles[index],
                             weight: FontWeight.bold,
                             textColor: isSelected
-                                ? Colors.white
+                                ? usedAppColor.Colors.white
                                 : getFigmaColor("313A34"),
                           ),
                         ),
@@ -126,7 +126,7 @@ class _AiCoachChatPage12State extends State<AiCoachChatPage12> {
                         selectedMenuItemBuilder: (context, child) {
                           return FancyContainer(
                             // height: 30,
-                            backgroundColor: Colors.white,
+                            backgroundColor: usedAppColor.Colors.white,
                             child: child,
                           );
                         },
@@ -185,11 +185,11 @@ class _AiCoachChatPage12State extends State<AiCoachChatPage12> {
                             FancyText(
                               "Continue",
                               // size: 16,
-                              // textColor: Colors.white,
+                              // textColor:usedAppColor.Colors.white,
                               rawTextStyle: GoogleFonts.workSans(
                                 fontSize: 16,
                                 fontWeight: FontWeight.w600,
-                                color: Colors.white,
+                                color: usedAppColor.Colors.white,
                               ),
                             ),
                             const SizedBox(width: 7),

@@ -134,7 +134,7 @@ class _RangeSliderWidgetState extends State<RangeSliderWidget> {
       handler: RangeSliderFlutterHandler(
         decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(10),
-          border: Border.all(color: Colors.white, width: 3),
+          border: Border.all(color: usedAppColor.Colors.white, width: 3),
           color: getFigmaColor("F97316"),
           boxShadow: List.filled(
             4,
@@ -150,7 +150,7 @@ class _RangeSliderWidgetState extends State<RangeSliderWidget> {
       rightHandler: RangeSliderFlutterHandler(
         decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(10),
-          border: Border.all(color: Colors.white, width: 3),
+          border: Border.all(color: usedAppColor.Colors.white, width: 3),
           color: getFigmaColor("F97316"),
           boxShadow: List.filled(
             4,
@@ -164,7 +164,7 @@ class _RangeSliderWidgetState extends State<RangeSliderWidget> {
         ),
         foregroundDecoration: BoxDecoration(
           borderRadius: BorderRadius.circular(10),
-          border: Border.all(color: Colors.white, width: 3),
+          border: Border.all(color: usedAppColor.Colors.white, width: 3),
           color: getFigmaColor("F97316"),
         ),
       ),

@@ -19,7 +19,7 @@ class _AiCoachChatPage4State extends State<AiCoachChatPage4> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.white,
+      backgroundColor: usedAppColor.Colors.white,
       body: SafeArea(
         child: Padding(
           padding: const EdgeInsets.all(8.0),
@@ -60,7 +60,7 @@ class _AiCoachChatPage4State extends State<AiCoachChatPage4> {
                         selectedMenuItemBuilder: (context, child) {
                           return FancyContainer(
                             // height: 30,
-                            backgroundColor: Colors.white,
+                            backgroundColor: usedAppColor.Colors.white,
                             child: child,
                           );
                         },
@@ -129,7 +129,7 @@ class _AiCoachChatPage4State extends State<AiCoachChatPage4> {
                                 },
                                 backgroundColor: selectedBodyPart != e
                                     ? getFigmaColor("F3F3F4")
-                                    : Colors.white,
+                                    : usedAppColor.Colors.white,
                                 // height: 40,
                                 // nulledAlign: true,
 

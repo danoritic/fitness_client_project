@@ -17,7 +17,7 @@ class _HeartRatePageState extends State<HeartRatePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.white,
+      backgroundColor: usedAppColor.Colors.white,
       body: SafeArea(
         child: Column(
           children: [
@@ -85,10 +85,11 @@ class _HeartRatePageState extends State<HeartRatePage> {
                           radius: 15,
                           isContinousBorder: false,
                           hasBorder: true,
-                          borderColor: Colors.white.withAlpha(200),
+                          borderColor: usedAppColor.Colors.white.withAlpha(200),
                           borderThickness: 4,
                           backgroundColor: Colors.black,
-                          child: const Icon(Icons.add, color: Colors.white),
+                          child: const Icon(Icons.add,
+                              color: usedAppColor.Colors.white),
                         ),
                       ),
                       Row(
@@ -112,7 +113,7 @@ class _HeartRatePageState extends State<HeartRatePage> {
                                   ),
                                   isContinousBorder: false,
 
-                                  backgroundColor: Colors.white,
+                                  backgroundColor: usedAppColor.Colors.white,
                                   child: Padding(
                                     padding: const EdgeInsets.all(8.0),
                                     child: Column(
@@ -188,7 +189,7 @@ class _HeartRatePageState extends State<HeartRatePage> {
                                   radius: 20,
                                   isContinousBorder: false,
 
-                                  backgroundColor: Colors.white,
+                                  backgroundColor: usedAppColor.Colors.white,
                                   shadows: List.filled(
                                     4,
                                     BoxShadow(
@@ -279,7 +280,7 @@ class _HeartRatePageState extends State<HeartRatePage> {
       padding: const EdgeInsets.only(top: 38.0),
       child: FancyContainer(
         height: 50,
-        backgroundColor: Colors.white,
+        backgroundColor: usedAppColor.Colors.white,
         child: Padding(
           padding: const EdgeInsets.all(8.0),
           child: Row(

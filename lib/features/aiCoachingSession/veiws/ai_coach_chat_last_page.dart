@@ -45,7 +45,7 @@ class _AiCoachChatLastPageState extends State<AiCoachChatLastPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.white,
+      backgroundColor: usedAppColor.Colors.white,
       body: SafeArea(
         child: Padding(
           padding: const EdgeInsets.all(8.0),
@@ -77,7 +77,7 @@ class _AiCoachChatLastPageState extends State<AiCoachChatLastPage> {
                   FancyText(
                     "See All Workouts",
                     // size: 16,
-                    // textColor: Colors.white,
+                    // textColor:usedAppColor.Colors.white,
                     rawTextStyle: GoogleFonts.workSans(
                       fontSize: 16,
                       fontWeight: FontWeight.w600,
@@ -106,7 +106,7 @@ class _AiCoachChatLastPageState extends State<AiCoachChatLastPage> {
                         selectedMenuItemBuilder: (context, child) {
                           return FancyContainer(
                             // height: 30,
-                            backgroundColor: Colors.white,
+                            backgroundColor: usedAppColor.Colors.white,
                             child: child,
                           );
                         },
@@ -165,11 +165,11 @@ class _AiCoachChatLastPageState extends State<AiCoachChatLastPage> {
                             FancyText(
                               "Complete",
                               // size: 16,
-                              // textColor: Colors.white,
+                              // textColor:usedAppColor.Colors.white,
                               rawTextStyle: GoogleFonts.workSans(
                                 fontSize: 16,
                                 fontWeight: FontWeight.w600,
-                                color: Colors.white,
+                                color: usedAppColor.Colors.white,
                               ),
                             ),
                             const SizedBox(width: 7),
@@ -177,7 +177,7 @@ class _AiCoachChatLastPageState extends State<AiCoachChatLastPage> {
                                 width: 20,
                                 child: Icon(
                                   Icons.check_rounded,
-                                  color: Colors.white,
+                                  color: usedAppColor.Colors.white,
                                 )
                                 // buildTailedAppArrow(isLeft: false),
                                 ),

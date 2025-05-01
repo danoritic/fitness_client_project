@@ -1,4 +1,5 @@
 import 'package:fitness_client_project/features/aiCoachingSession/widgets/score_card.dart';
+import 'package:fitness_client_project/utils/app_variables.dart';
 import 'package:fitness_client_project/utils/customs/customs.dart';
 import 'package:fitness_client_project/utils/customs/fancy_text.dart';
 import 'package:fitness_client_project/utils/helperFunctions.dart';
@@ -20,7 +21,7 @@ class _SandowScoreHistoryState extends State<SandowScoreHistory> {
         appBar: AppBar(
           leading: buildBackArrow(context),
           elevation: 0,
-          backgroundColor: Colors.white,
+          backgroundColor: usedAppColor.white,
           title: Padding(
             padding: const EdgeInsets.all(8.0),
             child: FancyText(
@@ -32,7 +33,7 @@ class _SandowScoreHistoryState extends State<SandowScoreHistory> {
             ),
           ),
         ),
-        backgroundColor: Colors.white,
+        backgroundColor: usedAppColor.Colors.white,
         //  Colors.grey[300],
 
         body: Padding(

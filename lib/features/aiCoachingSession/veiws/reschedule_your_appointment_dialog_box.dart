@@ -30,7 +30,7 @@ class _RescheduleYourAppointmentDialogBoxState
                       child: FancyContainer(
                         height: 380,
                         radius: 50,
-                        backgroundColor: Colors.white,
+                        backgroundColor: usedAppColor.Colors.white,
                         child: Padding(
                           padding: const EdgeInsets.all(8.0),
                           child: Column(
@@ -81,14 +81,14 @@ class _RescheduleYourAppointmentDialogBoxState
                                     children: [
                                       FancyText(
                                         "Yes, reschedule",
-                                        textColor: Colors.white,
+                                        textColor: usedAppColor.Colors.white,
                                       ),
                                       const SizedBox(width: 10),
                                       SizedBox.square(
                                         dimension: 15,
                                         child: Image.asset(
                                           "assets/images/appIcon-Calendar.png",
-                                          color: Colors.white,
+                                          color: usedAppColor.Colors.white,
                                         ),
                                       ),
                                     ],

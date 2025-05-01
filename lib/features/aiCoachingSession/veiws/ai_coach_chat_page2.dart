@@ -22,7 +22,7 @@ class _AiCoachChatPage2State extends State<AiCoachChatPage2> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.white,
+      backgroundColor: usedAppColor.Colors.white,
       body: SafeArea(
         child: Padding(
           padding: const EdgeInsets.all(8.0),
@@ -60,7 +60,7 @@ class _AiCoachChatPage2State extends State<AiCoachChatPage2> {
                         selectedMenuItemBuilder: (context, child) {
                           return FancyContainer(
                             // height: 30,
-                            backgroundColor: Colors.white,
+                            backgroundColor: usedAppColor.Colors.white,
                             child: child,
                           );
                         },
@@ -150,7 +150,7 @@ class _AiCoachChatPage2State extends State<AiCoachChatPage2> {
                 rawTextStyle: GoogleFonts.workSans(
                   fontSize: 16,
                   fontWeight: FontWeight.w600,
-                  color: isSelected ? Colors.white : Colors.black,
+                  color: isSelected ? usedAppColor.Colors.white : Colors.black,
                 ),
               ),
               const SizedBox(width: 7),

@@ -86,13 +86,13 @@ class _RatingWidgetState extends State<RatingWidget> {
                       FancyText(
                         "4.8",
                         size: 36,
-                        textColor: Colors.white,
+                        textColor: usedAppColor.Colors.white,
                         weight: FontWeight.w900,
                       ),
                       FancyText(
                         "87 Reviews",
                         size: 12,
-                        textColor: Colors.white,
+                        textColor: usedAppColor.Colors.white,
                         weight: FontWeight.w900,
                       ),
                     ],
@@ -110,7 +110,7 @@ class _RatingWidgetState extends State<RatingWidget> {
                           children: [
                             FancyText(
                               "$key",
-                              textColor: Colors.white,
+                              textColor: usedAppColor.Colors.white,
                               weight: FontWeight.w900,
                             ),
                             Icon(
@@ -151,7 +151,8 @@ class _RatingWidgetState extends State<RatingWidget> {
             radius: 10,
             height: widget.height ?? 6,
             width: (percentage / 100) * (widget.maxwidth ?? 120),
-            backgroundColor: (widget.fillWidget == null) ? Colors.white : null,
+            backgroundColor:
+                (widget.fillWidget == null) ? usedAppColor.Colors.white : null,
             child: (widget.fillWidget == null)
                 ? null
                 : Expanded(child: widget.fillWidget!),

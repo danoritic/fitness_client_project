@@ -1,3 +1,5 @@
+import 'package:fitness_client_project/utils/app_variables.dart';
+import 'package:fitness_client_project/utils/theme/theme.dart';
 import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
 
@@ -74,4 +76,8 @@ String formatDateTimeToTimeWitAM(DateTime dateTime) {
   print(dateTime);
   final formatter = DateFormat('hh:mm a');
   return formatter.format(dateTime);
+}
+
+changeAppThemeMode(bool toDark) {
+  usedAppColor = toDark ? AppColorsDarkVersion() : AppColorsLightVersion();
 }

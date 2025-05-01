@@ -36,7 +36,7 @@ import 'package:uuid/uuid.dart';
 //   @override
 //   Widget build(BuildContext context) {
 //     return Scaffold(
-// backgroundColor: Colors.white,
+// backgroundColor:usedAppColor.Colors.white,
 // body:);
 //   }
 // }
@@ -52,7 +52,7 @@ class _TestScreenState extends State<TestScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        backgroundColor: Colors.white,
+        backgroundColor: usedAppColor.Colors.white,
         body: Padding(
           padding: const EdgeInsets.all(8.0),
           child: SingleChildScrollView(
@@ -79,7 +79,7 @@ class _TestScreenState extends State<TestScreen> {
                         child: Icon(
                           Icons.question_mark_outlined,
                           size: 12,
-                          color: Colors.white,
+                          color: usedAppColor.Colors.white,
                         ),
                       ),
                     )
@@ -185,14 +185,14 @@ class _TestScreenState extends State<TestScreen> {
                                 dimension: 12,
                                 child: Image.asset(
                                   element["image"],
-                                  color: Colors.white,
+                                  color: usedAppColor.Colors.white,
                                 ),
                               ),
                               const SizedBox(width: 10),
                               FancyText(element["name"],
                                   // "Male",
                                   size: 12,
-                                  textColor: Colors.white),
+                                  textColor: usedAppColor.Colors.white),
                             ],
                           ),
                         ),
@@ -224,7 +224,7 @@ class _TestScreenState extends State<TestScreen> {
                                 element["name"],
                                 size: 12,
                                 // "Calorie",
-                                // textColor: Colors.white,
+                                // textColor:usedAppColor.Colors.white,
                               ),
                             ],
                           ),
@@ -433,7 +433,7 @@ class _TestScreenState extends State<TestScreen> {
       padding: const EdgeInsets.only(top: 0.0),
       child: FancyContainer(
         height: 50,
-        // backgroundColor: Colors.white,
+        // backgroundColor:usedAppColor.Colors.white,
         child: Padding(
           padding: const EdgeInsets.all(8.0),
           child: Row(
@@ -494,7 +494,7 @@ class _CancelThisAppointmentPageState extends State<CancelThisAppointmentPage> {
   Widget build(BuildContext context) {
     // Main scaffold for the screen
     return Scaffold(
-      backgroundColor: Colors.white,
+      backgroundColor: usedAppColor.Colors.white,
       body: Center(
         child: Padding(
           padding: const EdgeInsets.all(10.0),
@@ -570,7 +570,7 @@ class _CancelThisAppointmentPageState extends State<CancelThisAppointmentPage> {
                         ),
                         const SizedBox(height: 10),
                         FancyContainer(
-                          backgroundColor: Colors.white,
+                          backgroundColor: usedAppColor.Colors.white,
                           radius: 6,
                           isContinousBorder: false,
                           child: Padding(
@@ -722,7 +722,7 @@ class _CancelThisAppointmentPageState extends State<CancelThisAppointmentPage> {
                       children: [
                         FancyText(
                           "Continue Cancellation",
-                          textColor: Colors.white,
+                          textColor: usedAppColor.Colors.white,
                         ),
                         const SizedBox(width: 10),
                         SizedBox(
@@ -732,7 +732,7 @@ class _CancelThisAppointmentPageState extends State<CancelThisAppointmentPage> {
 
                         // const Icon(
                         //   Icons.check,
-                        //   color: Colors.white,
+                        //   color:usedAppColor.Colors.white,
                         // )
                       ],
                     ),
@@ -887,7 +887,7 @@ class _CoachingSchedulePageState extends State<CoachingSchedulePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        backgroundColor: Colors.white,
+        backgroundColor: usedAppColor.Colors.white,
         body: SingleChildScrollView(
           child: Column(
             children: [
@@ -983,7 +983,8 @@ class _CoachingSchedulePageState extends State<CoachingSchedulePage> {
                                               padding:
                                                   const EdgeInsets.all(8.0),
                                               child: Icon(Icons.delete,
-                                                  color: Colors.white),
+                                                  color: usedAppColor
+                                                      .Colors.white),
                                             ),
                                           ),
                                           SizedBox(width: 10),
@@ -1008,10 +1009,11 @@ class _CoachingSchedulePageState extends State<CoachingSchedulePage> {
                                                     const EdgeInsets.all(8.0),
                                                 child: Image.asset(
                                                   "assets/images/appIcon-calendarFilled.png",
-                                                  color: Colors.white,
+                                                  color:
+                                                      usedAppColor.Colors.white,
                                                 )
                                                 // Icon(Icons.delete,
-                                                //     color: Colors.white),
+                                                //     color:usedAppColor.Colors.white),
                                                 ),
                                           ),
                                         ],
@@ -1128,7 +1130,7 @@ class _CoachingSchedulePageState extends State<CoachingSchedulePage> {
                     ),
                     const SizedBox(height: 10),
                     FancyContainer(
-                      backgroundColor: Colors.white,
+                      backgroundColor: usedAppColor.Colors.white,
                       radius: 6,
                       isContinousBorder: false,
                       // width: double.infinity,
@@ -1268,7 +1270,7 @@ class _CoachingSchedulePageState extends State<CoachingSchedulePage> {
       padding: const EdgeInsets.only(top: 0.0),
       child: FancyContainer(
         height: 50,
-        // backgroundColor: Colors.white,
+        // backgroundColor:usedAppColor.Colors.white,
         child: Padding(
           padding: const EdgeInsets.all(8.0),
           child: Row(
@@ -1304,7 +1306,7 @@ class _CoachHomePageState extends State<CoachHomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        backgroundColor: Colors.white,
+        backgroundColor: usedAppColor.Colors.white,
         body: SingleChildScrollView(
           child: Column(
             children: [
@@ -1543,7 +1545,7 @@ class _CoachHomePageState extends State<CoachHomePage> {
                               rawTextStyle: GoogleFonts.workSans(
                                   fontSize: 20,
                                   fontWeight: FontWeight.bold,
-                                  color: Colors.white)),
+                                  color: usedAppColor.Colors.white)),
                           SizedBox(width: 10),
                           FancyContainer(
                             height: 25,
@@ -1556,7 +1558,7 @@ class _CoachHomePageState extends State<CoachHomePage> {
                                 rawTextStyle: GoogleFonts.workSans(
                                     fontSize: 16,
                                     fontWeight: FontWeight.bold,
-                                    color: Colors.white)),
+                                    color: usedAppColor.Colors.white)),
                           ),
                           Spacer(),
                           FancyContainer(
@@ -1601,7 +1603,7 @@ class _CoachHomePageState extends State<CoachHomePage> {
           "2.8",
           weight: FontWeight.w500,
           size: 14,
-          textColor: Colors.white,
+          textColor: usedAppColor.Colors.white,
         ),
         const SizedBox(width: 5),
         FancyContainer(
@@ -1622,7 +1624,7 @@ class _CoachHomePageState extends State<CoachHomePage> {
           "87 Clients",
           weight: FontWeight.w500,
           size: 14,
-          textColor: Colors.white,
+          textColor: usedAppColor.Colors.white,
         ),
       ],
     );
@@ -1643,7 +1645,7 @@ class _CoachHomePageState extends State<CoachHomePage> {
           "2.8",
           weight: FontWeight.w500,
           size: 10,
-          // textColor: Colors.white,
+          // textColor:usedAppColor.Colors.white,
         ),
         const SizedBox(width: 5),
         FancyContainer(
@@ -1664,7 +1666,7 @@ class _CoachHomePageState extends State<CoachHomePage> {
           "87 Clients",
           weight: FontWeight.w500,
           size: 10,
-          // textColor: Colors.white,
+          // textColor:usedAppColor.Colors.white,
         ),
       ],
     );
@@ -1675,7 +1677,7 @@ class _CoachHomePageState extends State<CoachHomePage> {
       padding: const EdgeInsets.only(top: 0.0),
       child: FancyContainer(
         // height: 50,
-        backgroundColor: Colors.white,
+        backgroundColor: usedAppColor.Colors.white,
         child: Padding(
           padding: const EdgeInsets.all(8.0),
           child: Row(
@@ -1778,14 +1780,14 @@ class _CoachHomePageState extends State<CoachHomePage> {
                           width: 15,
                           radius: 5,
                           hasBorder: true,
-                          borderColor: Colors.white,
+                          borderColor: usedAppColor.Colors.white,
                           isContinousBorder: false,
                           borderThickness: 2,
                           backgroundColor: Colors.red,
                           child: FancyText(
                             "8",
                             size: 10,
-                            textColor: Colors.white,
+                            textColor: usedAppColor.Colors.white,
                           ),
                         ),
                       )

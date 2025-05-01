@@ -61,7 +61,7 @@ class _SelectPaymentMethodsBottomSheetState
                   isContinousBorder: false,
                   borderRadius:
                       const BorderRadius.vertical(top: Radius.circular(20)),
-                  backgroundColor: Colors.white.withAlpha(50),
+                  backgroundColor: usedAppColor.Colors.white.withAlpha(50),
                 ),
               ),
               Padding(
@@ -73,7 +73,7 @@ class _SelectPaymentMethodsBottomSheetState
                   isContinousBorder: false,
                   borderRadius:
                       const BorderRadius.vertical(top: Radius.circular(20)),
-                  backgroundColor: Colors.white.withAlpha(200),
+                  backgroundColor: usedAppColor.Colors.white.withAlpha(200),
                 ),
               ),
               Padding(
@@ -84,7 +84,7 @@ class _SelectPaymentMethodsBottomSheetState
                   isContinousBorder: false,
                   borderRadius:
                       const BorderRadius.vertical(top: Radius.circular(20)),
-                  backgroundColor: Colors.white,
+                  backgroundColor: usedAppColor.Colors.white,
                   child: Padding(
                     padding: const EdgeInsets.all(8.0),
                     child: SingleChildScrollView(
@@ -147,7 +147,7 @@ class _SelectPaymentMethodsBottomSheetState
                                         FancyText(
                                           element["name"],
 
-                                          // textColor: Colors.white,
+                                          // textColor:usedAppColor.Colors.white,
                                         ),
                                         Spacer(),
                                         SizedBox(
@@ -156,7 +156,7 @@ class _SelectPaymentMethodsBottomSheetState
                                             element["image"],
                                             //  "assets/images/calendarIcon-filled.png",
                                             // element["image"],
-                                            // color: Colors.white,
+                                            // color:usedAppColor.Colors.white,
                                           ),
                                         ),
                                         SizedBox(width: 5),
@@ -231,13 +231,13 @@ class _SelectPaymentMethodsBottomSheetState
                 rawTextStyle: GoogleFonts.urbanist(
                   fontSize: 14,
                   fontWeight: FontWeight.bold,
-                  color: Colors.white,
+                  color: usedAppColor.Colors.white,
                 ),
               ),
               const SizedBox(width: 10),
               Icon(
                 Icons.check_rounded,
-                color: Colors.white,
+                color: usedAppColor.Colors.white,
               ),
             ],
           ),

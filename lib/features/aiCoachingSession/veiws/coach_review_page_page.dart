@@ -18,7 +18,7 @@ class _CoachReviewPagePageState extends State<CoachReviewPagePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        backgroundColor: Colors.white,
+        backgroundColor: usedAppColor.Colors.white,
         body: Stack(
           // Align
           children: [
@@ -162,12 +162,12 @@ class _CoachReviewPagePageState extends State<CoachReviewPagePage> {
                       children: [
                         FancyText(
                           "Submit Review",
-                          textColor: Colors.white,
+                          textColor: usedAppColor.Colors.white,
                         ),
                         const SizedBox(width: 10),
                         const Icon(
                           Icons.check_rounded,
-                          color: Colors.white,
+                          color: usedAppColor.Colors.white,
                         )
                       ],
                     ),
@@ -184,7 +184,7 @@ class _CoachReviewPagePageState extends State<CoachReviewPagePage> {
       padding: const EdgeInsets.only(top: 0.0),
       child: FancyContainer(
         height: 50,
-        backgroundColor: Colors.white,
+        backgroundColor: usedAppColor.Colors.white,
         child: Padding(
           padding: const EdgeInsets.all(8.0),
           child: Row(

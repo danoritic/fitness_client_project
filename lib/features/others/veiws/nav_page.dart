@@ -1,9 +1,9 @@
 import 'package:awesome_bottom_bar/awesome_bottom_bar.dart';
 import 'package:awesome_bottom_bar/widgets/inspired/inspired.dart';
-import 'package:fitness_client_project/features/Sandow/veiws/sandow_score_detail.dart';
-import 'package:fitness_client_project/features/Sandow/veiws/sandow_score_history.dart';
-import 'package:fitness_client_project/features/homepage/veiws/homepage.dart';
-import 'package:fitness_client_project/features/homepage/veiws/sandow_score.dart';
+import 'package:fitness_client_project/features/homeAndFitnessMetrics/veiws/sandow_score_detail.dart';
+import 'package:fitness_client_project/features/homeAndFitnessMetrics/veiws/sandow_score_history.dart';
+import 'package:fitness_client_project/features/homeAndFitnessMetrics/veiws/homepage.dart';
+import 'package:fitness_client_project/features/homeAndFitnessMetrics/veiws/sandow_score.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/scheduler.dart';
 
@@ -100,7 +100,7 @@ class _NavPageState extends State<NavPage> {
               child: BottomBarInspiredOutside(
                 items: items,
                 // backgroundColor: Colors.transparent,
-                backgroundColor: Colors.white,
+                backgroundColor: usedAppColor.Colors.white,
                 // .faintGreen,
 
                 color: Colors.grey,
@@ -135,7 +135,7 @@ class _NavPageState extends State<NavPage> {
       //     child: BottomBarInspiredOutside(
       //       items: items,
       //       // backgroundColor: Colors.transparent,
-      //       backgroundColor: Colors.white,
+      //       backgroundColor:usedAppColor.Colors.white,
       //       // .faintGreen,
 
       //       color: Colors.grey,
@@ -153,7 +153,7 @@ class _NavPageState extends State<NavPage> {
       //           convexBridge: false,
       //           drawHexagon: true,
       //           isHexagon: false,
-      //           background: Colors.white,
+      //           background:usedAppColor.Colors.white,
       //           color: Colors.red),
       //       itemStyle: ItemStyle.hexagon,
       //       animated: true,

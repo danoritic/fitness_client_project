@@ -21,7 +21,7 @@ class _CheckoutPageState extends State<CheckoutPage> {
     // "assets/images/appIcon-creditCard.png";
     // "assets/images/appIcon-fatPencil.png";
     return Scaffold(
-      backgroundColor: Colors.white,
+      backgroundColor: usedAppColor.Colors.white,
       body: SafeArea(
         child: Padding(
           padding: const EdgeInsets.all(8.0),
@@ -363,7 +363,7 @@ class _CheckoutPageState extends State<CheckoutPage> {
                     width: 50,
                     child: Image.asset(
                       "assets/images/paymentMethodLogo-visa.png",
-                      color: Colors.white,
+                      color: usedAppColor.Colors.white,
                     ),
                   ),
                 ),
@@ -373,7 +373,7 @@ class _CheckoutPageState extends State<CheckoutPage> {
                   rawTextStyle: GoogleFonts.workSans(
                     fontSize: 10,
                     // fontWeight: FontWeight.bold,
-                    color: Colors.white,
+                    color: usedAppColor.Colors.white,
                   ),
                 ),
                 FancyText(
@@ -381,7 +381,7 @@ class _CheckoutPageState extends State<CheckoutPage> {
                   rawTextStyle: GoogleFonts.workSans(
                     fontSize: 14,
                     fontWeight: FontWeight.bold,
-                    color: Colors.white,
+                    color: usedAppColor.Colors.white,
                   ),
                 )
               ],
@@ -397,7 +397,7 @@ class _CheckoutPageState extends State<CheckoutPage> {
       padding: const EdgeInsets.only(top: 0.0),
       child: FancyContainer(
         height: 50,
-        // backgroundColor: Colors.white,
+        // backgroundColor:usedAppColor.Colors.white,
         child: Padding(
           padding: const EdgeInsets.all(8.0),
           child: Row(
@@ -456,7 +456,7 @@ class _CheckoutPageState extends State<CheckoutPage> {
                 rawTextStyle: GoogleFonts.urbanist(
                   fontSize: 14,
                   fontWeight: FontWeight.bold,
-                  color: Colors.white,
+                  color: usedAppColor.Colors.white,
                 ),
               ),
               const SizedBox(width: 10),
@@ -466,7 +466,7 @@ class _CheckoutPageState extends State<CheckoutPage> {
               ),
               // Icon(
               //   Icons.shop,
-              //   color: Colors.white,
+              //   color:usedAppColor.Colors.white,
               // ),
             ],
           ),

@@ -43,7 +43,7 @@ class _AiCoachChatPage13And16State extends State<AiCoachChatPage13And16> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.white,
+      backgroundColor: usedAppColor.Colors.white,
       body: SafeArea(
         child: Padding(
           padding: const EdgeInsets.all(8.0),
@@ -81,7 +81,7 @@ class _AiCoachChatPage13And16State extends State<AiCoachChatPage13And16> {
                         selectedMenuItemBuilder: (context, child) {
                           return FancyContainer(
                             // height: 30,
-                            backgroundColor: Colors.white,
+                            backgroundColor: usedAppColor.Colors.white,
                             child: child,
                           );
                         },
@@ -168,11 +168,11 @@ class _AiCoachChatPage13And16State extends State<AiCoachChatPage13And16> {
                                   FancyText(
                                     "Upload/Scan",
                                     // size: 16,
-                                    // textColor: Colors.white,
+                                    // textColor:usedAppColor.Colors.white,
                                     rawTextStyle: GoogleFonts.workSans(
                                       fontSize: 16,
                                       fontWeight: FontWeight.w600,
-                                      color: Colors.white,
+                                      color: usedAppColor.Colors.white,
                                     ),
                                   ),
                                   const SizedBox(width: 7),
@@ -180,7 +180,7 @@ class _AiCoachChatPage13And16State extends State<AiCoachChatPage13And16> {
                                       width: 20,
                                       child: Icon(
                                         Icons.camera_alt_outlined,
-                                        color: Colors.white,
+                                        color: usedAppColor.Colors.white,
                                       )
                                       // buildTailedAppArrow(isLeft: false)
                                       ),
