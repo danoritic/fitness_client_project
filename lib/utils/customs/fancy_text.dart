@@ -22,7 +22,7 @@ class FancyText extends StatefulWidget {
     this.textAlign,
     this.rawTextStyle,
     this.action,
-    this.isAsync,
+    this.isAsync = false,
     this.maxLine,
   });
 

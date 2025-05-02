@@ -166,7 +166,7 @@ class _HeartRateHistoryPageState extends State<HeartRateHistoryPage> {
               //   action: () {
               //     print("sassasasas");
               //   },
-              //   // backgroundColor: Colors.grey[300],
+              //   // backgroundColor: usedAppColor.f3f3f4,
               //   child: Padding(
               //     padding:EdgeInsets.all(8.0),
               //     child: ,
@@ -186,7 +186,7 @@ class _HeartRateHistoryPageState extends State<HeartRateHistoryPage> {
                 height: 30,
                 width: 30,
                 radius: 20,
-                backgroundColor: Colors.grey[300],
+                backgroundColor: usedAppColor.f3f3f4,
                 child: Padding(
                   padding: EdgeInsets.all(4.0),
                   child: Icon(

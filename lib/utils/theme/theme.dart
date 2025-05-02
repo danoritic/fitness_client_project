@@ -45,7 +45,7 @@ class AppColors extends ChangeNotifier {
     Color9EA0A5 = getFigmaColor("393C43");
     D7D8D9 = getFigmaColor("393C43");
 
-    white = Colors.black;
+    white = getFigmaColor("111214");
     black = Colors.white;
     isDarkMode = false;
     notifyListeners();

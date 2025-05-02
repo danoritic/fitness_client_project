@@ -1,3 +1,4 @@
+import 'package:fitness_client_project/features/aiCoachingSession/veiws/heart_rate_page.dart';
 import 'package:fitness_client_project/features/others/veiws/gallery_of_screens.dart';
 import 'package:fitness_client_project/features/others/veiws/test_screen.dart';
 import 'package:fitness_client_project/utils/app_variables.dart';
@@ -49,7 +50,9 @@ class _MyAppState extends State<MyApp> {
 
           //   // useMaterial3: true,
           // ),
-          home: const GalleryOfScreens(),
+          home:
+              // const HeartRatePage(),
+              const GalleryOfScreens(),
           themeMode: isDarkYeah ? ThemeMode.dark : ThemeMode.light,
         );
       },

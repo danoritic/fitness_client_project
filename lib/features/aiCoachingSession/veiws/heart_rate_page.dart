@@ -64,6 +64,14 @@ class _HeartRatePageState extends State<HeartRatePage> {
                   // fontWeight: FontWeight.bold,
                   color: usedAppColor.Color676C75,
                 ),
+                action: () {
+                  isDark = !isDark;
+                  // usedAppColor.darken();
+                  changeAppThemeMode(isDark, context);
+                  // usedAppColor = context.read<AppColors>().trigger();
+                  // usedAppColor.trigger();
+                  setState(() {});
+                },
               ),
             ),
             Expanded(
@@ -71,7 +79,7 @@ class _HeartRatePageState extends State<HeartRatePage> {
               child: Stack(
                 children: [
                   Image.asset(
-                    "assets/images/sporty_woman.png",
+                    "assets/images/sporty_woman.png".getThemeImage,
                     width: double.infinity,
                     alignment: Alignment.topCenter,
                     fit: BoxFit.fitWidth,
@@ -87,10 +95,10 @@ class _HeartRatePageState extends State<HeartRatePage> {
                           radius: 15,
                           isContinousBorder: false,
                           hasBorder: true,
-                          borderColor: usedAppColor.white.withAlpha(200),
+                          borderColor: usedAppColor.black.withAlpha(70),
                           borderThickness: 4,
-                          backgroundColor: usedAppColor.black,
-                          child: Icon(Icons.add, color: usedAppColor.white),
+                          backgroundColor: usedAppColor.white,
+                          child: Icon(Icons.add, color: usedAppColor.black),
                         ),
                       ),
                       Row(
@@ -109,7 +117,7 @@ class _HeartRatePageState extends State<HeartRatePage> {
                                     BoxShadow(
                                       offset: const Offset(5, 5),
                                       blurRadius: 10,
-                                      color: Colors.grey[300]!,
+                                      color: usedAppColor.f3f3f4!,
                                     ),
                                   ),
                                   isContinousBorder: false,
@@ -295,7 +303,7 @@ class _HeartRatePageState extends State<HeartRatePage> {
               //   action: () {
               //     print("sassasasas");
               //   },
-              //   // backgroundColor: Colors.grey[300],
+              //   // backgroundColor: usedAppColor.f3f3f4,
               //   child: Padding(
               //     padding: const EdgeInsets.all(8.0),
               //     child: ,
@@ -315,7 +323,7 @@ class _HeartRatePageState extends State<HeartRatePage> {
                 height: 30,
                 width: 30,
                 radius: 20,
-                backgroundColor: Colors.grey[300],
+                backgroundColor: usedAppColor.f3f3f4,
                 child: const Padding(
                   padding: EdgeInsets.all(4.0),
                   child: Icon(

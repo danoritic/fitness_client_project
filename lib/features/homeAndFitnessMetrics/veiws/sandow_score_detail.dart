@@ -81,7 +81,7 @@ class _SandowScoreDetailState extends State<SandowScoreDetail> {
           ),
         ),
         backgroundColor: usedAppColor.white,
-        //  Colors.grey[300],
+        //  usedAppColor.f3f3f4,
 
         body: Padding(
           padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 8.0),

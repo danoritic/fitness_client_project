@@ -41,7 +41,7 @@ class _SandowScoreHistoryState extends State<SandowScoreHistory> {
           ),
         ),
         backgroundColor: usedAppColor.white,
-        //  Colors.grey[300],
+        //  usedAppColor.f3f3f4,
 
         body: Padding(
           padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 8.0),
@@ -58,7 +58,7 @@ class _SandowScoreHistoryState extends State<SandowScoreHistory> {
                         radius: 40,
                         height: 20,
                         width: 20,
-                        // backgroundColor: Colors.grey[300],
+                        // backgroundColor: usedAppColor.f3f3f4,
                         child: Padding(
                             padding: const EdgeInsets.all(12.0),
                             child: buildAppArrow()

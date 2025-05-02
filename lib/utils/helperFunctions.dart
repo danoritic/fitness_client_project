@@ -1,4 +1,5 @@
 import 'package:fitness_client_project/utils/app_variables.dart';
+import 'package:fitness_client_project/utils/image_details.dart';
 import 'package:fitness_client_project/utils/theme/theme.dart';
 import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
@@ -79,9 +80,14 @@ String formatDateTimeToTimeWitAM(DateTime dateTime) {
   return formatter.format(dateTime);
 }
 
-changeAppThemeMode(bool toDark, BuildContext context) {
+changeAppThemeMode(bool toDarkParam, BuildContext context) {
   // usedAppColor=context.watch<AppColors>();
-  toDark ? usedAppColor.darken() : usedAppColor.lighten();
+  isDark = toDarkParam;
+  toDarkParam ? usedAppColor.darken() : usedAppColor.lighten();
 
   print(usedAppColor);
+}
+
+extension ThemeImage on String {
+  String get getThemeImage => isDark ? imageDetails[this] : this;
 }

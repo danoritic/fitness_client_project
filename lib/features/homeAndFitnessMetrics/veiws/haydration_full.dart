@@ -92,7 +92,10 @@ class _HaydrationFullState extends State<HaydrationFull> {
                             backgroundColor: Colors.white,
                             child: const Padding(
                               padding: EdgeInsets.all(8.0),
-                              child: Icon(Icons.question_mark),
+                              child: Icon(
+                                Icons.question_mark,
+                                color: Colors.black,
+                              ),
                             ),
                           ),
                           FancyContainer(
@@ -105,6 +108,7 @@ class _HaydrationFullState extends State<HaydrationFull> {
                               child: Icon(
                                 Icons.add,
                                 size: 30,
+                                color: Colors.black,
                               ),
                             ),
                           ),
@@ -119,6 +123,7 @@ class _HaydrationFullState extends State<HaydrationFull> {
                               padding: EdgeInsets.all(8.0),
                               child: Icon(
                                 Icons.checklist_rounded,
+                                color: Colors.black,
                               ),
                             ),
                           ),

@@ -456,7 +456,7 @@ class _TestScreenState extends State<TestScreen> {
                 height: 30,
                 width: 30,
                 radius: 20,
-                backgroundColor: Colors.grey[300],
+                backgroundColor: usedAppColor.f3f3f4,
                 child: const Padding(
                   padding: EdgeInsets.all(4.0),
                   child: Icon(
@@ -1763,7 +1763,7 @@ class _CoachHomePageState extends State<CoachHomePage> {
                 height: 45,
                 width: 45,
                 radius: 20,
-                borderColor: Colors.grey[300],
+                borderColor: usedAppColor.f3f3f4,
                 hasBorder: true,
                 child: Padding(
                   padding: EdgeInsets.all(4.0),

@@ -41,13 +41,13 @@ class _AiCoachChatPage15ImageScanState
               FancyContainer(
                 height: 1,
                 width: double.infinity,
-                backgroundColor: Colors.grey[300],
+                backgroundColor: usedAppColor.f3f3f4,
               ),
               const Expanded(child: SizedBox()),
               FancyContainer(
                 height: 1,
                 width: double.infinity,
-                backgroundColor: Colors.grey[300],
+                backgroundColor: usedAppColor.f3f3f4,
               ),
               const Expanded(child: SizedBox()),
             ]),
@@ -58,13 +58,13 @@ class _AiCoachChatPage15ImageScanState
                 FancyContainer(
                   height: double.infinity,
                   width: 1,
-                  backgroundColor: Colors.grey[300],
+                  backgroundColor: usedAppColor.f3f3f4,
                 ),
                 const Expanded(child: SizedBox()),
                 FancyContainer(
                   height: double.infinity,
                   width: 1,
-                  backgroundColor: Colors.grey[300],
+                  backgroundColor: usedAppColor.f3f3f4,
                 ),
                 const Expanded(child: SizedBox()),
               ],

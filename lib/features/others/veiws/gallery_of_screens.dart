@@ -201,8 +201,9 @@ class _GalleryOfScreensState extends State<GalleryOfScreens> {
                         padding: const EdgeInsets.all(8.0),
                         child: FancyText(
                           isDark ? "lighten" : "darken",
-                          textColor:
-                              !isDark ? usedAppColor.white : usedAppColor.black,
+                          textColor: !context.read<AppColors>().isDarkMode
+                              ? usedAppColor.white
+                              : usedAppColor.black,
                         ),
                       ),
                       action: () {
@@ -213,8 +214,9 @@ class _GalleryOfScreensState extends State<GalleryOfScreens> {
                         // usedAppColor.trigger();
                         setState(() {});
                       },
-                      backgroundColor:
-                          isDark ? usedAppColor.white : usedAppColor.black,
+                      backgroundColor: context.read<AppColors>().isDarkMode
+                          ? usedAppColor.white
+                          : usedAppColor.black,
                     ),
                     Expanded(
                       child: FancyContainer(

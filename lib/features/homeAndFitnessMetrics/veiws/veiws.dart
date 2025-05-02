@@ -863,7 +863,7 @@ class _DateTimeRangableSelectorState extends State<DateTimeRangableSelector> {
               ),
             ),
             FancyContainer(
-              backgroundColor: Colors.grey[300],
+              backgroundColor: usedAppColor.f3f3f4,
               radius: 30,
               nulledAlign: false,
               width: 40,
@@ -1198,22 +1198,26 @@ class _HydrationPageState extends State<HydrationPage> {
                                         nulledAlign: true,
                                         radius: 15,
                                         isContinousBorder: false,
-                                        backgroundColor: usedAppColor.white,
+                                        backgroundColor: Colors.white,
                                         child: const Padding(
                                           padding: EdgeInsets.all(8.0),
-                                          child: Icon(Icons.question_mark),
+                                          child: Icon(
+                                            Icons.question_mark,
+                                            color: Colors.black,
+                                          ),
                                         ),
                                       ),
                                       FancyContainer(
                                         radius: 20,
                                         nulledAlign: true,
                                         isContinousBorder: false,
-                                        backgroundColor: usedAppColor.white,
+                                        backgroundColor: Colors.white,
                                         child: const Padding(
                                           padding: EdgeInsets.all(18.0),
                                           child: Icon(
                                             Icons.add,
                                             size: 30,
+                                            color: Colors.black,
                                           ),
                                         ),
                                       ),
@@ -1223,11 +1227,12 @@ class _HydrationPageState extends State<HydrationPage> {
                                         nulledAlign: true,
                                         radius: 15,
                                         isContinousBorder: false,
-                                        backgroundColor: usedAppColor.white,
+                                        backgroundColor: Colors.white,
                                         child: const Padding(
                                           padding: EdgeInsets.all(8.0),
                                           child: Icon(
                                             Icons.checklist_rounded,
+                                            color: Colors.black,
                                           ),
                                         ),
                                       ),
@@ -1279,7 +1284,7 @@ Padding buildAppBar(BuildContext context, String title) {
               height: 30,
               width: 30,
               radius: 20,
-              backgroundColor: Colors.grey[300],
+              backgroundColor: usedAppColor.f3f3f4,
               child: const Padding(
                 padding: EdgeInsets.all(4.0),
                 child: Icon(
