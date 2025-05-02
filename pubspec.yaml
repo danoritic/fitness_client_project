@@ -57,6 +57,7 @@ dependencies:
   range_slider_flutter:
   fl_chart: 0.65.0
   intl:
+  syncfusion_flutter_sliders: 27.1.57
   
 dev_dependencies:
   flutter_test:

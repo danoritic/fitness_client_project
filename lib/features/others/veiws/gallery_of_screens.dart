@@ -147,7 +147,7 @@ class _GalleryOfScreensState extends State<GalleryOfScreens> {
             // ).toList(),
             onGenerateRoute: (settings) {
               return MaterialPageRoute(
-                builder: (context) => Scaffold(),
+                builder: (context) => HomePage(),
               );
             },
             key: rootNavigatorKey,
