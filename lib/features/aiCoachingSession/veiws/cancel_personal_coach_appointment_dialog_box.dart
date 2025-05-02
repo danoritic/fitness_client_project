@@ -44,7 +44,8 @@ class _CancelPersonalCoachAppointmentDialogBoxState
                                 hasBorder: true,
                                 borderColor: getFigmaColor("BABBBE"),
                                 child: Image.asset(
-                                    "assets/images/3dImage-cancel.png"),
+                                    "assets/images/3dImage-cancel.png"
+                                        .getThemeImage),
                               ),
                               Center(
                                 child: FancyText(

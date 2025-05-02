@@ -35,7 +35,8 @@ class _UpcomingCoachFitnessTrainingPageState
                     FancyContainer(
                       radius: 40,
                       height: 140,
-                      child: Image.asset("assets/images/3dImage-clock.png"),
+                      child: Image.asset(
+                          "assets/images/3dImage-clock.png".getThemeImage),
                     ),
                     Center(
                       child: FancyText("Upcoming Coach Fitness Training!",

@@ -25,7 +25,7 @@ class _FilterCoachSearchBottomSheetState
   Widget build(BuildContext context) {
     context.watch<AppColors>();
     return Scaffold(
-      backgroundColor: Colors.grey,
+      backgroundColor: usedAppColor.Color9EA0A5,
       body: SafeArea(child: _buildCascadedBottomsheet(context)),
     );
   }

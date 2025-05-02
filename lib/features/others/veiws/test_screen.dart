@@ -408,7 +408,7 @@ class _TestScreenState extends State<TestScreen> {
                       ),
                       // Icon(
                       //   Icons.timer,
-                      //   color: getFigmaColor("9EA0A5"),
+                      //   color: usedAppColor.Color9EA0A5,
                       //   size: 12,
                       // ),
                       const SizedBox(width: 5),

@@ -24,7 +24,7 @@ class _CoachCallPageState extends State<CoachCallPage> {
         title: Column(
           children: [
             Center(
-              child: FancyText("Psst.. Before your coaching session...",
+              child: FancyText("Coach Spike Brown",
                   textAlign: TextAlign.center,
                   rawTextStyle: GoogleFonts.workSans(
                     fontSize: 22,
@@ -34,7 +34,7 @@ class _CoachCallPageState extends State<CoachCallPage> {
                   )),
             ),
             FancyText(
-              "Please ensure the following:",
+              "Certified Human Trainer",
               textAlign: TextAlign.center,
               rawTextStyle: GoogleFonts.workSans(
                   fontSize: 13,
@@ -51,7 +51,7 @@ class _CoachCallPageState extends State<CoachCallPage> {
         child: Stack(
           children: [
             Image.asset(
-              "assets/images/callPageImage-large.png",
+              "assets/images/callPageImage-large.png".getThemeImage,
               width: double.infinity,
               fit: BoxFit.fitWidth,
             ),
@@ -87,11 +87,11 @@ class _CoachCallPageState extends State<CoachCallPage> {
                           BoxShadow(
                             offset: const Offset(5, 5),
                             blurRadius: 10,
-                            color: usedAppColor.black.withAlpha(10),
+                            color: Colors.black.withAlpha(10),
                           ),
                         ),
                         child: Image.asset(
-                          "assets/images/callPageImage-small.png",
+                          "assets/images/callPageImage-small.png".getThemeImage,
                           width: double.infinity,
                           fit: BoxFit.cover,
                         ),
@@ -133,6 +133,14 @@ class _CoachCallPageState extends State<CoachCallPage> {
                             height: 70,
                             width: 70,
                             radius: 22,
+                            action: () {
+                              isDark = !isDark;
+                              // usedAppColor.darken();
+                              changeAppThemeMode(isDark, context);
+                              // usedAppColor = context.read<AppColors>().trigger();
+                              // usedAppColor.trigger();
+                              setState(() {});
+                            },
                             isContinousBorder: false,
                             backgroundColor: getFigmaColor("F97316"),
                             hasBorder: true,

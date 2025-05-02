@@ -19,6 +19,8 @@ class AppColors extends ChangeNotifier {
   Color white = Colors.white;
   Color black = Colors.black;
   bool isDarkMode = false;
+  // 9EA0A5
+  // Color Color9EA0A5 = get FigmaColor("9EA0A5");
 
   lighten() {
     f3f3f4 = getFigmaColor("f3f3f4");

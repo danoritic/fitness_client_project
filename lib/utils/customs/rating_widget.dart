@@ -146,7 +146,7 @@ class _RatingWidgetState extends State<RatingWidget> {
             radius: 4,
             height: widget.height ?? 6,
             width: widget.maxwidth ?? 120,
-            backgroundColor: Colors.grey.withAlpha(100),
+            backgroundColor: usedAppColor.Color9EA0A5.withAlpha(100),
           ),
           FancyContainer(
             radius: 10,

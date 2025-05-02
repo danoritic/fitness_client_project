@@ -22,7 +22,7 @@ class _AiCoachChatPage15ImageScanState
         child: Stack(
           children: [
             Image.asset(
-              "assets/images/strongRunningHuman.png",
+              "assets/images/strongRunningHuman.png".getThemeImage,
               width: double.infinity,
               fit: BoxFit.fitWidth,
             ),
@@ -123,7 +123,7 @@ class _AiCoachChatPage15ImageScanState
                           BoxShadow(
                             offset: const Offset(5, 5),
                             blurRadius: 10,
-                            color: usedAppColor.black.withAlpha(10),
+                            color: Colors.black.withAlpha(10),
                           ),
                         ),
                         child: Padding(
@@ -176,7 +176,7 @@ class _AiCoachChatPage15ImageScanState
                               BoxShadow(
                                 offset: const Offset(5, 5),
                                 blurRadius: 10,
-                                color: usedAppColor.black.withAlpha(10),
+                                color: Colors.black.withAlpha(10),
                               ),
                             ),
                             child: const Center(

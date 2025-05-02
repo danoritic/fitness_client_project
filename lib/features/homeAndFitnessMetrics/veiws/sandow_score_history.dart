@@ -87,7 +87,7 @@ class _SandowScoreHistoryState extends State<SandowScoreHistory> {
                         rawTextStyle: GoogleFonts.workSans(
                           fontSize: 15.w,
                           fontWeight: FontWeight.bold,
-                          color: getFigmaColor("9EA0A5"),
+                          color: usedAppColor.Color9EA0A5,
                         ),
                       ),
                     ),

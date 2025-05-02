@@ -250,7 +250,7 @@ class _AiCoachChatPage18State extends State<AiCoachChatPage18> {
                     children: [
                       Icon(
                         Icons.description,
-                        color: getFigmaColor("9EA0A5"),
+                        color: usedAppColor.Color9EA0A5,
                         size: 12,
                       ),
                       FancyText(
@@ -267,7 +267,7 @@ class _AiCoachChatPage18State extends State<AiCoachChatPage18> {
                       ),
                       Icon(
                         Icons.timer,
-                        color: getFigmaColor("9EA0A5"),
+                        color: usedAppColor.Color9EA0A5,
                         size: 12,
                       ),
                       FancyText(

@@ -24,7 +24,7 @@ class _FindFitnessCoachPageState extends State<FindFitnessCoachPage> {
         body: Stack(
           children: [
             Image.asset(
-              "assets/images/mapImage.png",
+              "assets/images/mapImage.png".getThemeImage,
               width: double.infinity,
               fit: BoxFit.fitWidth,
             ),
@@ -48,8 +48,8 @@ class _FindFitnessCoachPageState extends State<FindFitnessCoachPage> {
                 height: MediaQuery.of(context).size.height * .5,
                 gradient: LinearGradient(
                   colors: [
-                    usedAppColor.black.withAlpha(100),
-                    usedAppColor.black.withAlpha(0),
+                    Colors.black.withAlpha(100),
+                    Colors.black.withAlpha(0),
                   ],
                   begin: Alignment.bottomCenter,
                   end: Alignment.topCenter,
@@ -244,6 +244,14 @@ class _FindFitnessCoachPageState extends State<FindFitnessCoachPage> {
                 height: 30,
                 width: 30,
                 radius: 20,
+                action: () {
+                  isDark = !isDark;
+                  // usedAppColor.darken();
+                  changeAppThemeMode(isDark, context);
+                  // usedAppColor = context.read<AppColors>().trigger();
+                  // usedAppColor.trigger();
+                  setState(() {});
+                },
                 backgroundColor: usedAppColor.f3f3f4,
                 child: Padding(
                   padding: EdgeInsets.all(4.0),

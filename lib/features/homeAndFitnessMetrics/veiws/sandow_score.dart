@@ -217,7 +217,7 @@ class SandowScoreDialog extends StatelessWidget {
               //   ),
 
               // ),
-              backgroundColor: Colors.grey[200],
+              backgroundColor: usedAppColor.Color9EA0A5,
               // decoration: BoxDecoration(
               //   color: Colors.grey[200],
               //   shape: BoxShape.circle,

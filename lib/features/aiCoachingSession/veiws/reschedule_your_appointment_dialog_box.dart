@@ -44,7 +44,8 @@ class _RescheduleYourAppointmentDialogBoxState
                                 hasBorder: true,
                                 borderColor: getFigmaColor("BABBBE"),
                                 child: Image.asset(
-                                    "assets/images/3dImage-calendar.png"),
+                                    "assets/images/3dImage-calendar.png"
+                                        .getThemeImage),
                               ),
                               Center(
                                 child: FancyText("Reschedule your appointment?",

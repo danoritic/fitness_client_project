@@ -118,7 +118,7 @@ class _HydrationHistoryPageState extends State<HydrationHistoryPage> {
                                   rawTextStyle: GoogleFonts.workSans(
                                     fontSize: 15,
                                     fontWeight: FontWeight.bold,
-                                    color: getFigmaColor("9EA0A5"),
+                                    color: usedAppColor.Color9EA0A5,
                                   ),
                                 ),
                                 const SizedBox(width: 10),
@@ -362,7 +362,7 @@ class _DrinkWaterScreenState extends State<DrinkWaterScreen> {
                                     rawTextStyle: GoogleFonts.workSans(
                                       fontSize: 14,
                                       fontWeight: FontWeight.w500,
-                                      color: getFigmaColor("9EA0A5"),
+                                      color: usedAppColor.Color9EA0A5,
                                     ),
                                   ),
                                 ],
@@ -440,7 +440,7 @@ class _CascadedBottomSheetState extends State<CascadedBottomSheet> {
   Widget build(BuildContext context) {
     context.watch<AppColors>();
     return Scaffold(
-      backgroundColor: Colors.grey,
+      backgroundColor: usedAppColor.Color9EA0A5,
       body: SafeArea(child: _buildCascadedBottomsheet(context)),
     );
   }
@@ -901,7 +901,7 @@ class _DateTimeRangableSelectorState extends State<DateTimeRangableSelector> {
       child: Padding(
         padding: const EdgeInsets.all(2.0),
         child: FancyContainer(
-          backgroundColor: Colors.grey.withAlpha(40),
+          backgroundColor: usedAppColor.Color9EA0A5.withAlpha(40),
           height: 50,
           width: 50,
           child: Text(

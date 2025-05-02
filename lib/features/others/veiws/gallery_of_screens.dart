@@ -56,11 +56,11 @@ import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
 //Scaffold(
-//   backgroundColor: Colors.grey,
+//   backgroundColor: usedAppColor.Color9EA0A5,
 //   body: CascadedBottomSheet(),
 // ),
 //Scaffold(
-//   backgroundColor: Colors.grey,
+//   backgroundColor: usedAppColor.Color9EA0A5,
 //   body: DateTimeRangableSelector(),
 // ),
 class GalleryOfScreens extends StatefulWidget {

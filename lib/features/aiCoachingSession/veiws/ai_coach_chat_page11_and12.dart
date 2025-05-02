@@ -138,7 +138,7 @@ class _AiCoachChatPage11And12State extends State<AiCoachChatPage11And12> {
                                             Text(e),
                                             Icon(
                                               Icons.add,
-                                              color: getFigmaColor("9EA0A5"),
+                                              color: usedAppColor.Color9EA0A5,
                                             ),
                                           ],
                                         ),
@@ -183,7 +183,7 @@ class _AiCoachChatPage11And12State extends State<AiCoachChatPage11And12> {
                                         ),
                                         Icon(
                                           Icons.close,
-                                          color: getFigmaColor("9EA0A5"),
+                                          color: usedAppColor.Color9EA0A5,
                                           size: 15,
                                         ),
                                       ],

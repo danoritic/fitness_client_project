@@ -126,7 +126,8 @@ class _AiCoachChatPage14ImageSelectionMenuState
                           hasBorder: true,
                           radius: 40,
                           child: Image.asset(
-                              "assets/images/strongRunningHuman.png"),
+                              "assets/images/strongRunningHuman.png"
+                                  .getThemeImage),
                         ),
                       ),
                     ),

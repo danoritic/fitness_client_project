@@ -28,8 +28,8 @@ class _CoachSelectionPageState extends State<CoachSelectionPage> {
           PageView(
             controller: pageController,
             children: [
-              Image.asset("assets/images/coachAIImage.png"),
-              Image.asset("assets/images/coachFemaleImage.png"),
+              Image.asset("assets/images/coachAIImage.png".getThemeImage),
+              Image.asset("assets/images/coachFemaleImage.png".getThemeImage),
             ],
           ),
           Align(

@@ -23,7 +23,7 @@ class _AiCoachIntroPageState extends State<AiCoachIntroPage> {
         child: Stack(
           children: [
             Image.asset(
-              "assets/images/female_robot.png",
+              "assets/images/female_robot.png".getThemeImage,
               fit: BoxFit.fitWidth,
               width: double.infinity,
             ),
@@ -40,6 +40,14 @@ class _AiCoachIntroPageState extends State<AiCoachIntroPage> {
                         nulledAlign: true,
                         isContinousBorder: false,
                         radius: 10,
+                        action: () {
+                          isDark = !isDark;
+                          // usedAppColor.darken();
+                          changeAppThemeMode(isDark, context);
+                          // usedAppColor = context.read<AppColors>().trigger();
+                          // usedAppColor.trigger();
+                          setState(() {});
+                        },
                         child: Padding(
                           padding: EdgeInsets.all(8.0),
                           child: Row(

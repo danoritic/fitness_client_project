@@ -89,5 +89,5 @@ changeAppThemeMode(bool toDarkParam, BuildContext context) {
 }
 
 extension ThemeImage on String {
-  String get getThemeImage => isDark ? imageDetails[this] : this;
+  String get getThemeImage => isDark ? (imageDetails[this] ?? this) : this;
 }

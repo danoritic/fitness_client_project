@@ -306,7 +306,7 @@ class _SandowScoreDetailState extends State<SandowScoreDetail> {
                   rawTextStyle: GoogleFonts.workSans(
                       fontSize: 16.w,
                       fontWeight: FontWeight.bold,
-                      color: getFigmaColor("9EA0A5")),
+                      color: usedAppColor.Color9EA0A5),
                 ),
               ],
             ),

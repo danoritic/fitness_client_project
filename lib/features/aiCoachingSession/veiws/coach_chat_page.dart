@@ -69,7 +69,7 @@ class _CoachChatPageState extends State<CoachChatPage> {
                         child: isMine
                             ? Icon(
                                 Icons.person,
-                                color: getFigmaColor("9EA0A5"),
+                                color: usedAppColor.Color9EA0A5,
                                 size: 15,
                               )
                             : Image.asset(

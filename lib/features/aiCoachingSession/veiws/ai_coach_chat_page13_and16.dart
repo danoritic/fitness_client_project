@@ -138,7 +138,8 @@ class _AiCoachChatPage13And16State extends State<AiCoachChatPage13And16> {
                               child: AspectRatio(
                                 aspectRatio: 180 / 277,
                                 child: Image.asset(
-                                  "assets/images/strongRunningHuman.png",
+                                  "assets/images/strongRunningHuman.png"
+                                      .getThemeImage,
                                   fit: BoxFit.fill,
                                 ),
                               ),
