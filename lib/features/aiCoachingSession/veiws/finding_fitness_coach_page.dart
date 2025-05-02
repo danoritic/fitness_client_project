@@ -17,6 +17,7 @@ class FindingFitnessCoachPage extends StatefulWidget {
 class _FindingFitnessCoachPageState extends State<FindingFitnessCoachPage> {
   @override
   Widget build(BuildContext context) {
+    context.watch<AppColors>();
     return Scaffold(
       backgroundColor: usedAppColor.white,
       body: Stack(
@@ -32,8 +33,8 @@ class _FindingFitnessCoachPageState extends State<FindingFitnessCoachPage> {
               height: MediaQuery.of(context).size.height * .5,
               gradient: LinearGradient(
                 colors: [
-                  Colors.black.withAlpha(100),
-                  Colors.black.withAlpha(0),
+                  usedAppColor.black.withAlpha(100),
+                  usedAppColor.black.withAlpha(0),
                 ],
                 begin: Alignment.bottomCenter,
                 end: Alignment.topCenter,

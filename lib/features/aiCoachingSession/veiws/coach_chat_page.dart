@@ -39,8 +39,9 @@ class _CoachChatPageState extends State<CoachChatPage> {
   ];
   @override
   Widget build(BuildContext context) {
+    context.watch<AppColors>();
     return Scaffold(
-      backgroundColor: getFigmaColor("f3f3f4"),
+      backgroundColor: usedAppColor.f3f3f4,
       body: Column(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
@@ -73,7 +74,7 @@ class _CoachChatPageState extends State<CoachChatPage> {
                               )
                             : Image.asset(
                                 "assets/images/Union_icon.png",
-                                color: getFigmaColor("f3f3f4"),
+                                color: usedAppColor.f3f3f4,
                                 height: 15,
                                 width: 15,
                               ),
@@ -94,7 +95,8 @@ class _CoachChatPageState extends State<CoachChatPage> {
                         rawTextStyle: GoogleFonts.workSans(
                           fontSize: 10,
                           fontWeight: FontWeight.w400,
-                          color: isMine ? usedAppColor.white : Colors.black,
+                          color:
+                              isMine ? usedAppColor.white : usedAppColor.black,
                           // weight: FontWeight.bold,
                           //   size: 24,
                         ),
@@ -111,7 +113,7 @@ class _CoachChatPageState extends State<CoachChatPage> {
                         constraints: BoxConstraints(minHeight: 40),
                         nulledAlign: true,
                         backgroundColor:
-                            isMine ? Colors.black : getFigmaColor("D7D8D9"),
+                            isMine ? usedAppColor.black : usedAppColor.D7D8D9,
                         isContinousBorder: false,
                         borderRadius: BorderRadius.only(
                           topLeft: Radius.circular(17),
@@ -149,7 +151,7 @@ class _CoachChatPageState extends State<CoachChatPage> {
                       // width: 40,
                       radius: 15,
                       isContinousBorder: false,
-                      backgroundColor: getFigmaColor("f3f3f4"),
+                      backgroundColor: usedAppColor.f3f3f4,
                       child: Padding(
                         padding: EdgeInsets.all(0.0),
                         child: Padding(
@@ -250,7 +252,7 @@ class _CoachChatPageState extends State<CoachChatPage> {
                           FancyContainer(
                             height: 5,
                             width: 5,
-                            backgroundColor: getFigmaColor("f3f3f4"),
+                            backgroundColor: usedAppColor.f3f3f4,
                           ),
                           SizedBox(width: 5),
                           FancyText(

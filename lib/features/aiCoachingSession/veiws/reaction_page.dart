@@ -54,6 +54,7 @@ class _ReactionPageState extends State<ReactionPage> {
   @override
   Widget build(BuildContext context) {
     Map detailsOfReaction = reactionsList[focussedReaction];
+    context.watch<AppColors>();
     return Scaffold(
         backgroundColor: detailsOfReaction['color'],
         body: Column(

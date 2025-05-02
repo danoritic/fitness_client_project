@@ -24,6 +24,7 @@ class _AiCoachChatPage11And12State extends State<AiCoachChatPage11And12> {
   TextEditingController textEditingController = TextEditingController();
   @override
   Widget build(BuildContext context) {
+    context.watch<AppColors>();
     return Scaffold(
       backgroundColor: usedAppColor.white,
       body: SafeArea(
@@ -50,7 +51,7 @@ class _AiCoachChatPage11And12State extends State<AiCoachChatPage11And12> {
                     height: 45,
                     radius: 15,
                     isContinousBorder: false,
-                    backgroundColor: getFigmaColor("F3F3F4"),
+                    backgroundColor: usedAppColor.f3f3f4,
                     child: Padding(
                       padding: const EdgeInsets.symmetric(horizontal: 8.0),
                       child: Row(
@@ -91,11 +92,11 @@ class _AiCoachChatPage11And12State extends State<AiCoachChatPage11And12> {
                         // height: 45,
                         radius: 15,
                         isContinousBorder: false,
-                        backgroundColor: getFigmaColor("F3F3F4"),
+                        backgroundColor: usedAppColor.f3f3f4,
                         child: Padding(
                           padding: const EdgeInsets.symmetric(horizontal: 8.0),
                           child: FancyContainer(
-                            backgroundColor: getFigmaColor("F3F3F4"),
+                            backgroundColor: usedAppColor.f3f3f4,
                             // height: 40,
                             // width: 150,
                             radius: 20,
@@ -124,7 +125,7 @@ class _AiCoachChatPage11And12State extends State<AiCoachChatPage11And12> {
                                         backgroundColor:
                                             // selectedBodyPart != e
                                             // ?
-                                            getFigmaColor("F3F3F4"),
+                                            usedAppColor.f3f3f4,
                                         // :usedAppColor.white,
                                         // height: 40,
                                         // nulledAlign: true,
@@ -165,7 +166,7 @@ class _AiCoachChatPage11And12State extends State<AiCoachChatPage11And12> {
                                   radius: 15,
                                   isContinousBorder: false,
                                   nulledAlign: true,
-                                  backgroundColor: getFigmaColor("F3F3F4"),
+                                  backgroundColor: usedAppColor.f3f3f4,
                                   child: Padding(
                                     padding: const EdgeInsets.symmetric(
                                       horizontal: 8.0,
@@ -211,7 +212,7 @@ class _AiCoachChatPage11And12State extends State<AiCoachChatPage11And12> {
                           maxHeight: 200,
                           offset: const Offset(-50, 0),
                           decoration: BoxDecoration(
-                              color: getFigmaColor("F3F3F4"),
+                              color: usedAppColor.f3f3f4,
                               borderRadius: BorderRadius.circular(20))),
                       alignment: Alignment.topCenter,
                       menuItemStyleData: MenuItemStyleData(
@@ -225,7 +226,7 @@ class _AiCoachChatPage11And12State extends State<AiCoachChatPage11And12> {
                       ),
                       customButton: FancyContainer(
                         radius: 20,
-                        backgroundColor: getFigmaColor("F3F3F4"),
+                        backgroundColor: usedAppColor.f3f3f4,
                         height: 40,
                         width: 40,
                         child: Padding(
@@ -261,7 +262,7 @@ class _AiCoachChatPage11And12State extends State<AiCoachChatPage11And12> {
                   Padding(
                     padding: const EdgeInsets.all(8.0),
                     child: FancyContainer(
-                      backgroundColor: Colors.black,
+                      backgroundColor: usedAppColor.black,
                       // height: 40,
                       // nulledAlign: true,
                       isContinousBorder: false,

@@ -19,6 +19,7 @@ class SessionHistoryPage extends StatefulWidget {
 class _SessionHistoryPageState extends State<SessionHistoryPage> {
   @override
   Widget build(BuildContext context) {
+    context.watch<AppColors>();
     return Scaffold(
       backgroundColor: usedAppColor.white,
       appBar: AppBar(
@@ -63,7 +64,7 @@ class _SessionHistoryPageState extends State<SessionHistoryPage> {
                     rawTextStyle: GoogleFonts.workSans(
                         fontSize: 13,
                         fontWeight: FontWeight.bold,
-                        color: getFigmaColor("676C75")),
+                        color: usedAppColor.Color676C75),
                   ),
                   SizedBox(width: 5),
                   SizedBox(

@@ -21,6 +21,7 @@ class _AiCoachChatPage14ImageSelectionMenuState
   String? tabName;
   @override
   Widget build(BuildContext context) {
+    context.watch<AppColors>();
     return Scaffold(
         backgroundColor: usedAppColor.white,
         body: SafeArea(
@@ -37,7 +38,7 @@ class _AiCoachChatPage14ImageSelectionMenuState
                   action: () {
                     print("sassasasas");
                   },
-                  backgroundColor: getFigmaColor("F3F3F4"),
+                  backgroundColor: usedAppColor.f3f3f4,
                   child: Padding(
                     padding: const EdgeInsets.all(4.0),
                     child: Row(
@@ -71,8 +72,8 @@ class _AiCoachChatPage14ImageSelectionMenuState
                                   e,
                                   weight: FontWeight.w700,
                                   textColor: isSelected
-                                      ? Colors.black
-                                      : getFigmaColor("676C75"),
+                                      ? usedAppColor.black
+                                      : usedAppColor.Color676C75,
                                 ),
                               ),
                             ),
@@ -134,7 +135,7 @@ class _AiCoachChatPage14ImageSelectionMenuState
                 ),
                 const SizedBox(height: 30),
                 FancyContainer(
-                  backgroundColor: Colors.black,
+                  backgroundColor: usedAppColor.black,
                   // height: 50,
                   // width: 50,
                   nulledAlign: true,

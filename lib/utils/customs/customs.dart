@@ -48,12 +48,12 @@ Widget buildTailedAppArrow({bool isLeft = true, Color? iconColor}) {
           angle: pi,
           child: Image.asset(
             "assets/images/arrowTailed.png",
-            color: iconColor,
+            color: iconColor ?? usedAppColor.white,
           ),
         )
       : Image.asset(
           "assets/images/arrowTailed.png",
-          color: iconColor,
+          color: iconColor ?? usedAppColor.white,
         );
 }
 
@@ -88,7 +88,7 @@ Widget buildBackArrow(BuildContext context,
     height: 30,
     width: 30,
     backgroundColor: !(ModalRoute.of(context)?.isFirst ?? true)
-        ? backgroundColor ?? Colors.grey[300]
+        ? backgroundColor ?? usedAppColor.f3f3f4
         : null,
     child: Visibility(
       visible: !(ModalRoute.of(context)?.isFirst ?? true),
@@ -98,7 +98,8 @@ Widget buildBackArrow(BuildContext context,
             action: () {
               Get.back();
             },
-            child: buildAppArrow(iconColor: iconColor)),
+            child: buildAppArrow(
+                iconColor: iconColor ?? usedAppColor.Color676C75)),
       ),
     ),
   );
@@ -131,7 +132,7 @@ class _RangeSliderWidgetState extends State<RangeSliderWidget> {
       ),
       max: 80,
       textPositionTop: 0, textPositionBottom: -70,
-      handlerHeight: 30, textColor: getFigmaColor("676C75"),
+      handlerHeight: 30, textColor: usedAppColor.Color676C75,
       handler: RangeSliderFlutterHandler(
         decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(10),
@@ -140,7 +141,7 @@ class _RangeSliderWidgetState extends State<RangeSliderWidget> {
           boxShadow: List.filled(
             4,
             BoxShadow(
-              color: Colors.grey.withAlpha(30),
+              color: usedAppColor.black.withAlpha(10),
               offset: Offset(2, 2),
               // spreadRadius: 10,
               blurRadius: 10,
@@ -156,7 +157,7 @@ class _RangeSliderWidgetState extends State<RangeSliderWidget> {
           boxShadow: List.filled(
             4,
             BoxShadow(
-              color: Colors.grey.withAlpha(30),
+              color: usedAppColor.black.withAlpha(10),
               offset: Offset(2, 2),
               // spreadRadius: 10,
               blurRadius: 10,
@@ -178,7 +179,7 @@ class _RangeSliderWidgetState extends State<RangeSliderWidget> {
         ),
         inactiveTrackBar: BoxDecoration(
           borderRadius: BorderRadius.circular(1),
-          color: getFigmaColor("F1F1F1"),
+          color: usedAppColor.f3f3f4,
         ),
       ),
 

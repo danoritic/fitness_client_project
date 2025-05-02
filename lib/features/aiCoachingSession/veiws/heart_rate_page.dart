@@ -17,6 +17,7 @@ class HeartRatePage extends StatefulWidget {
 class _HeartRatePageState extends State<HeartRatePage> {
   @override
   Widget build(BuildContext context) {
+    context.watch<AppColors>();
     return Scaffold(
       backgroundColor: usedAppColor.white,
       body: SafeArea(
@@ -48,7 +49,7 @@ class _HeartRatePageState extends State<HeartRatePage> {
                     rawTextStyle: GoogleFonts.workSans(
                       fontSize: 20,
                       fontWeight: FontWeight.bold,
-                      color: getFigmaColor("676C75"),
+                      color: usedAppColor.Color676C75,
                     ),
                   ),
                 ),
@@ -61,7 +62,7 @@ class _HeartRatePageState extends State<HeartRatePage> {
                 rawTextStyle: GoogleFonts.workSans(
                   fontSize: 17,
                   // fontWeight: FontWeight.bold,
-                  color: getFigmaColor("676C75"),
+                  color: usedAppColor.Color676C75,
                 ),
               ),
             ),
@@ -88,7 +89,7 @@ class _HeartRatePageState extends State<HeartRatePage> {
                           hasBorder: true,
                           borderColor: usedAppColor.white.withAlpha(200),
                           borderThickness: 4,
-                          backgroundColor: Colors.black,
+                          backgroundColor: usedAppColor.black,
                           child: Icon(Icons.add, color: usedAppColor.white),
                         ),
                       ),
@@ -130,7 +131,7 @@ class _HeartRatePageState extends State<HeartRatePage> {
                                                   GoogleFonts.workSans(
                                                 fontSize: 15,
                                                 fontWeight: FontWeight.bold,
-                                                // color: getFigmaColor("676C75"),
+                                                // color: usedAppColor.Color676C75,
                                               ),
                                             ),
                                             const Spacer(),
@@ -165,7 +166,7 @@ class _HeartRatePageState extends State<HeartRatePage> {
                                                   fontSize: 15,
                                                   fontWeight: FontWeight.bold,
                                                   color:
-                                                      getFigmaColor("676C75"),
+                                                      usedAppColor.Color676C75,
                                                 ),
                                               ),
                                             ),
@@ -214,7 +215,7 @@ class _HeartRatePageState extends State<HeartRatePage> {
                                                   GoogleFonts.workSans(
                                                 fontSize: 15,
                                                 fontWeight: FontWeight.bold,
-                                                // color: getFigmaColor("676C75"),
+                                                // color: usedAppColor.Color676C75,
                                               ),
                                             ),
                                             const Spacer(),
@@ -249,7 +250,7 @@ class _HeartRatePageState extends State<HeartRatePage> {
                                                   fontSize: 15,
                                                   fontWeight: FontWeight.bold,
                                                   color:
-                                                      getFigmaColor("676C75"),
+                                                      usedAppColor.Color676C75,
                                                 ),
                                               ),
                                             ),

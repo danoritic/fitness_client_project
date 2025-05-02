@@ -20,6 +20,7 @@ class _AiCoachChatPage7State extends State<AiCoachChatPage7> {
   String? menuValue;
   @override
   Widget build(BuildContext context) {
+    context.watch<AppColors>();
     return Scaffold(
       backgroundColor: usedAppColor.white,
       body: SafeArea(
@@ -54,7 +55,7 @@ class _AiCoachChatPage7State extends State<AiCoachChatPage7> {
                           maxHeight: 200,
                           offset: const Offset(-50, 0),
                           decoration: BoxDecoration(
-                              color: getFigmaColor("F3F3F4"),
+                              color: usedAppColor.f3f3f4,
                               borderRadius: BorderRadius.circular(20))),
                       alignment: Alignment.topCenter,
                       menuItemStyleData: MenuItemStyleData(
@@ -68,7 +69,7 @@ class _AiCoachChatPage7State extends State<AiCoachChatPage7> {
                       ),
                       customButton: FancyContainer(
                         radius: 20,
-                        backgroundColor: getFigmaColor("F3F3F4"),
+                        backgroundColor: usedAppColor.f3f3f4,
                         height: 40,
                         width: 40,
                         child: Padding(
@@ -104,7 +105,7 @@ class _AiCoachChatPage7State extends State<AiCoachChatPage7> {
                   Padding(
                     padding: const EdgeInsets.all(8.0),
                     child: FancyContainer(
-                      backgroundColor: Colors.black,
+                      backgroundColor: usedAppColor.black,
                       // height: 40,
                       // nulledAlign: true,
                       isContinousBorder: false,
@@ -169,7 +170,7 @@ class _AiCoachChatPage7State extends State<AiCoachChatPage7> {
                       width: 50,
                       // nulledAlign: true,
 
-                      backgroundColor: getFigmaColor("F3F3F4"),
+                      backgroundColor: usedAppColor.f3f3f4,
                       child: Padding(
                         padding: const EdgeInsets.all(0),
                         child: FancyText(
@@ -197,7 +198,7 @@ class _AiCoachChatPage7State extends State<AiCoachChatPage7> {
                         setState(() {});
                       },
 
-                      backgroundColor: getFigmaColor("F3F3F4"),
+                      backgroundColor: usedAppColor.f3f3f4,
                       child: Padding(
                         padding: const EdgeInsets.all(0),
                         child: FancyText(

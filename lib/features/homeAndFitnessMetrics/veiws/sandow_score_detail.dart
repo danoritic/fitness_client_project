@@ -11,6 +11,7 @@ import 'package:fitness_client_project/utils/helperFunctions.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:fitness_client_project/utils/utils.dart';
 
 class SandowScoreDetail extends StatefulWidget {
   const SandowScoreDetail({super.key});
@@ -58,9 +59,14 @@ class _SandowScoreDetailState extends State<SandowScoreDetail> {
   // assets/images/insightIcon-bucket.png
   @override
   Widget build(BuildContext context) {
+    context.watch<AppColors>();
     return Scaffold(
         appBar: AppBar(
-          leading: buildBackArrow(context),
+          leading: SizedBox(
+            height: 30,
+            width: 30,
+            child: Center(child: buildBackArrow(context)),
+          ),
           elevation: 0,
           backgroundColor: usedAppColor.white,
           title: Padding(
@@ -115,7 +121,7 @@ class _SandowScoreDetailState extends State<SandowScoreDetail> {
                             padding: EdgeInsets.all(8.0.w),
                             child: FancyContainer(
                               radius: 30,
-                              backgroundColor: getFigmaColor("F3F3F4"),
+                              backgroundColor: usedAppColor.f3f3f4,
                               child: Padding(
                                 padding: EdgeInsets.all(8.0.w),
                                 child: Column(
@@ -270,7 +276,7 @@ class _SandowScoreDetailState extends State<SandowScoreDetail> {
         child: FancyContainer(
           width: double.infinity,
           isContinousBorder: false,
-          backgroundColor: getFigmaColor("F3F3F4"),
+          backgroundColor: usedAppColor.f3f3f4,
           child: Padding(
             padding: const EdgeInsets.all(8.0),
             child: Row(
@@ -314,7 +320,7 @@ class _SandowScoreDetailState extends State<SandowScoreDetail> {
     return FancyContainer(
       isContinousBorder: false,
       radius: 10,
-      backgroundColor: getFigmaColor("F3F3F4"),
+      backgroundColor: usedAppColor.f3f3f4,
       child: Padding(
         padding: const EdgeInsets.all(15.0),
         child: Column(
@@ -430,7 +436,7 @@ class _SandowScoreDetailState extends State<SandowScoreDetail> {
               radius: 15,
               height: 40,
               isContinousBorder: false,
-              backgroundColor: Colors.black,
+              backgroundColor: usedAppColor.black,
               child: FancyText(
                 "See AI Recommendations",
                 textColor: usedAppColor.white,

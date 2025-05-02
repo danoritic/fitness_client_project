@@ -16,6 +16,7 @@ class CoachCallPage extends StatefulWidget {
 class _CoachCallPageState extends State<CoachCallPage> {
   @override
   Widget build(BuildContext context) {
+    context.watch<AppColors>();
     return Scaffold(
       appBar: AppBar(
         backgroundColor: usedAppColor.white,
@@ -86,7 +87,7 @@ class _CoachCallPageState extends State<CoachCallPage> {
                           BoxShadow(
                             offset: const Offset(5, 5),
                             blurRadius: 10,
-                            color: Colors.black.withAlpha(10),
+                            color: usedAppColor.black.withAlpha(10),
                           ),
                         ),
                         child: Image.asset(
@@ -116,7 +117,7 @@ class _CoachCallPageState extends State<CoachCallPage> {
                               BoxShadow(
                                 offset: const Offset(5, 5),
                                 blurRadius: 10,
-                                color: Colors.black.withAlpha(10),
+                                color: usedAppColor.black.withAlpha(10),
                               ),
                             ),
                             child: const Center(
@@ -144,7 +145,7 @@ class _CoachCallPageState extends State<CoachCallPage> {
                             //   BoxShadow(
                             //     offset: const Offset(5, 5),
                             //     blurRadius: 10,
-                            //     color: Colors.black.withAlpha(10),
+                            //     color: usedAppColor.black.withAlpha(10),
                             //   ),
                             // ),
 
@@ -170,7 +171,7 @@ class _CoachCallPageState extends State<CoachCallPage> {
                               BoxShadow(
                                 offset: const Offset(5, 5),
                                 blurRadius: 10,
-                                color: Colors.black.withAlpha(10),
+                                color: usedAppColor.black.withAlpha(10),
                               ),
                             ),
                             child: const Center(

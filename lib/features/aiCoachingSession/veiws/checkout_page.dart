@@ -21,6 +21,7 @@ class _CheckoutPageState extends State<CheckoutPage> {
     // "assets/images/appIcon-Calendar.png";
     // "assets/images/appIcon-creditCard.png";
     // "assets/images/appIcon-fatPencil.png";
+    context.watch<AppColors>();
     return Scaffold(
       backgroundColor: usedAppColor.white,
       body: SafeArea(
@@ -73,7 +74,7 @@ class _CheckoutPageState extends State<CheckoutPage> {
             height: 45,
             radius: radius,
             isContinousBorder: false,
-            backgroundColor: getFigmaColor("F3F3F4"),
+            backgroundColor: usedAppColor.f3f3f4,
             child: Padding(
               padding: const EdgeInsets.symmetric(horizontal: 8.0),
               child: Row(
@@ -151,7 +152,7 @@ class _CheckoutPageState extends State<CheckoutPage> {
             height: 45,
             radius: radius,
             isContinousBorder: false,
-            backgroundColor: getFigmaColor("F3F3F4"),
+            backgroundColor: usedAppColor.f3f3f4,
             child: Padding(
               padding: const EdgeInsets.symmetric(horizontal: 8.0),
               child: Row(
@@ -228,7 +229,7 @@ class _CheckoutPageState extends State<CheckoutPage> {
             height: 45,
             radius: radius,
             isContinousBorder: false,
-            backgroundColor: getFigmaColor("F3F3F4"),
+            backgroundColor: usedAppColor.f3f3f4,
             child: Padding(
               padding: const EdgeInsets.symmetric(horizontal: 8.0),
               child: Row(
@@ -297,7 +298,7 @@ class _CheckoutPageState extends State<CheckoutPage> {
             height: 45,
             radius: radius,
             isContinousBorder: false,
-            backgroundColor: getFigmaColor("F3F3F4"),
+            backgroundColor: usedAppColor.f3f3f4,
             child: Padding(
               padding: const EdgeInsets.symmetric(horizontal: 8.0),
               child: Row(
@@ -349,7 +350,7 @@ class _CheckoutPageState extends State<CheckoutPage> {
     return FancyContainer(
       height: 150,
       radius: 40,
-      backgroundColor: Colors.black,
+      backgroundColor: usedAppColor.black,
       child: Stack(
         children: [
           Image.asset("assets/images/creditCardBG.png"),
@@ -446,7 +447,7 @@ class _CheckoutPageState extends State<CheckoutPage> {
         action: () {},
         isContinousBorder: false,
         backgroundColor: getFigmaColor("000000"),
-        //  getFigmaColor("F3F3F4"),
+        //  usedAppColor.f3f3f4,
         child: Padding(
           padding: const EdgeInsets.all(8.0),
           child: Row(

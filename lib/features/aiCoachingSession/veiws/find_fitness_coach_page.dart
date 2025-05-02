@@ -18,6 +18,7 @@ class FindFitnessCoachPage extends StatefulWidget {
 class _FindFitnessCoachPageState extends State<FindFitnessCoachPage> {
   @override
   Widget build(BuildContext context) {
+    context.watch<AppColors>();
     return Scaffold(
         backgroundColor: usedAppColor.white,
         body: Stack(
@@ -47,8 +48,8 @@ class _FindFitnessCoachPageState extends State<FindFitnessCoachPage> {
                 height: MediaQuery.of(context).size.height * .5,
                 gradient: LinearGradient(
                   colors: [
-                    Colors.black.withAlpha(100),
-                    Colors.black.withAlpha(0),
+                    usedAppColor.black.withAlpha(100),
+                    usedAppColor.black.withAlpha(0),
                   ],
                   begin: Alignment.bottomCenter,
                   end: Alignment.topCenter,
@@ -97,7 +98,7 @@ class _FindFitnessCoachPageState extends State<FindFitnessCoachPage> {
                                                   fontSize: 15,
                                                   fontWeight: FontWeight.w700,
                                                 )
-                                                // textColor: getFigmaColor("676C75"),
+                                                // textColor: usedAppColor.Color676C75,
                                                 ),
                                             SizedBox(height: 10),
                                             _buildIconImageDotRepeat(),
@@ -111,7 +112,7 @@ class _FindFitnessCoachPageState extends State<FindFitnessCoachPage> {
                                       maxLine: 3,
                                       weight: FontWeight.w500,
                                       size: 14,
-                                      textColor: getFigmaColor("676C75"),
+                                      textColor: usedAppColor.Color676C75,
                                     )
                                   ],
                                 ),
@@ -120,7 +121,7 @@ class _FindFitnessCoachPageState extends State<FindFitnessCoachPage> {
                           ),
                           FancyContainer(
                             height: 40,
-                            backgroundColor: Colors.black,
+                            backgroundColor: usedAppColor.black,
                             radius: 15,
                             isContinousBorder: false,
                             child: FancyText(
@@ -166,7 +167,7 @@ class _FindFitnessCoachPageState extends State<FindFitnessCoachPage> {
                         "Move map to discover fitness coach.",
                         weight: FontWeight.w700,
                         size: 12,
-                        // textColor: getFigmaColor("676C75"),
+                        // textColor: usedAppColor.Color676C75,
                       ),
                     ],
                   ),
@@ -191,7 +192,7 @@ class _FindFitnessCoachPageState extends State<FindFitnessCoachPage> {
           "Strength Expert",
           weight: FontWeight.w500,
           size: 12,
-          textColor: getFigmaColor("676C75"),
+          textColor: usedAppColor.Color676C75,
         ),
         SizedBox(width: 5),
         SizedBox(
@@ -204,14 +205,14 @@ class _FindFitnessCoachPageState extends State<FindFitnessCoachPage> {
           "4.8",
           weight: FontWeight.w500,
           size: 12,
-          textColor: getFigmaColor("676C75"),
+          textColor: usedAppColor.Color676C75,
         ),
         SizedBox(width: 5),
         FancyText(
           "(28)",
           weight: FontWeight.w800,
           size: 12,
-          // textColor: getFigmaColor("676C75"),
+          // textColor: usedAppColor.Color676C75,
         ),
       ],
     );

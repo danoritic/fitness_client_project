@@ -19,6 +19,7 @@ class _SelectPaymentMethodsBottomSheetState
     extends State<SelectPaymentMethodsBottomSheet> {
   @override
   Widget build(BuildContext context) {
+    context.watch<AppColors>();
     return Scaffold(
       backgroundColor: Colors.grey,
       body: SafeArea(child: _buildCascadedBottomsheet(context)),
@@ -93,7 +94,7 @@ class _SelectPaymentMethodsBottomSheetState
                             child: FancyContainer(
                               width: 50,
                               height: 5,
-                              backgroundColor: getFigmaColor("D7D8D9"),
+                              backgroundColor: usedAppColor.D7D8D9,
                             ),
                           ),
                           SizedBox(height: 10),
@@ -108,7 +109,7 @@ class _SelectPaymentMethodsBottomSheetState
                                 ),
                               ),
                               FancyContainer(
-                                backgroundColor: getFigmaColor("D7D8D9"),
+                                backgroundColor: usedAppColor.D7D8D9,
                                 radius: 20,
                                 child: Padding(
                                   padding: EdgeInsets.all(8.0),
@@ -136,7 +137,7 @@ class _SelectPaymentMethodsBottomSheetState
                                   isContinousBorder: false,
                                   height: 40,
                                   radius: radius,
-                                  backgroundColor: getFigmaColor("f3f3f4"),
+                                  backgroundColor: usedAppColor.f3f3f4,
                                   child: Padding(
                                     padding: EdgeInsets.all(8.0),
                                     child: Row(
@@ -163,7 +164,7 @@ class _SelectPaymentMethodsBottomSheetState
                                           radius: 10,
                                           hasBorder: true,
                                           borderColor: isSelected
-                                              ? Colors.black
+                                              ? usedAppColor.black
                                               : Colors.grey,
                                           child: !isSelected
                                               ? null
@@ -172,9 +173,10 @@ class _SelectPaymentMethodsBottomSheetState
                                                   width: 5,
                                                   radius: 20,
                                                   hasBorder: true,
-                                                  backgroundColor: Colors.black,
+                                                  backgroundColor:
+                                                      usedAppColor.black,
                                                   // borderColor: isSelected
-                                                  //     ? Colors.black
+                                                  //     ? usedAppColor.black
                                                   //     : Colors.grey,
                                                   child: SizedBox(),
                                                 ),
@@ -217,7 +219,7 @@ class _SelectPaymentMethodsBottomSheetState
         action: () {},
         isContinousBorder: false,
         backgroundColor: getFigmaColor("000000"),
-        //  getFigmaColor("F3F3F4"),
+        //  usedAppColor.f3f3f4,
         child: Padding(
           padding: EdgeInsets.all(8.0),
           child: Row(

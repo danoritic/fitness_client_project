@@ -20,6 +20,7 @@ class _CoachSelectionPageState extends State<CoachSelectionPage> {
   PageController pageController = PageController();
   @override
   Widget build(BuildContext context) {
+    context.watch<AppColors>();
     return Scaffold(
       backgroundColor: usedAppColor.white,
       body: Stack(
@@ -118,7 +119,7 @@ class _CoachSelectionPageState extends State<CoachSelectionPage> {
                     action: () {
                       print("sassasasas");
                     },
-                    backgroundColor: getFigmaColor("F3F3F4"),
+                    backgroundColor: usedAppColor.f3f3f4,
                     child: Padding(
                       padding: const EdgeInsets.all(4.0),
                       child: Row(
@@ -147,8 +148,8 @@ class _CoachSelectionPageState extends State<CoachSelectionPage> {
                                     e,
                                     weight: FontWeight.w700,
                                     textColor: isSelected
-                                        ? Colors.black
-                                        : getFigmaColor("676C75"),
+                                        ? usedAppColor.black
+                                        : usedAppColor.Color676C75,
                                   ),
                                 ),
                               ),
@@ -169,11 +170,11 @@ class _CoachSelectionPageState extends State<CoachSelectionPage> {
                         padding: const EdgeInsets.all(8.0),
                         child: Icon(
                           Icons.favorite_rounded,
-                          color: getFigmaColor("676C75"),
+                          color: usedAppColor.Color676C75,
                           size: 13,
                         ),
                       ),
-                      backgroundColor: getFigmaColor("f3f3f4"),
+                      backgroundColor: usedAppColor.f3f3f4,
                     ),
                     FancyContainer(
                       isContinousBorder: false,
@@ -187,7 +188,7 @@ class _CoachSelectionPageState extends State<CoachSelectionPage> {
                           ),
                         ),
                       ),
-                      backgroundColor: getFigmaColor("f3f3f4"),
+                      backgroundColor: usedAppColor.f3f3f4,
                     ),
                   ],
                 ),
@@ -227,7 +228,7 @@ class _CoachSelectionPageState extends State<CoachSelectionPage> {
                             "assets/images/coachSelectionPageIcon-wavyCheck.png")),
                     // Icon(
                     //   Icons.timer,
-                    //   color: getFigmaColor("676C75"),
+                    //   color: usedAppColor.Color676C75,
                     //   size: 15,
                     // ),
                     const SizedBox(width: 5),
@@ -235,7 +236,7 @@ class _CoachSelectionPageState extends State<CoachSelectionPage> {
                       "Human",
                       weight: FontWeight.w500,
                       size: 14,
-                      textColor: getFigmaColor("676C75"),
+                      textColor: usedAppColor.Color676C75,
                     ),
                     const SizedBox(width: 5),
                     FancyContainer(
@@ -243,7 +244,7 @@ class _CoachSelectionPageState extends State<CoachSelectionPage> {
                       width: 5,
 
                       // isContinousBorder: false,
-                      backgroundColor: getFigmaColor("D7D8D9"),
+                      backgroundColor: usedAppColor.D7D8D9,
                     ),
                     const SizedBox(width: 5),
                     SizedBox(
@@ -257,7 +258,7 @@ class _CoachSelectionPageState extends State<CoachSelectionPage> {
                       "2.8",
                       weight: FontWeight.w500,
                       size: 14,
-                      textColor: getFigmaColor("676C75"),
+                      textColor: usedAppColor.Color676C75,
                     ),
                     const SizedBox(width: 5),
                     FancyContainer(
@@ -265,7 +266,7 @@ class _CoachSelectionPageState extends State<CoachSelectionPage> {
                       width: 5,
 
                       // isContinousBorder: false,
-                      backgroundColor: getFigmaColor("D7D8D9"),
+                      backgroundColor: usedAppColor.D7D8D9,
                     ),
                     const SizedBox(width: 5),
                     SizedBox(
@@ -279,7 +280,7 @@ class _CoachSelectionPageState extends State<CoachSelectionPage> {
                       "87 Clients",
                       weight: FontWeight.w500,
                       size: 14,
-                      textColor: getFigmaColor("676C75"),
+                      textColor: usedAppColor.Color676C75,
                     ),
                   ],
                 ),

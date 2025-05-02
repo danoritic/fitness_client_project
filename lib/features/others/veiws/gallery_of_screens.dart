@@ -39,6 +39,7 @@ import 'package:fitness_client_project/features/aiCoachingSession/veiws/session_
 import 'package:fitness_client_project/features/aiCoachingSession/veiws/session_history_page.dart';
 import 'package:fitness_client_project/features/aiCoachingSession/veiws/upcoming_coach_fitness_training_page.dart';
 import 'package:fitness_client_project/features/aiCoachingSession/veiws/views.dart';
+import 'package:fitness_client_project/features/homeAndFitnessMetrics/veiws/haydration_full.dart';
 import 'package:fitness_client_project/features/homeAndFitnessMetrics/veiws/homepage.dart';
 import 'package:fitness_client_project/features/homeAndFitnessMetrics/veiws/sandow_score.dart';
 import 'package:fitness_client_project/features/homeAndFitnessMetrics/veiws/sandow_score_detail.dart';
@@ -49,9 +50,19 @@ import 'package:fitness_client_project/utils/app_variables.dart';
 import 'package:fitness_client_project/utils/customs/fancy_container.dart';
 import 'package:fitness_client_project/utils/customs/fancy_text.dart';
 import 'package:fitness_client_project/utils/helperFunctions.dart';
+import 'package:fitness_client_project/utils/theme/theme.dart';
 
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
 
+//Scaffold(
+//   backgroundColor: Colors.grey,
+//   body: CascadedBottomSheet(),
+// ),
+//Scaffold(
+//   backgroundColor: Colors.grey,
+//   body: DateTimeRangableSelector(),
+// ),
 class GalleryOfScreens extends StatefulWidget {
   const GalleryOfScreens({super.key});
 
@@ -60,84 +71,91 @@ class GalleryOfScreens extends StatefulWidget {
 }
 
 class _GalleryOfScreensState extends State<GalleryOfScreens> {
-  List<Widget> listOfScreens = [
-    const HomePage(),
-    const SandowScore(),
-    const SandowScoreHistory(),
-    const SandowScoreDetail(),
-    const HydrationDialog(),
-    const DrinkWaterScreen(),
-    const Scaffold(
-      backgroundColor: Colors.grey,
-      body: CascadedBottomSheet(),
-    ),
-    const Scaffold(
-      backgroundColor: Colors.grey,
-      body: DateTimeRangableSelector(),
-    ),
-    const HydrationPage(),
-    const HaydrationFull(),
-    // new
-    const HydrationHistoryPage(),
-    const AiSuggesstionPage(),
+  List<Widget Function()> listOfScreens = [
+    () => HomePage(),
+    () => SandowScore(),
+    () => SandowScoreHistory(),
+    () => SandowScoreDetail(),
+    () => HydrationDialog(),
+    () => DrinkWaterScreen(),
 
-    const AiCoachIntroPage(),
-    const AiCoachChatPage1(),
-    const AiCoachChatPage2(),
-    const AiCoachChatPage4(),
-    const AiCoachChatPage5(),
-    const AiCoachChatPage6(),
-    const AiCoachChatPage7(),
-    const AiCoachChatPage8And9(),
-    const AiCoachChatPage10(),
-    const AiCoachChatPage11And12(),
-    const AiCoachChatPage13And16(),
-    const AiCoachChatPage14ImageSelectionMenu(),
-    const AiCoachChatPage15ImageScan(),
-    const AiCoachChatPage17(),
-    AiCoachChatPage18(),
-    const HeartRatePage(),
-    HeartRateHistoryPage(),
-    const FindFitnessCoachByTextPage(),
-    FindFitnessCoachPage(),
-    const FindingFitnessCoachPage(),
-    const CoachHomePage(),
-    const CoachingSchedulePage(),
-    const CoachCallPage(),
-    CoachChatPage(),
-    CoachReviewDialogBox(),
-    const CoachReviewPagePage(),
-    const CoachSelectionPage(),
-    const CoachTalkSessionEndedPage(),
-    const CoachingSessionInstructionPage(),
-    const AiCoachChatLastPage(),
-    const CancelThisAppointmentPage(),
-    CancelPersonalCoachAppointmentDialogBox(),
-    const CheckoutPage(),
-    FilterCoachSearchBottomSheet(),
-    FilterCoachSearchBottomSheet(),
-    PaymentCompletedDialogBox(),
-    ReactionPage(),
-    RescheduleYourAppointmentDialogBox(),
-    const ReviewsPage(),
-    SelectPaymentMethodsBottomSheet(),
-    const SessionCompletedPage(),
-    SessionHistoryPage(),
-    const UpcomingCoachFitnessTrainingPage(),
+    () => HydrationPage(),
+    () => HaydrationFull(),
+    // new
+    () => HydrationHistoryPage(),
+    () => AiSuggesstionPage(),
+
+    () => AiCoachIntroPage(),
+    () => AiCoachChatPage1(),
+    () => AiCoachChatPage2(),
+    () => AiCoachChatPage4(),
+    () => AiCoachChatPage5(),
+    () => AiCoachChatPage6(),
+    () => AiCoachChatPage7(),
+    () => AiCoachChatPage8And9(),
+    () => AiCoachChatPage10(),
+    () => AiCoachChatPage11And12(),
+    () => AiCoachChatPage13And16(),
+    () => AiCoachChatPage14ImageSelectionMenu(),
+    () => AiCoachChatPage15ImageScan(),
+    () => AiCoachChatPage17(),
+    () => AiCoachChatPage18(),
+    () => HeartRatePage(),
+    () => HeartRateHistoryPage(),
+    () => FindFitnessCoachByTextPage(),
+    () => FindFitnessCoachPage(),
+    () => FindingFitnessCoachPage(),
+    () => CoachHomePage(),
+    () => CoachingSchedulePage(),
+    () => CoachCallPage(),
+    () => CoachChatPage(),
+    () => CoachReviewDialogBox(),
+    () => CoachReviewPagePage(),
+    () => CoachSelectionPage(),
+    () => CoachTalkSessionEndedPage(),
+    () => CoachingSessionInstructionPage(),
+    () => AiCoachChatLastPage(),
+    () => CancelThisAppointmentPage(),
+    () => CancelPersonalCoachAppointmentDialogBox(),
+    () => CheckoutPage(),
+    () => FilterCoachSearchBottomSheet(),
+    () => FilterCoachSearchBottomSheet(),
+    () => PaymentCompletedDialogBox(),
+    () => ReactionPage(),
+    () => RescheduleYourAppointmentDialogBox(),
+    () => ReviewsPage(),
+    () => SelectPaymentMethodsBottomSheet(),
+    () => SessionCompletedPage(),
+    () => SessionHistoryPage(),
+    () => UpcomingCoachFitnessTrainingPage(),
   ];
 
   int currentIndex = 0;
   // git revert c568fb6
   @override
   Widget build(BuildContext context) {
+    context.watch<AppColors>();
     return Scaffold(
         body: SafeArea(
       child: Stack(
         children: [
-          FancyContainer(
-            height: double.infinity,
-            width: double.infinity,
-            child: listOfScreens[currentIndex],
+          Navigator(
+            // pages: listOfScreens.map(
+            //   (e) {
+            //     return MaterialPage(child: e());
+            //   },
+            // ).toList(),
+            onGenerateRoute: (settings) {
+              return MaterialPageRoute(
+                builder: (context) => Scaffold(),
+              );
+            },
+            key: rootNavigatorKey,
+            // child: FancyContainer(
+            //   height: double.infinity,
+            //   width: double.infinity,
+            //   child: listOfScreens[currentIndex],
+            // ),
           ),
           SafeArea(
             child: Align(
@@ -156,10 +174,14 @@ class _GalleryOfScreensState extends State<GalleryOfScreens> {
                           if (currentIndex > 0) {
                             currentIndex--;
                           } else {}
+                          Navigator.of(rootNavigatorKey.currentContext!)
+                              .push(MaterialPageRoute(
+                            builder: (context) => listOfScreens[currentIndex](),
+                          ));
                           setState(() {});
                         },
                         // child: FancyContainer(
-                        //   backgroundColor: Colors.black,
+                        //   backgroundColor: usedAppColor.black,
                         //   // height: 50,
                         //   // width: 50,
                         //   nulledAlign: true,
@@ -180,16 +202,19 @@ class _GalleryOfScreensState extends State<GalleryOfScreens> {
                         child: FancyText(
                           isDark ? "lighten" : "darken",
                           textColor:
-                              !isDark ? usedAppColor.white : Colors.black,
+                              !isDark ? usedAppColor.white : usedAppColor.black,
                         ),
                       ),
                       action: () {
                         isDark = !isDark;
-                        changeAppThemeMode(isDark);
+                        // usedAppColor.darken();
+                        changeAppThemeMode(isDark, context);
+                        // usedAppColor = context.read<AppColors>().trigger();
+                        // usedAppColor.trigger();
                         setState(() {});
                       },
                       backgroundColor:
-                          isDark ? usedAppColor.white : Colors.black,
+                          isDark ? usedAppColor.white : usedAppColor.black,
                     ),
                     Expanded(
                       child: FancyContainer(
@@ -198,10 +223,14 @@ class _GalleryOfScreensState extends State<GalleryOfScreens> {
                           if (currentIndex < listOfScreens.length - 1) {
                             currentIndex++;
                           } else {}
+                          Navigator.of(rootNavigatorKey.currentContext!)
+                              .push(MaterialPageRoute(
+                            builder: (context) => listOfScreens[currentIndex](),
+                          ));
                           setState(() {});
                         },
                         // child: FancyContainer(
-                        //   backgroundColor: Colors.black,
+                        //   backgroundColor: usedAppColor.black,
                         //   // height: 50,
                         //   // width: 50,
                         //   nulledAlign: true,

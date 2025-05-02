@@ -18,6 +18,7 @@ class CoachReviewPagePage extends StatefulWidget {
 class _CoachReviewPagePageState extends State<CoachReviewPagePage> {
   @override
   Widget build(BuildContext context) {
+    context.watch<AppColors>();
     return Scaffold(
         backgroundColor: usedAppColor.white,
         body: Stack(
@@ -34,7 +35,7 @@ class _CoachReviewPagePageState extends State<CoachReviewPagePage> {
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
                     FancyContainer(
-                      backgroundColor: getFigmaColor("f3f3f4"),
+                      backgroundColor: usedAppColor.f3f3f4,
                       radius: 14,
                       isContinousBorder: false,
                       child: Padding(
@@ -44,13 +45,13 @@ class _CoachReviewPagePageState extends State<CoachReviewPagePage> {
                     ),
                     SizedBox(width: 10),
                     FancyContainer(
-                      backgroundColor: getFigmaColor("f3f3f4"),
+                      backgroundColor: usedAppColor.f3f3f4,
                       height: 80,
                       width: 80,
                       radius: 80,
                       isContinousBorder: false,
                       hasBorder: true,
-                      borderColor: getFigmaColor("f3f3f4"),
+                      borderColor: usedAppColor.f3f3f4,
                       child:
                           Image.asset("assets/images/maleCommentatorImage.png"),
                     ),
@@ -58,7 +59,7 @@ class _CoachReviewPagePageState extends State<CoachReviewPagePage> {
                     FancyContainer(
                       radius: 14,
                       isContinousBorder: false,
-                      backgroundColor: getFigmaColor("f3f3f4"),
+                      backgroundColor: usedAppColor.f3f3f4,
                       child: Padding(
                         padding: const EdgeInsets.all(8.0),
                         child: Icon(Icons.share_outlined),
@@ -98,7 +99,7 @@ class _CoachReviewPagePageState extends State<CoachReviewPagePage> {
                 FancyContainer(
                   height: 180,
                   radius: 60,
-                  backgroundColor: getFigmaColor("f3f3f4"),
+                  backgroundColor: usedAppColor.f3f3f4,
                   child: Padding(
                     padding: const EdgeInsets.all(18.0),
                     child: Column(
@@ -157,7 +158,7 @@ class _CoachReviewPagePageState extends State<CoachReviewPagePage> {
                     isContinousBorder: false,
                     radius: 14,
                     width: double.infinity,
-                    backgroundColor: Colors.black,
+                    backgroundColor: usedAppColor.black,
                     child: Row(
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [

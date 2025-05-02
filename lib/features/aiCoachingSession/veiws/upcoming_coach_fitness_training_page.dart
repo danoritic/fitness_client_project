@@ -18,6 +18,7 @@ class _UpcomingCoachFitnessTrainingPageState
     extends State<UpcomingCoachFitnessTrainingPage> {
   @override
   Widget build(BuildContext context) {
+    context.watch<AppColors>();
     return Scaffold(
         backgroundColor: usedAppColor.white,
         body: Padding(
@@ -64,7 +65,7 @@ class _UpcomingCoachFitnessTrainingPageState
               FancyContainer(
                 radius: 40,
                 // height: 217,
-                backgroundColor: getFigmaColor("f3f3f4"),
+                backgroundColor: usedAppColor.f3f3f4,
                 child: Padding(
                   padding: const EdgeInsets.all(8.0),
                   child: Column(
@@ -89,7 +90,7 @@ class _UpcomingCoachFitnessTrainingPageState
                                     fontSize: 15,
                                     fontWeight: FontWeight.w700,
                                   )
-                                  // textColor: getFigmaColor("676C75"),
+                                  // textColor: usedAppColor.Color676C75,
                                   ),
                               const SizedBox(height: 10),
                               _buildIconImage(),
@@ -107,7 +108,7 @@ class _UpcomingCoachFitnessTrainingPageState
                           maxLine: 3,
                           weight: FontWeight.w500,
                           size: 14,
-                          textColor: getFigmaColor("676C75"),
+                          textColor: usedAppColor.Color676C75,
                         ),
                       ),
                       const SizedBox(height: 10),
@@ -119,7 +120,7 @@ class _UpcomingCoachFitnessTrainingPageState
               const SizedBox(height: 10),
               FancyContainer(
                 height: 40,
-                backgroundColor: Colors.black,
+                backgroundColor: usedAppColor.black,
                 radius: 15,
                 isContinousBorder: false,
                 child: FancyText(
@@ -149,7 +150,7 @@ class _UpcomingCoachFitnessTrainingPageState
           "10:25 - 11:35 AM",
           weight: FontWeight.w500,
           size: 10,
-          textColor: getFigmaColor("676C75"),
+          textColor: usedAppColor.Color676C75,
         ),
         const SizedBox(width: 5),
         FancyContainer(
@@ -157,7 +158,7 @@ class _UpcomingCoachFitnessTrainingPageState
           width: 5,
 
           // isContinousBorder: false,
-          backgroundColor: getFigmaColor("D7D8D9"),
+          backgroundColor: usedAppColor.D7D8D9,
         ),
         const SizedBox(width: 5),
         SizedBox(
@@ -169,7 +170,7 @@ class _UpcomingCoachFitnessTrainingPageState
           "550 USD",
           weight: FontWeight.w500,
           size: 10,
-          textColor: getFigmaColor("676C75"),
+          textColor: usedAppColor.Color676C75,
         ),
       ],
     );
@@ -189,7 +190,7 @@ class _UpcomingCoachFitnessTrainingPageState
           "Strength/CORE Expert",
           weight: FontWeight.w500,
           size: 12,
-          textColor: getFigmaColor("676C75"),
+          textColor: usedAppColor.Color676C75,
         ),
       ],
     );

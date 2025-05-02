@@ -18,6 +18,7 @@ class CoachTalkSessionEndedPage extends StatefulWidget {
 class _CoachTalkSessionEndedPageState extends State<CoachTalkSessionEndedPage> {
   @override
   Widget build(BuildContext context) {
+    context.watch<AppColors>();
     return Scaffold(
         backgroundColor: usedAppColor.white,
         body: Center(
@@ -59,7 +60,7 @@ class _CoachTalkSessionEndedPageState extends State<CoachTalkSessionEndedPage> {
                 _buildAIRecommendations(),
                 SizedBox(height: 10),
                 FancyContainer(
-                  backgroundColor: Colors.black,
+                  backgroundColor: usedAppColor.black,
                   height: 40,
                   radius: 10,
                   isContinousBorder: false,
@@ -106,7 +107,7 @@ class _CoachTalkSessionEndedPageState extends State<CoachTalkSessionEndedPage> {
               ),
             ),
             FancyContainer(
-              backgroundColor: getFigmaColor("D7D8D9"),
+              backgroundColor: usedAppColor.D7D8D9,
               radius: 20,
               child: const Padding(
                 padding: EdgeInsets.all(8.0),
@@ -122,7 +123,7 @@ class _CoachTalkSessionEndedPageState extends State<CoachTalkSessionEndedPage> {
         FancyContainer(
           radius: 40,
           // height: 217,
-          backgroundColor: getFigmaColor("f3f3f4"),
+          backgroundColor: usedAppColor.f3f3f4,
           child: Padding(
             padding: const EdgeInsets.all(8.0),
             child: Row(
@@ -143,7 +144,7 @@ class _CoachTalkSessionEndedPageState extends State<CoachTalkSessionEndedPage> {
                           fontSize: 15,
                           fontWeight: FontWeight.w700,
                         )
-                        // textColor: getFigmaColor("676C75"),
+                        // textColor: usedAppColor.Color676C75,
                         ),
                     const SizedBox(height: 1),
                     _buildIconImageDotRepeat()
@@ -196,7 +197,7 @@ class _CoachTalkSessionEndedPageState extends State<CoachTalkSessionEndedPage> {
                   child: FancyContainer(
                     radius: 40,
                     // height: 217,
-                    backgroundColor: getFigmaColor("f3f3f4"),
+                    backgroundColor: usedAppColor.f3f3f4,
                     nulledAlign: true,
                     child: Padding(
                       padding: const EdgeInsets.all(8.0),
@@ -220,7 +221,7 @@ class _CoachTalkSessionEndedPageState extends State<CoachTalkSessionEndedPage> {
                                     fontSize: 15,
                                     fontWeight: FontWeight.w700,
                                   )
-                                  // textColor: getFigmaColor("676C75"),
+                                  // textColor: usedAppColor.Color676C75,
                                   ),
                               const SizedBox(height: 1),
                               FancyText("2,500ml/day",
@@ -228,7 +229,7 @@ class _CoachTalkSessionEndedPageState extends State<CoachTalkSessionEndedPage> {
                                     fontSize: 15,
                                     fontWeight: FontWeight.w400,
                                   )
-                                  // textColor: getFigmaColor("676C75"),
+                                  // textColor: usedAppColor.Color676C75,
                                   ),
                             ],
                           ),
@@ -253,7 +254,7 @@ class _CoachTalkSessionEndedPageState extends State<CoachTalkSessionEndedPage> {
           "30mg",
           weight: FontWeight.w500,
           size: 10,
-          textColor: getFigmaColor("676C75"),
+          textColor: usedAppColor.Color676C75,
         ),
         const SizedBox(width: 5),
         FancyContainer(
@@ -261,14 +262,14 @@ class _CoachTalkSessionEndedPageState extends State<CoachTalkSessionEndedPage> {
           width: 5,
 
           // isContinousBorder: false,
-          backgroundColor: getFigmaColor("D7D8D9"),
+          backgroundColor: usedAppColor.D7D8D9,
         ),
         const SizedBox(width: 5),
         FancyText(
           "After Eating",
           weight: FontWeight.w500,
           size: 10,
-          textColor: getFigmaColor("676C75"),
+          textColor: usedAppColor.Color676C75,
         ),
         const SizedBox(width: 5),
         FancyContainer(
@@ -276,14 +277,14 @@ class _CoachTalkSessionEndedPageState extends State<CoachTalkSessionEndedPage> {
           width: 5,
 
           // isContinousBorder: false,
-          backgroundColor: getFigmaColor("D7D8D9"),
+          backgroundColor: usedAppColor.D7D8D9,
         ),
         const SizedBox(width: 5),
         FancyText(
           "2x Pill",
           weight: FontWeight.w500,
           size: 10,
-          textColor: getFigmaColor("676C75"),
+          textColor: usedAppColor.Color676C75,
         ),
       ],
     );

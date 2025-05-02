@@ -74,7 +74,7 @@ class _RatingWidgetState extends State<RatingWidget> {
         // radius: 40,
         // height: 50,
         // width: 50,
-        backgroundColor: Colors.black,
+        backgroundColor: usedAppColor.black,
         radius: 60,
         child: Padding(
           padding: const EdgeInsets.all(15.0),

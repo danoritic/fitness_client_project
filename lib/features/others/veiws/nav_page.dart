@@ -78,6 +78,7 @@ class _NavPageState extends State<NavPage> {
       //     ),
     ];
 
+    context.watch<AppColors>();
     return Scaffold(
       // appBar: AppBar(
       //   title: const Text('Home Page'),

@@ -19,6 +19,7 @@ class _ReviewsPageState extends State<ReviewsPage> {
   String tabName = "Recent";
   @override
   Widget build(BuildContext context) {
+    context.watch<AppColors>();
     return Scaffold(
         backgroundColor: usedAppColor.white,
         body: Padding(
@@ -54,7 +55,7 @@ class _ReviewsPageState extends State<ReviewsPage> {
         // width: double.infinity,
 
         radius: 30,
-        backgroundColor: getFigmaColor("f3f3f4"),
+        backgroundColor: usedAppColor.f3f3f4,
         child: Padding(
           padding: const EdgeInsets.all(8.0),
           child: Column(
@@ -76,7 +77,7 @@ class _ReviewsPageState extends State<ReviewsPage> {
                             fontSize: 15,
                             fontWeight: FontWeight.w700,
                           )
-                          // textColor: getFigmaColor("676C75"),
+                          // textColor: usedAppColor.Color676C75,
                           ),
                       SizedBox(height: 10),
                       _buildIconImageDotRepeat(),
@@ -96,7 +97,7 @@ class _ReviewsPageState extends State<ReviewsPage> {
                 maxLine: 3,
                 weight: FontWeight.w500,
                 size: 14,
-                textColor: getFigmaColor("676C75"),
+                textColor: usedAppColor.Color676C75,
               )
             ],
           ),
@@ -120,7 +121,7 @@ class _ReviewsPageState extends State<ReviewsPage> {
           "2.8",
           weight: FontWeight.w500,
           size: 14,
-          textColor: getFigmaColor("676C75"),
+          textColor: usedAppColor.Color676C75,
         ),
         const SizedBox(width: 5),
         FancyContainer(
@@ -128,14 +129,14 @@ class _ReviewsPageState extends State<ReviewsPage> {
           width: 5,
 
           // isContinousBorder: false,
-          backgroundColor: getFigmaColor("D7D8D9"),
+          backgroundColor: usedAppColor.D7D8D9,
         ),
         const SizedBox(width: 5),
         FancyText(
           "2d ago",
           weight: FontWeight.w500,
           size: 14,
-          textColor: getFigmaColor("676C75"),
+          textColor: usedAppColor.Color676C75,
         ),
       ],
     );
@@ -150,7 +151,7 @@ class _ReviewsPageState extends State<ReviewsPage> {
       action: () {
         print("sassasasas");
       },
-      backgroundColor: getFigmaColor("F3F3F4"),
+      backgroundColor: usedAppColor.f3f3f4,
       child: Padding(
         padding: const EdgeInsets.all(4.0),
         child: Row(
@@ -177,8 +178,9 @@ class _ReviewsPageState extends State<ReviewsPage> {
                     child: FancyText(
                       e,
                       weight: FontWeight.w700,
-                      textColor:
-                          isSelected ? Colors.black : getFigmaColor("676C75"),
+                      textColor: isSelected
+                          ? usedAppColor.black
+                          : usedAppColor.Color676C75,
                     ),
                   ),
                 ),

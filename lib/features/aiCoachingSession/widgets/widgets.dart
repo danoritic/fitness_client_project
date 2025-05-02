@@ -2,6 +2,7 @@ import 'package:fitness_client_project/features/aiCoachingSession/models/models.
 import 'package:fitness_client_project/utils/customs/fancy_container.dart';
 import 'package:fitness_client_project/utils/customs/fancy_text.dart';
 import 'package:fitness_client_project/utils/helperFunctions.dart';
+import 'package:fitness_client_project/utils/utils.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -86,7 +87,7 @@ class _StageWidgetState extends State<StageWidget> {
                       rawTextStyle: GoogleFonts.workSans(
                           fontSize: 12,
                           fontWeight: FontWeight.w500,
-                          color: getFigmaColor("676C75")),
+                          color: usedAppColor.Color676C75),
                     ),
                     // const SizedBox(width: 5),
                     // SizedBox(
@@ -126,7 +127,7 @@ class _StageWidgetState extends State<StageWidget> {
                               FancyContainer(
                                 height: double.infinity,
                                 width: double.infinity,
-                                backgroundColor: getFigmaColor("D7D8D9"),
+                                backgroundColor: usedAppColor.D7D8D9,
                               ),
                               FancyContainer(
                                 height: .5 * constraints.maxHeight,
@@ -152,7 +153,7 @@ class _StageWidgetState extends State<StageWidget> {
                         padding: const EdgeInsets.all(8.0),
                         child: FancyContainer(
                           radius: 30,
-                          backgroundColor: getFigmaColor("f3f3f4"),
+                          backgroundColor: usedAppColor.f3f3f4,
                           // width: double.infinity,
                           child: Padding(
                             padding: const EdgeInsets.all(12.0),
@@ -177,7 +178,7 @@ class _StageWidgetState extends State<StageWidget> {
                                       children: [
                                         Icon(
                                           Icons.timer,
-                                          color: getFigmaColor("676C75"),
+                                          color: usedAppColor.Color676C75,
                                           size: 15,
                                         ),
                                         const SizedBox(width: 5),
@@ -195,7 +196,7 @@ class _StageWidgetState extends State<StageWidget> {
                                           }.call(),
                                           weight: FontWeight.w500,
                                           size: 14,
-                                          textColor: getFigmaColor("676C75"),
+                                          textColor: usedAppColor.Color676C75,
                                         ),
                                         const SizedBox(width: 5),
                                         FancyContainer(
@@ -203,8 +204,7 @@ class _StageWidgetState extends State<StageWidget> {
                                           width: 5,
 
                                           // isContinousBorder: false,
-                                          backgroundColor:
-                                              getFigmaColor("D7D8D9"),
+                                          backgroundColor: usedAppColor.D7D8D9,
                                         ),
                                         const SizedBox(width: 5),
                                         SizedBox(
@@ -222,7 +222,7 @@ class _StageWidgetState extends State<StageWidget> {
                                           "Strength",
                                           weight: FontWeight.w500,
                                           size: 14,
-                                          textColor: getFigmaColor("676C75"),
+                                          textColor: usedAppColor.Color676C75,
                                         ),
                                       ],
                                     )

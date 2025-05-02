@@ -23,6 +23,7 @@ class _FilterCoachSearchBottomSheetState
     extends State<FilterCoachSearchBottomSheet> {
   @override
   Widget build(BuildContext context) {
+    context.watch<AppColors>();
     return Scaffold(
       backgroundColor: Colors.grey,
       body: SafeArea(child: _buildCascadedBottomsheet(context)),
@@ -96,7 +97,7 @@ class _FilterCoachSearchBottomSheetState
                             child: FancyContainer(
                               width: 50,
                               height: 5,
-                              backgroundColor: getFigmaColor("D7D8D9"),
+                              backgroundColor: usedAppColor.D7D8D9,
                             ),
                           ),
                           SizedBox(height: 10),
@@ -111,7 +112,7 @@ class _FilterCoachSearchBottomSheetState
                                 ),
                               ),
                               FancyContainer(
-                                backgroundColor: getFigmaColor("D7D8D9"),
+                                backgroundColor: usedAppColor.D7D8D9,
                                 radius: 20,
                                 child: Padding(
                                   padding: EdgeInsets.all(8.0),
@@ -156,7 +157,7 @@ class _FilterCoachSearchBottomSheetState
         action: () {},
         isContinousBorder: false,
         backgroundColor: getFigmaColor("F97316"),
-        //  getFigmaColor("F3F3F4"),
+        //  usedAppColor.f3f3f4,
         child: Padding(
           padding: EdgeInsets.all(8.0),
           child: Row(
@@ -196,7 +197,7 @@ class _FilterCoachSearchBottomSheetState
         FancyContainer(
           height: 40,
           radius: 30,
-          backgroundColor: getFigmaColor("f3f3f4"),
+          backgroundColor: usedAppColor.f3f3f4,
           child: DropdownButtonHideUnderline(
             child: DropdownButton2(
               value: selectedExpertiseArea,
@@ -263,7 +264,7 @@ class _FilterCoachSearchBottomSheetState
         FancyContainer(
           height: 40,
           radius: 30,
-          backgroundColor: getFigmaColor("f3f3f4"),
+          backgroundColor: usedAppColor.f3f3f4,
           child: DropdownButtonHideUnderline(
               child: DropdownButton2(
                   value: selectedExpertiseArea,
@@ -331,7 +332,7 @@ class _FilterCoachSearchBottomSheetState
               rawTextStyle: GoogleFonts.workSans(
                 fontSize: 14,
                 fontWeight: FontWeight.bold,
-                color: getFigmaColor("676C75"),
+                color: usedAppColor.Color676C75,
               ),
             ),
           ],
@@ -361,7 +362,7 @@ class _FilterCoachSearchBottomSheetState
               rawTextStyle: GoogleFonts.workSans(
                 fontSize: 14,
                 fontWeight: FontWeight.bold,
-                color: getFigmaColor("676C75"),
+                color: usedAppColor.Color676C75,
               ),
             ),
           ],
@@ -416,7 +417,7 @@ class _FilterCoachSearchBottomSheetState
                           setState(() {});
                         },
                         isContinousBorder: false,
-                        backgroundColor: getFigmaColor("F3F3F4"),
+                        backgroundColor: usedAppColor.f3f3f4,
                         child: Padding(
                           padding: EdgeInsets.all(8.0),
                           child: Row(

@@ -36,7 +36,7 @@ import 'package:uuid/uuid.dart';
 // class _TestScreenState extends State<TestScreen> {
 //   @override
 //   Widget build(BuildContext context) {
-//     return Scaffold(
+//     context.watch<AppColors>(); return Scaffold(
 // backgroundColor:usedAppColor.white,
 // body:);
 //   }
@@ -52,6 +52,7 @@ class TestScreen extends StatefulWidget {
 class _TestScreenState extends State<TestScreen> {
   @override
   Widget build(BuildContext context) {
+    context.watch<AppColors>();
     return Scaffold(
         backgroundColor: usedAppColor.white,
         body: Padding(
@@ -153,7 +154,7 @@ class _TestScreenState extends State<TestScreen> {
               rawTextStyle: GoogleFonts.workSans(
                 fontSize: 14,
                 fontWeight: FontWeight.bold,
-                color: getFigmaColor("676C75"),
+                color: usedAppColor.Color676C75,
               ),
             ),
           ],
@@ -208,7 +209,7 @@ class _TestScreenState extends State<TestScreen> {
                           setState(() {});
                         },
                         isContinousBorder: false,
-                        backgroundColor: getFigmaColor("F3F3F4"),
+                        backgroundColor: usedAppColor.f3f3f4,
                         child: Padding(
                           padding: const EdgeInsets.all(8.0),
                           child: Row(
@@ -266,7 +267,7 @@ class _TestScreenState extends State<TestScreen> {
             height: 45,
             radius: radius,
             isContinousBorder: false,
-            backgroundColor: getFigmaColor("F3F3F4"),
+            backgroundColor: usedAppColor.f3f3f4,
             child: Padding(
               padding: const EdgeInsets.symmetric(horizontal: 8.0),
               child: Row(
@@ -328,7 +329,7 @@ class _TestScreenState extends State<TestScreen> {
       height: 85,
       radius: 40,
       nulledAlign: true,
-      backgroundColor: getFigmaColor("F3F3F4"),
+      backgroundColor: usedAppColor.f3f3f4,
       child: Padding(
         padding: const EdgeInsets.all(8.0),
         child: Row(
@@ -362,7 +363,7 @@ class _TestScreenState extends State<TestScreen> {
                             size: 8,
                           ),
                         ),
-                        backgroundColor: getFigmaColor("D7D8D9"),
+                        backgroundColor: usedAppColor.D7D8D9,
                       )
                     ],
                   ),
@@ -389,7 +390,7 @@ class _TestScreenState extends State<TestScreen> {
                         "1.8",
                         weight: FontWeight.w500,
                         size: 14,
-                        textColor: getFigmaColor("676C75"),
+                        textColor: usedAppColor.Color676C75,
                       ),
                       const SizedBox(width: 5),
                       FancyContainer(
@@ -397,7 +398,7 @@ class _TestScreenState extends State<TestScreen> {
                         width: 5,
 
                         // isContinousBorder: false,
-                        backgroundColor: getFigmaColor("D7D8D9"),
+                        backgroundColor: usedAppColor.D7D8D9,
                       ),
                       const SizedBox(width: 5),
                       SizedBox(
@@ -415,7 +416,7 @@ class _TestScreenState extends State<TestScreen> {
                         "Strength",
                         weight: FontWeight.w500,
                         size: 14,
-                        textColor: getFigmaColor("676C75"),
+                        textColor: usedAppColor.Color676C75,
                       ),
                     ],
                   )
@@ -493,7 +494,8 @@ class _CancelThisAppointmentPageState extends State<CancelThisAppointmentPage> {
   List<int> selectedreasons = [];
   @override
   Widget build(BuildContext context) {
-    // Main scaffold for the screen
+    // Main Scaffold for the screen
+    context.watch<AppColors>();
     return Scaffold(
       backgroundColor: usedAppColor.white,
       body: Center(
@@ -536,7 +538,7 @@ class _CancelThisAppointmentPageState extends State<CancelThisAppointmentPage> {
                   radius: 40,
                   // height: 217,
                   nulledAlign: true,
-                  backgroundColor: getFigmaColor("f3f3f4"),
+                  backgroundColor: usedAppColor.f3f3f4,
                   child: Padding(
                     padding: const EdgeInsets.all(8.0),
                     // Inner column for appointment details
@@ -582,7 +584,7 @@ class _CancelThisAppointmentPageState extends State<CancelThisAppointmentPage> {
                                 rawTextStyle: GoogleFonts.workSans(
                                     fontSize: 12,
                                     fontWeight: FontWeight.w600,
-                                    color: getFigmaColor("676C75"))),
+                                    color: usedAppColor.Color676C75)),
                           ),
                         ),
                         const SizedBox(height: 10),
@@ -625,7 +627,7 @@ class _CancelThisAppointmentPageState extends State<CancelThisAppointmentPage> {
                             setState(() {});
                           },
                           isContinousBorder: false,
-                          // backgroundColor: getFigmaColor("F3F3F4"),
+                          // backgroundColor: usedAppColor.f3f3f4,
                           // hasBorder: isSelected,
                           // Highlight selected reasons with a border
                           borderColor: getFigmaColor("2563EB"),
@@ -677,7 +679,7 @@ class _CancelThisAppointmentPageState extends State<CancelThisAppointmentPage> {
                 FancyContainer(
                   height: 140,
                   radius: 60,
-                  backgroundColor: getFigmaColor("f3f3f4"),
+                  backgroundColor: usedAppColor.f3f3f4,
                   child: Padding(
                     padding: const EdgeInsets.all(18.0),
                     child: Column(
@@ -784,7 +786,7 @@ class _CancelThisAppointmentPageState extends State<CancelThisAppointmentPage> {
           "10:25 - 11:35 AM",
           weight: FontWeight.w500,
           size: 10,
-          textColor: getFigmaColor("676C75"),
+          textColor: usedAppColor.Color676C75,
         ),
         const SizedBox(width: 5),
         FancyContainer(
@@ -792,7 +794,7 @@ class _CancelThisAppointmentPageState extends State<CancelThisAppointmentPage> {
           width: 5,
 
           // isContinousBorder: false,
-          backgroundColor: getFigmaColor("D7D8D9"),
+          backgroundColor: usedAppColor.D7D8D9,
         ),
         const SizedBox(width: 5),
         SizedBox(
@@ -804,7 +806,7 @@ class _CancelThisAppointmentPageState extends State<CancelThisAppointmentPage> {
           "550 USD",
           weight: FontWeight.w500,
           size: 10,
-          textColor: getFigmaColor("676C75"),
+          textColor: usedAppColor.Color676C75,
         ),
       ],
     );
@@ -825,7 +827,7 @@ class _CancelThisAppointmentPageState extends State<CancelThisAppointmentPage> {
           "Strength/CORE Expert",
           weight: FontWeight.w500,
           size: 12,
-          textColor: getFigmaColor("676C75"),
+          textColor: usedAppColor.Color676C75,
         ),
       ],
     );
@@ -887,6 +889,7 @@ class _CoachingSchedulePageState extends State<CoachingSchedulePage> {
 
   @override
   Widget build(BuildContext context) {
+    context.watch<AppColors>();
     return Scaffold(
         backgroundColor: usedAppColor.white,
         body: SingleChildScrollView(
@@ -914,7 +917,7 @@ class _CoachingSchedulePageState extends State<CoachingSchedulePage> {
                             rawTextStyle: GoogleFonts.workSans(
                                 fontSize: 11,
                                 fontWeight: FontWeight.bold,
-                                color: getFigmaColor("676C75")),
+                                color: usedAppColor.Color676C75),
                           ),
                           const SizedBox(width: 5),
                           SizedBox(
@@ -1063,7 +1066,7 @@ class _CoachingSchedulePageState extends State<CoachingSchedulePage> {
             isContinousBorder: false,
 
             nulledAlign: true,
-            backgroundColor: getFigmaColor("f3f3f4"),
+            backgroundColor: usedAppColor.f3f3f4,
             child: Padding(
               padding:
                   const EdgeInsets.symmetric(horizontal: 4.0, vertical: 10),
@@ -1080,7 +1083,7 @@ class _CoachingSchedulePageState extends State<CoachingSchedulePage> {
                         fontSize: 14,
                         fontWeight: FontWeight.w700,
                       )
-                      // textColor: getFigmaColor("676C75"),
+                      // textColor: usedAppColor.Color676C75,
                       ),
                 ],
               ),
@@ -1093,7 +1096,7 @@ class _CoachingSchedulePageState extends State<CoachingSchedulePage> {
               radius: 40,
               // height: 217,
               nulledAlign: true,
-              backgroundColor: getFigmaColor("f3f3f4"),
+              backgroundColor: usedAppColor.f3f3f4,
               child: Padding(
                 padding: const EdgeInsets.all(8.0),
                 child: Column(
@@ -1119,7 +1122,7 @@ class _CoachingSchedulePageState extends State<CoachingSchedulePage> {
                                   fontSize: 15,
                                   fontWeight: FontWeight.w700,
                                 )
-                                // textColor: getFigmaColor("676C75"),
+                                // textColor: usedAppColor.Color676C75,
                                 ),
                             const SizedBox(height: 10),
                             _buildIconImage(),
@@ -1139,8 +1142,8 @@ class _CoachingSchedulePageState extends State<CoachingSchedulePage> {
                             rawTextStyle: GoogleFonts.workSans(
                                 fontSize: 14,
                                 fontWeight: FontWeight.w700,
-                                color: getFigmaColor("676C75"))
-                            // textColor: getFigmaColor("676C75"),
+                                color: usedAppColor.Color676C75)
+                            // textColor: usedAppColor.Color676C75,
                             ),
                       ),
                     ),
@@ -1170,7 +1173,7 @@ class _CoachingSchedulePageState extends State<CoachingSchedulePage> {
           "10:25 - 11:35 AM",
           weight: FontWeight.w500,
           size: 10,
-          textColor: getFigmaColor("676C75"),
+          textColor: usedAppColor.Color676C75,
         ),
         const SizedBox(width: 5),
         FancyContainer(
@@ -1178,7 +1181,7 @@ class _CoachingSchedulePageState extends State<CoachingSchedulePage> {
           width: 5,
 
           // isContinousBorder: false,
-          backgroundColor: getFigmaColor("D7D8D9"),
+          backgroundColor: usedAppColor.D7D8D9,
         ),
         const SizedBox(width: 5),
         SizedBox(
@@ -1190,7 +1193,7 @@ class _CoachingSchedulePageState extends State<CoachingSchedulePage> {
           "550 USD",
           weight: FontWeight.w500,
           size: 10,
-          textColor: getFigmaColor("676C75"),
+          textColor: usedAppColor.Color676C75,
         ),
       ],
     );
@@ -1210,7 +1213,7 @@ class _CoachingSchedulePageState extends State<CoachingSchedulePage> {
           "Strength/CORE Expert",
           weight: FontWeight.w500,
           size: 12,
-          textColor: getFigmaColor("676C75"),
+          textColor: usedAppColor.Color676C75,
         ),
       ],
     );
@@ -1230,7 +1233,7 @@ class _CoachingSchedulePageState extends State<CoachingSchedulePage> {
             width: 60,
             radius: 20,
             isContinousBorder: false,
-            backgroundColor: getFigmaColor("f3f3f4"),
+            backgroundColor: usedAppColor.f3f3f4,
             child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
@@ -1304,6 +1307,7 @@ class CoachHomePage extends StatefulWidget {
 class _CoachHomePageState extends State<CoachHomePage> {
   @override
   Widget build(BuildContext context) {
+    context.watch<AppColors>();
     return Scaffold(
         backgroundColor: usedAppColor.white,
         body: SingleChildScrollView(
@@ -1318,7 +1322,7 @@ class _CoachHomePageState extends State<CoachHomePage> {
                       FancyContainer(
                         radius: 15,
                         isContinousBorder: false,
-                        backgroundColor: getFigmaColor("f3f3f4"),
+                        backgroundColor: usedAppColor.f3f3f4,
                         child: Padding(
                           padding: const EdgeInsets.symmetric(horizontal: 8.0),
                           child: Row(
@@ -1383,7 +1387,7 @@ class _CoachHomePageState extends State<CoachHomePage> {
                                 child: AspectRatio(
                                   aspectRatio: 250 / 290,
                                   child: FancyContainer(
-                                    backgroundColor: getFigmaColor("f3f3f4"),
+                                    backgroundColor: usedAppColor.f3f3f4,
                                     radius: 60,
                                     child: Stack(
                                       children: [
@@ -1497,7 +1501,7 @@ class _CoachHomePageState extends State<CoachHomePage> {
     return AspectRatio(
       aspectRatio: 340 / 248,
       child: FancyContainer(
-        backgroundColor: Colors.black,
+        backgroundColor: usedAppColor.black,
         radius: 60,
         width: double.infinity,
         child: Stack(
@@ -1531,7 +1535,7 @@ class _CoachHomePageState extends State<CoachHomePage> {
                         rawTextStyle: GoogleFonts.workSans(
                             fontSize: 15,
                             fontWeight: FontWeight.w600,
-                            color: getFigmaColor("D7D8D9")
+                            color: usedAppColor.D7D8D9
                             // weight: FontWeight.bold,
                             //   size: 24,
                             ),
@@ -1735,7 +1739,7 @@ class _CoachHomePageState extends State<CoachHomePage> {
                       //     FancyContainer(
                       //       height: 5,
                       //       width: 5,
-                      //       backgroundColor: getFigmaColor("f3f3f4"),
+                      //       backgroundColor: usedAppColor.f3f3f4,
                       //     ),
                       //     const SizedBox(width: 5),
                       //     FancyText(

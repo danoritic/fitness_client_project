@@ -2,6 +2,7 @@ import 'package:fitness_client_project/utils/app_variables.dart';
 import 'package:fitness_client_project/utils/theme/theme.dart';
 import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
+import 'package:provider/provider.dart';
 
 Color getFigmaColor(String value, [int percentageOpacity = 100]) {
   return Color(int.parse("0xff$value"))
@@ -29,7 +30,7 @@ emptyListWidgetReturningFunction(BuildContext context,
                   fontSize: MediaQuery.of(context).size.width * .1,
                   // fontStyle: FontStyle.italic,
                   fontWeight: FontWeight.bold,
-                  color: Colors.black),
+                  color: usedAppColor.black),
             ),
             Text(
               message ?? "Empty List",
@@ -51,7 +52,7 @@ Widget faultyImgaeDefault({double? size, Color? color}) {
   return Icon(
     Icons.person,
     size: size,
-    color: color ?? Colors.black.withAlpha(100),
+    color: color ?? usedAppColor.black.withAlpha(100),
   );
 }
 
@@ -78,6 +79,9 @@ String formatDateTimeToTimeWitAM(DateTime dateTime) {
   return formatter.format(dateTime);
 }
 
-changeAppThemeMode(bool toDark) {
-  usedAppColor = toDark ? AppColorsDarkVersion() : AppColorsLightVersion();
+changeAppThemeMode(bool toDark, BuildContext context) {
+  // usedAppColor=context.watch<AppColors>();
+  toDark ? usedAppColor.darken() : usedAppColor.lighten();
+
+  print(usedAppColor);
 }

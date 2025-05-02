@@ -18,6 +18,7 @@ class _RescheduleYourAppointmentDialogBoxState
     extends State<RescheduleYourAppointmentDialogBox> {
   @override
   Widget build(BuildContext context) {
+    context.watch<AppColors>();
     return Scaffold(
       body: SafeArea(
         child: Container(
@@ -76,7 +77,7 @@ class _RescheduleYourAppointmentDialogBoxState
                                   isContinousBorder: false,
                                   radius: 14,
                                   width: double.infinity,
-                                  backgroundColor: Colors.black,
+                                  backgroundColor: usedAppColor.black,
                                   child: Row(
                                     mainAxisAlignment: MainAxisAlignment.center,
                                     children: [
@@ -107,7 +108,7 @@ class _RescheduleYourAppointmentDialogBoxState
                 Padding(
                   padding: EdgeInsets.all(18.0),
                   child: FancyContainer(
-                    backgroundColor: getFigmaColor("F3F3F4"),
+                    backgroundColor: usedAppColor.f3f3f4,
                     width: 40,
                     height: 40,
                     radius: 20,

@@ -19,6 +19,7 @@ class _AiCoachChatPage4State extends State<AiCoachChatPage4> {
   String? selectedBodyPart;
   @override
   Widget build(BuildContext context) {
+    context.watch<AppColors>();
     return Scaffold(
       backgroundColor: usedAppColor.white,
       body: SafeArea(
@@ -54,7 +55,7 @@ class _AiCoachChatPage4State extends State<AiCoachChatPage4> {
                           maxHeight: 200,
                           offset: const Offset(-50, 0),
                           decoration: BoxDecoration(
-                              color: getFigmaColor("F3F3F4"),
+                              color: usedAppColor.f3f3f4,
                               borderRadius: BorderRadius.circular(20))),
                       alignment: Alignment.topCenter,
                       menuItemStyleData: MenuItemStyleData(
@@ -68,7 +69,7 @@ class _AiCoachChatPage4State extends State<AiCoachChatPage4> {
                       ),
                       customButton: FancyContainer(
                         radius: 20,
-                        backgroundColor: getFigmaColor("F3F3F4"),
+                        backgroundColor: usedAppColor.f3f3f4,
                         height: 40,
                         width: 40,
                         child: Padding(
@@ -102,7 +103,7 @@ class _AiCoachChatPage4State extends State<AiCoachChatPage4> {
                   ),
                   const Spacer(),
                   FancyContainer(
-                    backgroundColor: getFigmaColor("F3F3F4"),
+                    backgroundColor: usedAppColor.f3f3f4,
                     // height: 40,
                     width: 150,
                     radius: 20,
@@ -129,7 +130,7 @@ class _AiCoachChatPage4State extends State<AiCoachChatPage4> {
                                   setState(() {});
                                 },
                                 backgroundColor: selectedBodyPart != e
-                                    ? getFigmaColor("F3F3F4")
+                                    ? usedAppColor.f3f3f4
                                     : usedAppColor.white,
                                 // height: 40,
                                 // nulledAlign: true,

@@ -2,6 +2,7 @@ import 'dart:math';
 
 import 'package:fitness_client_project/utils/customs/customs.dart';
 import 'package:fitness_client_project/utils/customs/fancy_container.dart';
+import 'package:fitness_client_project/utils/utils.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -23,7 +24,7 @@ class ScoreCard extends StatelessWidget {
         aspectRatio: 340 / 125,
         child: FancyContainer(
           padding: EdgeInsets.all(8.0),
-          backgroundColor: Colors.grey[200],
+          backgroundColor: usedAppColor.f3f3f4,
           isContinousBorder: true,
           radius: 40,
           child: Row(

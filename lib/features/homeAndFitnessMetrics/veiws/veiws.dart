@@ -1,15 +1,18 @@
 import 'package:card_swiper/card_swiper.dart';
 import 'package:cr_calendar/cr_calendar.dart';
+import 'package:fitness_client_project/features/homeAndFitnessMetrics/veiws/haydration_full.dart';
 import 'package:fitness_client_project/utils/app_variables.dart';
 import 'package:fitness_client_project/utils/customs/customs.dart';
 import 'package:fitness_client_project/utils/customs/fancy_container.dart';
 import 'package:fitness_client_project/utils/customs/fancy_text.dart';
 import 'package:fitness_client_project/utils/helperFunctions.dart';
+import 'package:fitness_client_project/utils/utils.dart';
 import 'package:flutter/material.dart';
 import 'package:get/route_manager.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:moment_dart/moment_dart.dart';
 import 'package:cr_calendar/cr_calendar.dart' as cr_calendar;
+import 'package:provider/provider.dart';
 
 class HydrationHistoryPage extends StatefulWidget {
   const HydrationHistoryPage({super.key});
@@ -21,7 +24,9 @@ class HydrationHistoryPage extends StatefulWidget {
 class _HydrationHistoryPageState extends State<HydrationHistoryPage> {
   @override
   Widget build(BuildContext context) {
+    context.watch<AppColors>();
     return Scaffold(
+      backgroundColor: usedAppColor.white,
       body: SafeArea(
         child: Column(children: [
           Row(
@@ -58,7 +63,7 @@ class _HydrationHistoryPageState extends State<HydrationHistoryPage> {
                       rawTextStyle: GoogleFonts.workSans(
                           fontSize: 15,
                           fontWeight: FontWeight.bold,
-                          color: getFigmaColor("676C75")),
+                          color: usedAppColor.Color676C75),
                     ),
                     const Spacer(),
                     SizedBox(
@@ -70,7 +75,7 @@ class _HydrationHistoryPageState extends State<HydrationHistoryPage> {
                       rawTextStyle: GoogleFonts.workSans(
                           fontSize: 15,
                           fontWeight: FontWeight.bold,
-                          color: getFigmaColor("676C75")),
+                          color: usedAppColor.Color676C75),
                     ),
                   ],
                 ),
@@ -80,7 +85,7 @@ class _HydrationHistoryPageState extends State<HydrationHistoryPage> {
                       Padding(
                         padding: const EdgeInsets.only(bottom: 8.0),
                         child: FancyContainer(
-                          backgroundColor: getFigmaColor("F3F3F4"),
+                          backgroundColor: usedAppColor.f3f3f4,
                           child: Padding(
                             padding: const EdgeInsets.all(8.0),
                             child: Row(
@@ -104,7 +109,7 @@ class _HydrationHistoryPageState extends State<HydrationHistoryPage> {
                                   rawTextStyle: GoogleFonts.workSans(
                                     fontSize: 15,
                                     fontWeight: FontWeight.bold,
-                                    color: getFigmaColor("676C75"),
+                                    color: usedAppColor.Color676C75,
                                   ),
                                 ),
                                 const SizedBox(width: 10),
@@ -145,6 +150,7 @@ class HydrationDialog extends StatefulWidget {
 class _HydrationDialogState extends State<HydrationDialog> {
   @override
   Widget build(BuildContext context) {
+    context.watch<AppColors>();
     return Scaffold(
       body: SafeArea(
         child: Container(
@@ -194,7 +200,7 @@ class _HydrationDialogState extends State<HydrationDialog> {
                                   isContinousBorder: false,
                                   radius: 14,
                                   width: double.infinity,
-                                  backgroundColor: Colors.black,
+                                  backgroundColor: usedAppColor.black,
                                   child: Row(
                                     mainAxisAlignment: MainAxisAlignment.center,
                                     children: [
@@ -219,7 +225,7 @@ class _HydrationDialogState extends State<HydrationDialog> {
                   ),
                 ),
                 FancyContainer(
-                  backgroundColor: getFigmaColor("F3F3F4"),
+                  backgroundColor: usedAppColor.f3f3f4,
                   width: 30,
                   height: 30,
                   radius: 30,
@@ -258,6 +264,7 @@ class _DrinkWaterScreenState extends State<DrinkWaterScreen> {
       "assets/images/drinkWaterImage-3.png",
     ];
 // swiperController.
+    context.watch<AppColors>();
     return Scaffold(
       backgroundColor: usedAppColor.white,
       body: SafeArea(
@@ -301,7 +308,7 @@ class _DrinkWaterScreenState extends State<DrinkWaterScreen> {
                     return Padding(
                       padding: const EdgeInsets.all(8.0),
                       child: FancyContainer(
-                        backgroundColor: getFigmaColor("F3F3F4"),
+                        backgroundColor: usedAppColor.f3f3f4,
                         height: 150,
                         width: 242,
                         radius: 50,
@@ -319,9 +326,12 @@ class _DrinkWaterScreenState extends State<DrinkWaterScreen> {
                               child: Column(
                                 mainAxisAlignment: MainAxisAlignment.center,
                                 children: [
-                                  SizedBox(
-                                    height: 100,
-                                    child: Image.asset(listOfImageUrls[index]),
+                                  Expanded(
+                                    child: SizedBox(
+                                      height: 100,
+                                      child:
+                                          Image.asset(listOfImageUrls[index]),
+                                    ),
                                   ),
                                   FancyText(
                                     "Glass of Water",
@@ -329,7 +339,7 @@ class _DrinkWaterScreenState extends State<DrinkWaterScreen> {
                                     // size: 30,
                                     // textAlign: TextAlign.center,
                                     rawTextStyle: GoogleFonts.workSans(
-                                      fontSize: 15,
+                                      fontSize: 13,
                                       fontWeight: FontWeight.bold,
                                     ),
                                   ),
@@ -340,7 +350,7 @@ class _DrinkWaterScreenState extends State<DrinkWaterScreen> {
                                     // textAlign: TextAlign.center,
                                     rawTextStyle: GoogleFonts.workSans(
                                       fontSize: 14,
-                                      color: getFigmaColor("676C75"),
+                                      color: usedAppColor.Color676C75,
                                       fontWeight: FontWeight.w500,
                                     ),
                                   ),
@@ -369,8 +379,8 @@ class _DrinkWaterScreenState extends State<DrinkWaterScreen> {
                   },
                   pagination: SwiperPagination(
                     builder: DotSwiperPaginationBuilder(
-                        activeColor: Colors.black,
-                        color: getFigmaColor("F3F3F4"),
+                        activeColor: usedAppColor.black,
+                        color: usedAppColor.f3f3f4,
                         activeSize: 10),
                   ),
                   // indicatorLayout: PageIndicatorLayout.SLIDE,
@@ -392,7 +402,7 @@ class _DrinkWaterScreenState extends State<DrinkWaterScreen> {
                 isContinousBorder: false,
                 radius: 14,
                 width: double.infinity,
-                backgroundColor: Colors.black,
+                backgroundColor: usedAppColor.black,
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
@@ -428,6 +438,7 @@ class CascadedBottomSheet extends StatefulWidget {
 class _CascadedBottomSheetState extends State<CascadedBottomSheet> {
   @override
   Widget build(BuildContext context) {
+    context.watch<AppColors>();
     return Scaffold(
       backgroundColor: Colors.grey,
       body: SafeArea(child: _buildCascadedBottomsheet(context)),
@@ -483,7 +494,7 @@ class _CascadedBottomSheetState extends State<CascadedBottomSheet> {
                           FancyContainer(
                             width: 50,
                             height: 5,
-                            backgroundColor: getFigmaColor("D7D8D9"),
+                            backgroundColor: usedAppColor.D7D8D9,
                           ),
                           const SizedBox(height: 10),
                           Row(
@@ -497,7 +508,7 @@ class _CascadedBottomSheetState extends State<CascadedBottomSheet> {
                                 ),
                               ),
                               FancyContainer(
-                                backgroundColor: getFigmaColor("D7D8D9"),
+                                backgroundColor: usedAppColor.D7D8D9,
                                 radius: 20,
                                 child: const Padding(
                                   padding: EdgeInsets.all(8.0),
@@ -524,7 +535,7 @@ class _CascadedBottomSheetState extends State<CascadedBottomSheet> {
                                     ),
                                     const SizedBox(height: 10),
                                     FancyContainer(
-                                      backgroundColor: getFigmaColor("F3F3F4"),
+                                      backgroundColor: usedAppColor.f3f3f4,
                                       radius: 15,
                                       isContinousBorder: false,
                                       child: Padding(
@@ -569,7 +580,7 @@ class _CascadedBottomSheetState extends State<CascadedBottomSheet> {
                                     ),
                                     const SizedBox(height: 10),
                                     FancyContainer(
-                                      backgroundColor: getFigmaColor("F3F3F4"),
+                                      backgroundColor: usedAppColor.f3f3f4,
                                       radius: 15,
                                       isContinousBorder: false,
                                       child: Padding(
@@ -672,8 +683,7 @@ class _CascadedBottomSheetState extends State<CascadedBottomSheet> {
                                             setState(() {});
                                           },
                                           isContinousBorder: false,
-                                          backgroundColor:
-                                              getFigmaColor("F3F3F4"),
+                                          backgroundColor: usedAppColor.f3f3f4,
                                           child: Padding(
                                             padding: const EdgeInsets.all(8.0),
                                             child: Row(
@@ -703,8 +713,8 @@ class _CascadedBottomSheetState extends State<CascadedBottomSheet> {
                               height: 50,
                               action: () {},
                               isContinousBorder: false,
-                              backgroundColor: Colors.black,
-                              //  getFigmaColor("F3F3F4"),
+                              backgroundColor: usedAppColor.black,
+                              //  usedAppColor.f3f3f4,
                               child: Padding(
                                 padding: const EdgeInsets.all(8.0),
                                 child: Row(
@@ -779,7 +789,7 @@ class _DateTimeRangableSelectorState extends State<DateTimeRangableSelector> {
                                     padding: const EdgeInsets.all(8.0),
                                     child: FancyContainer(
                                         radius: 20,
-                                        backgroundColor: Colors.black,
+                                        backgroundColor: usedAppColor.black,
                                         action: () {
                                           onPress?.call();
                                         },
@@ -803,8 +813,7 @@ class _DateTimeRangableSelectorState extends State<DateTimeRangableSelector> {
                                   cancelButtonBuilder: (onPress) {
                                     return FancyContainer(
                                         radius: 20,
-                                        backgroundColor:
-                                            getFigmaColor("F3F3F4"),
+                                        backgroundColor: usedAppColor.f3f3f4,
                                         action: () {
                                           onPress?.call();
                                         },
@@ -822,8 +831,7 @@ class _DateTimeRangableSelectorState extends State<DateTimeRangableSelector> {
                                       width: 25,
                                       child: FancyContainer(
                                           radius: 20,
-                                          backgroundColor:
-                                              getFigmaColor("F3F3F4"),
+                                          backgroundColor: usedAppColor.f3f3f4,
                                           child: Padding(
                                             padding: const EdgeInsets.all(6.0),
                                             child: buildAppArrow(),
@@ -836,7 +844,7 @@ class _DateTimeRangableSelectorState extends State<DateTimeRangableSelector> {
                                       // action: () {
                                       //   // calendarController.
                                       // },
-                                      backgroundColor: getFigmaColor("F3F3F4"),
+                                      backgroundColor: usedAppColor.f3f3f4,
                                       child: Padding(
                                         padding: const EdgeInsets.all(6.0),
                                         child: buildAppArrow(isLeft: false),
@@ -1111,6 +1119,7 @@ class HydrationPage extends StatefulWidget {
 class _HydrationPageState extends State<HydrationPage> {
   @override
   Widget build(BuildContext context) {
+    context.watch<AppColors>();
     return Scaffold(
         backgroundColor: usedAppColor.white,
         body: SafeArea(
@@ -1142,7 +1151,7 @@ class _HydrationPageState extends State<HydrationPage> {
                           rawTextStyle: GoogleFonts.workSans(
                             fontSize: 30,
                             fontWeight: FontWeight.w500,
-                            color: getFigmaColor("676C75"),
+                            color: usedAppColor.Color676C75,
                           ),
                         )
                       ],
@@ -1150,11 +1159,11 @@ class _HydrationPageState extends State<HydrationPage> {
                     const SizedBox(height: 5),
                     FancyText(
                       "You need 1500ml for today.",
-                      textColor: getFigmaColor("676C75"),
+                      textColor: usedAppColor.Color676C75,
                       rawTextStyle: GoogleFonts.workSans(
                         fontSize: 18,
                         fontWeight: FontWeight.w500,
-                        color: getFigmaColor("676C75"),
+                        color: usedAppColor.Color676C75,
                       ),
                     ),
                     const SizedBox(height: 15),
@@ -1164,7 +1173,7 @@ class _HydrationPageState extends State<HydrationPage> {
                         borderRadius: const BorderRadius.vertical(
                             top: Radius.circular(50)),
                         width: double.infinity,
-                        backgroundColor: getFigmaColor("F3F3F4"),
+                        backgroundColor: usedAppColor.f3f3f4,
                         child: Column(
                           mainAxisAlignment: MainAxisAlignment.end,
                           children: [
@@ -1285,176 +1294,4 @@ Padding buildAppBar(BuildContext context, String title) {
       ),
     ),
   );
-}
-
-class HaydrationFull extends StatefulWidget {
-  const HaydrationFull({super.key});
-
-  @override
-  State<HaydrationFull> createState() => _HaydrationFullState();
-}
-
-class _HaydrationFullState extends State<HaydrationFull> {
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-        backgroundColor: usedAppColor.white,
-        body: SafeArea(
-          child: Stack(
-            children: [
-              FancyContainer(
-                backgroundColor: getFigmaColor("2563EB"),
-              ),
-              Column(
-                children: [
-                  buildAppBar(context, "hydration"),
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    // crossAxisAlignment: CrossAxisAlignment.end,
-                    children: [
-                      Image.asset(
-                        "assets/images/waterDrop.png",
-                        height: 30,
-                        color: usedAppColor.white,
-                      ),
-                      const SizedBox(width: 10),
-                      FancyText(
-                        "2,500",
-                        weight: FontWeight.w800,
-                        textColor: usedAppColor.white,
-                        size: 60,
-                      ),
-                      const SizedBox(width: 10),
-                      FancyText(
-                        "ml",
-                        weight: FontWeight.w500,
-                        size: 30,
-                        rawTextStyle: GoogleFonts.workSans(
-                          fontSize: 30,
-                          fontWeight: FontWeight.w500,
-                          color: usedAppColor.white,
-                          // color: getFigmaColor("676C75"),
-                        ),
-                      )
-                    ],
-                  ),
-                  const SizedBox(height: 5),
-                  FancyText(
-                    "You are fully hydrated for today.",
-                    rawTextStyle: GoogleFonts.workSans(
-                      fontSize: 18,
-                      fontWeight: FontWeight.w500,
-                      color: usedAppColor.white,
-                    ),
-                  ),
-                  const Spacer(),
-                  Align(
-                    alignment: Alignment.bottomCenter,
-                    child: Padding(
-                      padding: const EdgeInsets.all(18.0),
-                      child: Row(
-                        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                        children: [
-                          FancyContainer(
-                            // height: 100,
-                            // width: double.infinity,
-                            nulledAlign: true,
-                            radius: 15,
-                            isContinousBorder: false,
-                            backgroundColor: usedAppColor.white,
-                            child: const Padding(
-                              padding: EdgeInsets.all(8.0),
-                              child: Icon(Icons.question_mark),
-                            ),
-                          ),
-                          FancyContainer(
-                            radius: 20,
-                            nulledAlign: true,
-                            isContinousBorder: false,
-                            backgroundColor: usedAppColor.white,
-                            child: const Padding(
-                              padding: EdgeInsets.all(18.0),
-                              child: Icon(
-                                Icons.add,
-                                size: 30,
-                              ),
-                            ),
-                          ),
-                          FancyContainer(
-                            // height: 100,
-                            // width: double.infinity,
-                            nulledAlign: true,
-                            radius: 15,
-                            isContinousBorder: false,
-                            backgroundColor: usedAppColor.white,
-                            child: const Padding(
-                              padding: EdgeInsets.all(8.0),
-                              child: Icon(
-                                Icons.checklist_rounded,
-                              ),
-                            ),
-                          ),
-                        ],
-                      ),
-                    ),
-                  ),
-                ],
-              ),
-            ],
-          ),
-        ));
-  }
-
-  Padding buildAppBar(BuildContext context, String title) {
-    return Padding(
-      padding: const EdgeInsets.only(top: 38.0),
-      child: FancyContainer(
-        height: 50,
-        // backgroundColor:usedAppColor.white,
-        child: Padding(
-          padding: const EdgeInsets.all(8.0),
-          child: Row(
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-            children: [
-              FancyContainer(
-                // backgroundColor: Colors.red,
-                child: buildBackArrow(
-                  context,
-                  backgroundColor: usedAppColor.white.withAlpha(50),
-                  iconColor: usedAppColor.white,
-                ),
-              ),
-              Padding(
-                padding: const EdgeInsets.all(8.0),
-                child: FancyText(
-                  title,
-                  // "Sandow Score",
-                  rawTextStyle: GoogleFonts.workSans(
-                    fontSize: 15,
-                    fontWeight: FontWeight.bold,
-                    color: usedAppColor.white,
-                  ),
-                ),
-              ),
-              FancyContainer(
-                height: 30,
-                width: 30,
-                radius: 20,
-                backgroundColor: usedAppColor.white.withAlpha(50),
-                child: Padding(
-                  padding: EdgeInsets.all(4.0),
-                  child: Icon(
-                    Icons.settings_outlined,
-                    weight: .2,
-                    size: 15,
-                    color: usedAppColor.white,
-                  ),
-                ),
-              ),
-            ],
-          ),
-        ),
-      ),
-    );
-  }
 }

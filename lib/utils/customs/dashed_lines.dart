@@ -1,4 +1,5 @@
 import 'dart:math' as math;
+import 'package:fitness_client_project/utils/utils.dart';
 import 'package:flutter/material.dart';
 
 class DirectionalDashedLinePainter extends CustomPainter {
@@ -89,6 +90,7 @@ class DirectionalDashedLine extends StatelessWidget {
 class MyDirectionalDashedLineExample extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
+    context.watch<AppColors>();
     return Scaffold(
       appBar: AppBar(
         title: const Text('Directional Dashed Line Example'),

@@ -17,6 +17,7 @@ class AiSuggesstionPage extends StatefulWidget {
 class _AiSuggesstionPageState extends State<AiSuggesstionPage> {
   @override
   Widget build(BuildContext context) {
+    context.watch<AppColors>();
     return Scaffold(
       backgroundColor: usedAppColor.white,
       body: SafeArea(
@@ -46,7 +47,7 @@ class _AiSuggesstionPageState extends State<AiSuggesstionPage> {
                           // height: 15,
                           radius: 30,
                           nulledAlign: true,
-                          backgroundColor: getFigmaColor("D7D8D9"),
+                          backgroundColor: usedAppColor.D7D8D9,
                           child: Padding(
                             padding: EdgeInsets.all(4.0),
                             child: Icon(
@@ -62,7 +63,7 @@ class _AiSuggesstionPageState extends State<AiSuggesstionPage> {
                       rawTextStyle: GoogleFonts.workSans(
                         fontSize: 13,
                         // fontWeight: FontWeight.bold,
-                        color: getFigmaColor("676C75"),
+                        color: usedAppColor.Color676C75,
                       ),
                     ),
                     const SizedBox(height: 10),
@@ -80,7 +81,7 @@ class _AiSuggesstionPageState extends State<AiSuggesstionPage> {
                           rawTextStyle: GoogleFonts.workSans(
                               fontSize: 13,
                               fontWeight: FontWeight.bold,
-                              color: getFigmaColor("676C75")),
+                              color: usedAppColor.Color676C75),
                         ),
                         const Spacer(),
                         FancyText(
@@ -88,7 +89,7 @@ class _AiSuggesstionPageState extends State<AiSuggesstionPage> {
                           rawTextStyle: GoogleFonts.workSans(
                               fontSize: 13,
                               fontWeight: FontWeight.bold,
-                              color: getFigmaColor("676C75")),
+                              color: usedAppColor.Color676C75),
                         ),
                         const SizedBox(width: 5),
                         SizedBox(
@@ -118,7 +119,7 @@ class _AiSuggesstionPageState extends State<AiSuggesstionPage> {
     return Padding(
       padding: const EdgeInsets.only(bottom: 8.0),
       child: FancyContainer(
-        backgroundColor: getFigmaColor("F3F3F4"),
+        backgroundColor: usedAppColor.f3f3f4,
         radius: 30,
         child: Padding(
           padding: const EdgeInsets.all(8.0),
@@ -142,7 +143,7 @@ class _AiSuggesstionPageState extends State<AiSuggesstionPage> {
                                 isContinousBorder: false,
                                 hasBorder: true,
                                 borderThickness: 4,
-                                borderColor: getFigmaColor("F3F3F4"),
+                                borderColor: usedAppColor.f3f3f4,
                                 backgroundColor: color,
                                 child: Icon(
                                   Icons.ac_unit_sharp,
@@ -158,11 +159,11 @@ class _AiSuggesstionPageState extends State<AiSuggesstionPage> {
                               isContinousBorder: false,
                               hasBorder: true,
                               borderThickness: 4,
-                              borderColor: getFigmaColor("F3F3F4"),
+                              borderColor: usedAppColor.f3f3f4,
                               backgroundColor: color,
                               child: Icon(
                                 Icons.access_time_filled_sharp,
-                                color: getFigmaColor("F3F3F4"),
+                                color: usedAppColor.f3f3f4,
                               ),
                             ),
                           ),
@@ -175,7 +176,7 @@ class _AiSuggesstionPageState extends State<AiSuggesstionPage> {
                               isContinousBorder: false,
                               hasBorder: true,
                               borderThickness: 4,
-                              borderColor: getFigmaColor("F3F3F4"),
+                              borderColor: usedAppColor.f3f3f4,
                               backgroundColor: getWhiterVersion(color, 80),
                               child: FancyText(
                                 "8+",
@@ -196,7 +197,7 @@ class _AiSuggesstionPageState extends State<AiSuggesstionPage> {
                       rawTextStyle: GoogleFonts.workSans(
                         fontSize: 15,
                         fontWeight: FontWeight.bold,
-                        // color: getFigmaColor("676C75"),
+                        // color: usedAppColor.Color676C75,
                       ),
                     ),
                     Row(
@@ -206,7 +207,7 @@ class _AiSuggesstionPageState extends State<AiSuggesstionPage> {
                           rawTextStyle: GoogleFonts.workSans(
                             fontSize: 15,
                             fontWeight: FontWeight.bold,
-                            // color: getFigmaColor("676C75"),
+                            // color: usedAppColor.Color676C75,
                           ),
                         ),
                         const SizedBox(width: 5),
@@ -215,7 +216,7 @@ class _AiSuggesstionPageState extends State<AiSuggesstionPage> {
                           rawTextStyle: GoogleFonts.workSans(
                             fontSize: 14,
                             // fontWeight: FontWeight.bold,
-                            color: getFigmaColor("676C75"),
+                            color: usedAppColor.Color676C75,
                           ),
                         ),
                       ],
@@ -228,13 +229,13 @@ class _AiSuggesstionPageState extends State<AiSuggesstionPage> {
                           rawTextStyle: GoogleFonts.workSans(
                             fontSize: 15,
                             // fontWeight: FontWeight.bold,
-                            color: getFigmaColor("676C75"),
+                            color: usedAppColor.Color676C75,
                           ),
                         ),
                         Padding(
                           padding: const EdgeInsets.all(4.0),
                           child: FancyContainer(
-                            backgroundColor: getFigmaColor("D7D8D9"),
+                            backgroundColor: usedAppColor.D7D8D9,
                             width: 5,
                             height: 5,
                           ),
@@ -244,7 +245,7 @@ class _AiSuggesstionPageState extends State<AiSuggesstionPage> {
                           rawTextStyle: GoogleFonts.workSans(
                             fontSize: 14,
                             // fontWeight: FontWeight.bold,
-                            color: getFigmaColor("676C75"),
+                            color: usedAppColor.Color676C75,
                           ),
                         ),
                       ],

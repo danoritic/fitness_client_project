@@ -16,6 +16,7 @@ class _AiCoachChatPage15ImageScanState
     extends State<AiCoachChatPage15ImageScan> {
   @override
   Widget build(BuildContext context) {
+    context.watch<AppColors>();
     return Scaffold(
       body: SafeArea(
         child: Stack(
@@ -28,8 +29,8 @@ class _AiCoachChatPage15ImageScanState
             FancyContainer(
               gradient: LinearGradient(
                 colors: [
-                  Colors.black.withAlpha(100),
-                  Colors.black.withAlpha(0),
+                  usedAppColor.black.withAlpha(100),
+                  usedAppColor.black.withAlpha(0),
                 ],
                 begin: Alignment.bottomCenter,
                 end: Alignment.topCenter,
@@ -85,7 +86,7 @@ class _AiCoachChatPage15ImageScanState
                           BoxShadow(
                             offset: const Offset(5, 5),
                             blurRadius: 10,
-                            color: Colors.black.withAlpha(10),
+                            color: usedAppColor.black.withAlpha(10),
                           ),
                         ),
                         child: Padding(
@@ -122,7 +123,7 @@ class _AiCoachChatPage15ImageScanState
                           BoxShadow(
                             offset: const Offset(5, 5),
                             blurRadius: 10,
-                            color: Colors.black.withAlpha(10),
+                            color: usedAppColor.black.withAlpha(10),
                           ),
                         ),
                         child: Padding(
@@ -175,7 +176,7 @@ class _AiCoachChatPage15ImageScanState
                               BoxShadow(
                                 offset: const Offset(5, 5),
                                 blurRadius: 10,
-                                color: Colors.black.withAlpha(10),
+                                color: usedAppColor.black.withAlpha(10),
                               ),
                             ),
                             child: const Center(
@@ -198,7 +199,7 @@ class _AiCoachChatPage15ImageScanState
                               BoxShadow(
                                 offset: const Offset(5, 5),
                                 blurRadius: 10,
-                                color: Colors.black.withAlpha(10),
+                                color: usedAppColor.black.withAlpha(10),
                               ),
                             ),
                             child: const Center(
@@ -221,7 +222,7 @@ class _AiCoachChatPage15ImageScanState
                               BoxShadow(
                                 offset: const Offset(5, 5),
                                 blurRadius: 10,
-                                color: Colors.black.withAlpha(10),
+                                color: usedAppColor.black.withAlpha(10),
                               ),
                             ),
                             child: const Center(

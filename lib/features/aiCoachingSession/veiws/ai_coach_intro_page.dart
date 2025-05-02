@@ -16,6 +16,7 @@ class AiCoachIntroPage extends StatefulWidget {
 class _AiCoachIntroPageState extends State<AiCoachIntroPage> {
   @override
   Widget build(BuildContext context) {
+    context.watch<AppColors>();
     return Scaffold(
       backgroundColor: usedAppColor.white,
       body: SafeArea(
@@ -145,11 +146,11 @@ class _AiCoachIntroPageState extends State<AiCoachIntroPage> {
                           rawTextStyle: GoogleFonts.workSans(
                               fontSize: 13,
                               fontWeight: FontWeight.bold,
-                              color: getFigmaColor("676C75")),
+                              color: usedAppColor.Color676C75),
                         ),
                         SizedBox(height: 20),
                         FancyContainer(
-                          backgroundColor: Colors.black,
+                          backgroundColor: usedAppColor.black,
                           // height: 40,
                           // nulledAlign: true,
                           isContinousBorder: false,

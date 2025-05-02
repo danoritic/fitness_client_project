@@ -16,6 +16,7 @@ class SessionCompletedPage extends StatefulWidget {
 class _SessionCompletedPageState extends State<SessionCompletedPage> {
   @override
   Widget build(BuildContext context) {
+    context.watch<AppColors>();
     return Scaffold(
       backgroundColor: usedAppColor.white,
       body: Container(
@@ -59,7 +60,7 @@ class _SessionCompletedPageState extends State<SessionCompletedPage> {
                 Padding(
                   padding: const EdgeInsets.all(8.0),
                   child: FancyContainer(
-                    backgroundColor: Colors.black,
+                    backgroundColor: usedAppColor.black,
                     // height: 40,
                     // nulledAlign: true,
                     isContinousBorder: false,
@@ -95,7 +96,7 @@ class _SessionCompletedPageState extends State<SessionCompletedPage> {
                 Padding(
                   padding: const EdgeInsets.all(8.0),
                   child: FancyContainer(
-                    backgroundColor: getFigmaColor("F3F3F4"),
+                    backgroundColor: usedAppColor.f3f3f4,
                     // height: 40,
                     // nulledAlign: true,
                     isContinousBorder: false,

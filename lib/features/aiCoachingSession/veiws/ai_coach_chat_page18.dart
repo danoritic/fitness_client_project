@@ -45,6 +45,7 @@ class _AiCoachChatPage18State extends State<AiCoachChatPage18> {
 
   @override
   Widget build(BuildContext context) {
+    context.watch<AppColors>();
     return Scaffold(
       backgroundColor: usedAppColor.white,
       body: SafeArea(
@@ -98,7 +99,7 @@ class _AiCoachChatPage18State extends State<AiCoachChatPage18> {
                           maxHeight: 200,
                           offset: Offset(-50, 0),
                           decoration: BoxDecoration(
-                              color: getFigmaColor("F3F3F4"),
+                              color: usedAppColor.f3f3f4,
                               borderRadius: BorderRadius.circular(20))),
                       alignment: Alignment.topCenter,
                       menuItemStyleData: MenuItemStyleData(
@@ -112,7 +113,7 @@ class _AiCoachChatPage18State extends State<AiCoachChatPage18> {
                       ),
                       customButton: FancyContainer(
                         radius: 20,
-                        backgroundColor: getFigmaColor("F3F3F4"),
+                        backgroundColor: usedAppColor.f3f3f4,
                         height: 40,
                         width: 40,
                         child: Padding(
@@ -148,7 +149,7 @@ class _AiCoachChatPage18State extends State<AiCoachChatPage18> {
                   Padding(
                     padding: EdgeInsets.all(8.0),
                     child: FancyContainer(
-                      backgroundColor: Colors.black,
+                      backgroundColor: usedAppColor.black,
                       // height: 40,
                       // nulledAlign: true,
                       isContinousBorder: false,
@@ -193,7 +194,7 @@ class _AiCoachChatPage18State extends State<AiCoachChatPage18> {
     return FancyContainer(
       height: 80,
       radius: 40,
-      backgroundColor: getFigmaColor("F3F3F4"),
+      backgroundColor: usedAppColor.f3f3f4,
       child: Padding(
         padding: EdgeInsets.all(8.0),
         child: Row(
@@ -233,15 +234,15 @@ class _AiCoachChatPage18State extends State<AiCoachChatPage18> {
                             size: 12,
                           ),
                         ),
-                        backgroundColor: getFigmaColor("D7D8D9"),
+                        backgroundColor: usedAppColor.D7D8D9,
                       )
                     ],
                   ),
                   SizedBox(height: 5),
                   LinearProgressIndicator(
                     value: .5,
-                    color: Colors.black,
-                    backgroundColor: getFigmaColor("D7D8D9"),
+                    color: usedAppColor.black,
+                    backgroundColor: usedAppColor.D7D8D9,
                   ),
                   SizedBox(height: 5),
                   Row(
@@ -262,7 +263,7 @@ class _AiCoachChatPage18State extends State<AiCoachChatPage18> {
                         width: 10,
 
                         // isContinousBorder: false,
-                        backgroundColor: getFigmaColor("D7D8D9"),
+                        backgroundColor: usedAppColor.D7D8D9,
                       ),
                       Icon(
                         Icons.timer,

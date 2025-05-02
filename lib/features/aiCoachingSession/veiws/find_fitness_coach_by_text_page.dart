@@ -22,6 +22,7 @@ class _FindFitnessCoachByTextPageState
   String tabName = "Near You";
   @override
   Widget build(BuildContext context) {
+    context.watch<AppColors>();
     return Scaffold(
         backgroundColor: usedAppColor.white,
         body: Column(
@@ -44,7 +45,7 @@ class _FindFitnessCoachByTextPageState
                     height: 45,
                     radius: 15,
                     isContinousBorder: false,
-                    backgroundColor: getFigmaColor("F3F3F4"),
+                    backgroundColor: usedAppColor.f3f3f4,
                     hasBorder: true,
                     borderColor: getFigmaColor("F97316"),
                     child: Padding(
@@ -76,7 +77,7 @@ class _FindFitnessCoachByTextPageState
                           //   "Move map to discover fitness coach.",
                           //   weight: FontWeight.w700,
                           //   size: 12,
-                          //   // textColor: getFigmaColor("676C75"),
+                          //   // textColor: usedAppColor.Color676C75,
                           // ),
                           // Spacer(),
                           Transform.rotate(
@@ -107,7 +108,7 @@ class _FindFitnessCoachByTextPageState
                   rawTextStyle: GoogleFonts.workSans(
                       fontSize: 13,
                       fontWeight: FontWeight.bold,
-                      color: getFigmaColor("676C75")),
+                      color: usedAppColor.Color676C75),
                 ),
                 const SizedBox(width: 5),
                 SizedBox(
@@ -132,7 +133,7 @@ class _FindFitnessCoachByTextPageState
       height: 85,
       radius: 40,
       nulledAlign: true,
-      backgroundColor: getFigmaColor("F3F3F4"),
+      backgroundColor: usedAppColor.f3f3f4,
       child: Padding(
         padding: const EdgeInsets.all(8.0),
         child: Row(
@@ -166,7 +167,7 @@ class _FindFitnessCoachByTextPageState
                             size: 8,
                           ),
                         ),
-                        backgroundColor: getFigmaColor("D7D8D9"),
+                        backgroundColor: usedAppColor.D7D8D9,
                       )
                     ],
                   ),
@@ -193,7 +194,7 @@ class _FindFitnessCoachByTextPageState
                         "1.8",
                         weight: FontWeight.w500,
                         size: 14,
-                        textColor: getFigmaColor("676C75"),
+                        textColor: usedAppColor.Color676C75,
                       ),
                       const SizedBox(width: 5),
                       FancyContainer(
@@ -201,7 +202,7 @@ class _FindFitnessCoachByTextPageState
                         width: 5,
 
                         // isContinousBorder: false,
-                        backgroundColor: getFigmaColor("D7D8D9"),
+                        backgroundColor: usedAppColor.D7D8D9,
                       ),
                       const SizedBox(width: 5),
                       SizedBox(
@@ -219,7 +220,7 @@ class _FindFitnessCoachByTextPageState
                         "Strength",
                         weight: FontWeight.w500,
                         size: 14,
-                        textColor: getFigmaColor("676C75"),
+                        textColor: usedAppColor.Color676C75,
                       ),
                     ],
                   )
@@ -242,7 +243,7 @@ class _FindFitnessCoachByTextPageState
       action: () {
         print("sassasasas");
       },
-      backgroundColor: getFigmaColor("F3F3F4"),
+      backgroundColor: usedAppColor.f3f3f4,
       child: Padding(
         padding: const EdgeInsets.all(4.0),
         child: Row(
@@ -269,8 +270,9 @@ class _FindFitnessCoachByTextPageState
                     child: FancyText(
                       e,
                       weight: FontWeight.w700,
-                      textColor:
-                          isSelected ? Colors.black : getFigmaColor("676C75"),
+                      textColor: isSelected
+                          ? usedAppColor.black
+                          : usedAppColor.Color676C75,
                     ),
                   ),
                 ),

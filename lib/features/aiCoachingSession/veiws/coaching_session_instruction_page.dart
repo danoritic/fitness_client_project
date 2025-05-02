@@ -18,6 +18,7 @@ class _CoachingSessionInstructionPageState
     extends State<CoachingSessionInstructionPage> {
   @override
   Widget build(BuildContext context) {
+    context.watch<AppColors>();
     return Scaffold(
         backgroundColor: usedAppColor.white,
         body: Padding(
@@ -69,7 +70,7 @@ class _CoachingSessionInstructionPageState
                   radius: 12,
                   isContinousBorder: false,
                   // height: 217,
-                  backgroundColor: Colors.black,
+                  backgroundColor: usedAppColor.black,
                   child: Padding(
                     padding: const EdgeInsets.all(12.0),
                     child: Row(
@@ -110,7 +111,7 @@ class _CoachingSessionInstructionPageState
             radius: 12,
             isContinousBorder: false,
             // height: 217,
-            backgroundColor: getFigmaColor("f3f3f4"),
+            backgroundColor: usedAppColor.f3f3f4,
             child: Padding(
               padding: const EdgeInsets.all(12.0),
               child: Row(
@@ -142,7 +143,7 @@ class _CoachingSessionInstructionPageState
             radius: 12,
             isContinousBorder: false,
             // height: 217,
-            backgroundColor: getFigmaColor("f3f3f4"),
+            backgroundColor: usedAppColor.f3f3f4,
             child: Padding(
               padding: const EdgeInsets.all(12.0),
               child: Row(
@@ -174,7 +175,7 @@ class _CoachingSessionInstructionPageState
             radius: 12,
             isContinousBorder: false,
             // height: 217,
-            backgroundColor: getFigmaColor("f3f3f4"),
+            backgroundColor: usedAppColor.f3f3f4,
             child: Padding(
               padding: const EdgeInsets.all(12.0),
               child: Row(

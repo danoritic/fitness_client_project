@@ -1,6 +1,7 @@
 import 'package:fitness_client_project/features/homeAndFitnessMetrics/veiws/sandow_score.dart';
 import 'package:fitness_client_project/utils/customs/fancy_text.dart';
 import 'package:fitness_client_project/utils/helperFunctions.dart';
+import 'package:fitness_client_project/utils/utils.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
@@ -9,6 +10,7 @@ class HomePage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    context.watch<AppColors>();
     return Scaffold(
       // appBar: AppBar(
       //   title: const Text('Home Page'),
@@ -34,7 +36,7 @@ class HomePage extends StatelessWidget {
                       FancyText(
                         "Fitness Metrics",
                         weight: FontWeight.bold,
-                        textColor: Colors.black,
+                        textColor: usedAppColor.black,
                       ),
                       FancyText(
                         "See All",
@@ -164,7 +166,7 @@ class HomePage extends StatelessWidget {
         FancyText(
           "Fitness Metrics",
           weight: FontWeight.bold,
-          textColor: Colors.black,
+          textColor: usedAppColor.black,
         ),
         FancyText(
           "See All",

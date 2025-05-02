@@ -4,6 +4,7 @@ import 'package:fitness_client_project/utils/app_variables.dart';
 import 'package:fitness_client_project/utils/customs/customs.dart';
 import 'package:fitness_client_project/utils/customs/fancy_container.dart';
 import 'package:fitness_client_project/utils/customs/fancy_text.dart';
+import 'package:fitness_client_project/utils/utils.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
@@ -14,6 +15,7 @@ class SandowScore extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    context.watch<AppColors>();
     return Scaffold(
       // appBar: AppBar(
       //   title: const Text('Home Page'),
@@ -169,7 +171,7 @@ class SandowScoreDialog extends StatelessWidget {
                             Navigator.of(context).pop(); // Close the dialog
                           },
                           style: ElevatedButton.styleFrom(
-                            backgroundColor: Colors.black,
+                            backgroundColor: usedAppColor.black,
                             shape: RoundedRectangleBorder(
                               borderRadius: BorderRadius.circular(8.0),
                             ),

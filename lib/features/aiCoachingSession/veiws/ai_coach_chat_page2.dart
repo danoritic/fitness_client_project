@@ -22,6 +22,7 @@ class _AiCoachChatPage2State extends State<AiCoachChatPage2> {
 
   @override
   Widget build(BuildContext context) {
+    context.watch<AppColors>();
     return Scaffold(
       backgroundColor: usedAppColor.white,
       body: SafeArea(
@@ -54,7 +55,7 @@ class _AiCoachChatPage2State extends State<AiCoachChatPage2> {
                           maxHeight: 200,
                           offset: const Offset(-50, 0),
                           decoration: BoxDecoration(
-                              color: getFigmaColor("F3F3F4"),
+                              color: usedAppColor.f3f3f4,
                               borderRadius: BorderRadius.circular(20))),
                       alignment: Alignment.topCenter,
                       menuItemStyleData: MenuItemStyleData(
@@ -68,7 +69,7 @@ class _AiCoachChatPage2State extends State<AiCoachChatPage2> {
                       ),
                       customButton: FancyContainer(
                         radius: 20,
-                        backgroundColor: getFigmaColor("F3F3F4"),
+                        backgroundColor: usedAppColor.f3f3f4,
                         height: 40,
                         width: 40,
                         child: Padding(
@@ -133,7 +134,7 @@ class _AiCoachChatPage2State extends State<AiCoachChatPage2> {
           selectedBodyPart = text;
           setState(() {});
         },
-        backgroundColor: isSelected ? Colors.black : getFigmaColor("F3F3F4"),
+        backgroundColor: isSelected ? usedAppColor.black : usedAppColor.f3f3f4,
         // height: 40,
         // nulledAlign: true,
         isContinousBorder: false,
@@ -151,7 +152,7 @@ class _AiCoachChatPage2State extends State<AiCoachChatPage2> {
                 rawTextStyle: GoogleFonts.workSans(
                   fontSize: 16,
                   fontWeight: FontWeight.w600,
-                  color: isSelected ? usedAppColor.white : Colors.black,
+                  color: isSelected ? usedAppColor.white : usedAppColor.black,
                 ),
               ),
               const SizedBox(width: 7),
@@ -159,7 +160,7 @@ class _AiCoachChatPage2State extends State<AiCoachChatPage2> {
                 width: 20,
                 child: buildTailedAppArrow(
                   isLeft: false,
-                  iconColor: isSelected ? null : Colors.black,
+                  iconColor: isSelected ? null : usedAppColor.black,
                 ),
               ),
             ],

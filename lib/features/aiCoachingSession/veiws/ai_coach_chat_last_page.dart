@@ -45,6 +45,7 @@ class _AiCoachChatLastPageState extends State<AiCoachChatLastPage> {
 
   @override
   Widget build(BuildContext context) {
+    context.watch<AppColors>();
     return Scaffold(
       backgroundColor: usedAppColor.white,
       body: SafeArea(
@@ -100,7 +101,7 @@ class _AiCoachChatLastPageState extends State<AiCoachChatLastPage> {
                           maxHeight: 200,
                           offset: const Offset(-50, 0),
                           decoration: BoxDecoration(
-                              color: getFigmaColor("F3F3F4"),
+                              color: usedAppColor.f3f3f4,
                               borderRadius: BorderRadius.circular(20))),
                       alignment: Alignment.topCenter,
                       menuItemStyleData: MenuItemStyleData(
@@ -114,7 +115,7 @@ class _AiCoachChatLastPageState extends State<AiCoachChatLastPage> {
                       ),
                       customButton: FancyContainer(
                         radius: 20,
-                        backgroundColor: getFigmaColor("F3F3F4"),
+                        backgroundColor: usedAppColor.f3f3f4,
                         height: 40,
                         width: 40,
                         child: Padding(
@@ -150,7 +151,7 @@ class _AiCoachChatLastPageState extends State<AiCoachChatLastPage> {
                   Padding(
                     padding: const EdgeInsets.all(8.0),
                     child: FancyContainer(
-                      backgroundColor: Colors.black,
+                      backgroundColor: usedAppColor.black,
                       // height: 40,
                       // nulledAlign: true,
                       isContinousBorder: false,
@@ -201,7 +202,7 @@ class _AiCoachChatLastPageState extends State<AiCoachChatLastPage> {
       height: 85,
       radius: 40,
       nulledAlign: true,
-      backgroundColor: getFigmaColor("F3F3F4"),
+      backgroundColor: usedAppColor.f3f3f4,
       child: Padding(
         padding: const EdgeInsets.all(8.0),
         child: Row(
@@ -235,7 +236,7 @@ class _AiCoachChatLastPageState extends State<AiCoachChatLastPage> {
                             size: 8,
                           ),
                         ),
-                        backgroundColor: getFigmaColor("D7D8D9"),
+                        backgroundColor: usedAppColor.D7D8D9,
                       )
                     ],
                   ),
@@ -262,7 +263,7 @@ class _AiCoachChatLastPageState extends State<AiCoachChatLastPage> {
                         "1.8",
                         weight: FontWeight.w500,
                         size: 14,
-                        textColor: getFigmaColor("676C75"),
+                        textColor: usedAppColor.Color676C75,
                       ),
                       const SizedBox(width: 5),
                       FancyContainer(
@@ -270,7 +271,7 @@ class _AiCoachChatLastPageState extends State<AiCoachChatLastPage> {
                         width: 5,
 
                         // isContinousBorder: false,
-                        backgroundColor: getFigmaColor("D7D8D9"),
+                        backgroundColor: usedAppColor.D7D8D9,
                       ),
                       const SizedBox(width: 5),
                       SizedBox(
@@ -288,7 +289,7 @@ class _AiCoachChatLastPageState extends State<AiCoachChatLastPage> {
                         "Strength",
                         weight: FontWeight.w500,
                         size: 14,
-                        textColor: getFigmaColor("676C75"),
+                        textColor: usedAppColor.Color676C75,
                       ),
                     ],
                   )
